@@ -482,14 +482,14 @@ a:focus {
 
 // end about section
 
-// animal section
+// food section
 
-.animal_section {
-  background-image: url(../images/animal-bg.jpg);
+.food_section {
+  background-color: #DAD8E9;
   background-size: cover;
   color: $white;
 
-  .animal_container {
+  .food_container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -562,68 +562,6 @@ a:focus {
 
 // end animal section
 
-// pet section
-
-.pet_section {
-  .row {
-    align-items: center;
-  }
-
-  .img-box {
-    position: relative;
-    padding-right: 45px;
-
-
-    img {
-      width: 100%;
-      position: relative;
-      z-index: 2;
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -145px;
-      width: 100%;
-      height: 110%;
-      background-image: url(../images/pet-bg.png);
-      z-index: 1;
-      background-repeat: no-repeat;
-    }
-
-  }
-
-  .detail-box {
-
-    p {
-      color: #0e0e0e;
-      margin-top: 15px;
-    }
-
-    .btn-box {
-      display: flex;
-      margin-top: 25px;
-
-      a {
-        display: flex;
-        align-items: center;
-        color: $primary1;
-        text-transform: uppercase;
-
-        img {
-          margin-left: 5px;
-        }
-      }
-    }
-  }
-
-
-
-}
-
-
-// end pet section
 
 // us section
 
@@ -773,82 +711,7 @@ a:focus {
 
 // end food section
 
-// client section
 
-.client_section {
-  background-image: url(../images/client-bg.jpg);
-  background-size: cover;
-
-  #carouselExampleControls {
-    display: flex;
-    align-items: center;
-  }
-
-  .box {
-    display: flex;
-    margin-top: 75px;
-
-    .img-box {
-      margin-right: 25px;
-      min-width: 250px;
-
-      img {
-        width: 100%;
-      }
-    }
-
-    .detail-box {
-
-
-      h4 {
-        text-transform: uppercase;
-        font-size: 24px;
-      }
-
-      img {
-        width: 25px;
-      }
-
-    }
-
-  }
-
-
-  .carousel_btn-box {
-    display: flex;
-    align-items: center;
-
-    .carousel-control-prev,
-    .carousel-control-next {
-      position: unset;
-      width: 45px;
-      height: 45px;
-      background-color: $primary1;
-      opacity: 1;
-      border-radius: 100%;
-      background-repeat: no-repeat;
-      background-position: center;
-      margin: 0 3px;
-
-      &:hover {
-        background-color: $black;
-      }
-    }
-
-    .carousel-control-prev {
-      background-image: url(../images/prev.png);
-    }
-
-    .carousel-control-next {
-      background-image: url(../images/next.png);
-    }
-
-  }
-
-}
-
-
-// end client section
 
 // contact section
 .contact_section {
@@ -904,23 +767,6 @@ a:focus {
 
 // end contact section
 
-
-// info section
-.info_section {
-  background-color: $btnColor;
-  color: $white;
-  padding: 40px 0 75px 0;
-  @include second-font();
-
-  .row>div {
-    margin-top: 35px;
-  }
-
-  h5 {
-    text-transform: uppercase;
-    margin-bottom: 25px;
-  }
-}
 
 
 
