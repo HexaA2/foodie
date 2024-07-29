@@ -15,14 +15,14 @@
   <title>Foodie</title>
 
   <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
 
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poppins:400,700&display=swap" rel="stylesheet">
   <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
+  <link href="../css/style.css" rel="stylesheet" />
   <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+  <link href="../css/responsive.css" rel="stylesheet" />
 </head>
 
 <body class="sub_page">
@@ -31,9 +31,10 @@
     <header class="header_section">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container">
-          <a class="navbar-brand" href="index.html">
-            <img src="images/logo.png" alt="">
+          <a class="navbar-brand" href="../index.html">
+            <img src="../images/logo.png" alt="">
           </a>
+          
           <div class="" id="">
             
 
@@ -68,16 +69,49 @@
 
   
   <section class="restaurant_section layout_padding">
-    <div class="grid-container">
-      <div class="grid-item" onclick="location.href='restaurants/Wendys.html';">
-        <img src="images/Wendys.png" alt="Wendy's">
-      </div>
-      <div class="grid-item" onclick="location.href='restaurant2.html';">Restaurant 2</div>
-      <div class="grid-item" onclick="location.href='restaurant3.html';">Restaurant 3</div>
-      <div class="grid-item" onclick="location.href='restaurant4.html';">Restaurant 4</div>
-      <div class="grid-item" onclick="location.href='restaurant5.html';">Restaurant 5</div>
-      <!-- Add more grid items as needed -->
-  </div>
+    <div class="logo_image">
+        <img src="../images/Wendys.png" alt="">
+    </div>
+    <div class="food_table">
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Calories</th>
+                    <th>Score</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Dave's Single</td>
+                    <td class="calorie-cell"></td>
+                    <td class="score-cell"></td>
+                    <td class="price-cell"></td>
+                </tr>
+                <tr>
+                    <td>Dave's Double</td>
+                    <td class="calorie-cell"></td>
+                    <td class="score-cell"></td>
+                    <td class="price-cell"></td>
+                </tr>
+                <tr>
+                    <td>Dave's Triple</td>
+                    <td class="calorie-cell"></td>
+                    <td class="score-cell"></td>
+                    <td class="price-cell"></td>
+                </tr>
+                <tr>
+                    <td>Baconator</td>
+                    <td class="calorie-cell"></td>
+                    <td class="score-cell"></td>
+                    <td class="price-cell"></td>
+                </tr>
+                <!-- and so on... -->
+            </tbody>
+        </table>
+    </div>
+    
   </section>
 
   <!-- end about section -->
@@ -93,7 +127,7 @@
         <div class="box b1">
           
           <div class="img-box">
-            <img src="images/burger.jpg" alt="">
+            <img src="../images/burger.jpg" alt="">
           </div>
           <div class="detail-box">
             <h5>
@@ -106,7 +140,7 @@
         </div>
         <div class="box b2">
           <div class="img-box">
-            <img src="images/gourmet.jpg" alt="">
+            <img src="../images/gourmet.jpg" alt="">
           </div>
           <div class="detail-box">
             <h5>
@@ -119,7 +153,7 @@
         </div>
         <div class="box b1">
           <div class="img-box">
-            <img src="images/cupcake.jpg" alt="">
+            <img src="../images/cupcake.jpg" alt="">
           </div>
           <div class="detail-box">
             <h5>
@@ -132,7 +166,7 @@
         </div>
         <div class="box b2">
           <div class="img-box">
-            <img src="images/frappuccino.jpg" alt="">
+            <img src="../images/frappuccino.jpg" alt="">
           </div>
           <div class="detail-box">
             <h5>
@@ -160,6 +194,47 @@
       document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
     }
   </script>
+
+    <script>
+    
+    const cals = [590,860,1160,960]; 
+
+    const calCells = document.querySelectorAll('.calorie-cell');
+
+    calCells.forEach((cell, index) => {
+        if (cals[index] !== undefined) {
+            cell.textContent = cals[index];
+        }
+    });
+    
+    const scores = [90,100,80,90]; 
+
+    const scoreCells = document.querySelectorAll('.score-cell');
+
+    scoreCells.forEach((cell, index) => {
+        if (scores[index] !== undefined) {
+            cell.textContent = scores[index];
+        }
+    });
+
+    function formatAsPrice(value) {
+        const formatter = new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD',
+            minimumFractionDigits: 2
+        });
+        return formatter.format(value);
+    }
+
+    const prices = [6.59,7.79,8.99,8.49];
+
+    const priceCells = document.querySelectorAll('.price-cell');
+    priceCells.forEach((cell, index) => {
+        if (prices[index] !== undefined) {
+            cell.textContent = formatAsPrice(prices[index]);
+        }
+    });
+    </script>   
 
 </body>
 
