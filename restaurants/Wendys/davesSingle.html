@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Basic -->
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- Mobile Metas -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <!-- Site Metas -->
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+      
+        <title>Foodie</title>
+      
+        <!-- bootstrap core css -->
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css" />
+      
+        <!-- fonts style -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poppins:400,700&display=swap" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="../../css/style.css" rel="stylesheet" />
+        <!-- responsive style -->
+        <link href="../../css/responsive.css" rel="stylesheet" />
+      </head>
+<body>
+
+    <div class="sub_page">
+        <div class="hero_area">
+            <!-- header section strats -->
+            <header class="header_section">
+              <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg custom_nav-container">
+                  <a class="navbar-brand" href="../../index.html">
+                    <img src="../../images/logo.png" alt="">
+                  </a>
+                  <div class="" id="">
+                    
+        
+                    <div class="custom_menu-btn">
+                      <button onclick="openNav()">
+                        <span class="s-1">
+        
+                        </span>
+                        <span class="s-2">
+        
+                        </span>
+                        <span class="s-3">
+        
+                        </span>
+                      </button>
+                    </div>
+                    <div id="myNav" class="overlay">
+                      <div class="overlay-content">
+                        <a href="../../index.html">Home</a>
+                        <a href="../../explore.html">Explore</a>
+                        <a href="../../contact.html">Contact Us</a>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+            </header>
+            <!-- end header section -->
+          </div>
+        <div class="specificFood">
+            <div class="image-section">
+                <img src="images/davesSingle.png" alt="Food Image">
+                <div class="color-palette">
+                    <!-- Example color palette colors -->
+                    <div style="background-color: #f5a623;"></div>
+                    <div style="background-color: #7ed321;"></div>
+                    <div style="background-color: #4a90e2;"></div>
+                    <div style="background-color: #d0021b;"></div>
+                </div>
+            </div>
+            <div class="rating-section">
+                <h2 id="average-rating">80</h2> <!-- Example average rating -->
+                <div class="ratings">
+                    <div class="rating-bar" id="flavor-profile">
+                        <div class="label">Flavor Profile:</div>
+                        <div class="bar-container">
+                            <div class="bar-fill"></div>
+                        </div>
+                        <div class="value">85</div>
+                    </div>
+                    <div class="rating-bar" id="balance">
+                        <div class="label">Balance:</div>
+                        <div class="bar-container">
+                            <div class="bar-fill"></div>
+                        </div>
+                        <div class="value">75</div>
+                    </div>
+                    <div class="rating-bar" id="intensity">
+                        <div class="label">Intensity:</div>
+                        <div class="bar-container">
+                            <div class="bar-fill"></div>
+                        </div>
+                        <div class="value">90</div>
+                    </div>
+                    <div class="rating-bar" id="aftertaste">
+                        <div class="label">Aftertaste:</div>
+                        <div class="bar-container">
+                            <div class="bar-fill"></div>
+                        </div>
+                        <div class="value">70</div>
+                    </div>
+                    <div class="rating-bar" id="texture">
+                        <div class="label">Texture:</div>
+                        <div class="bar-container">
+                            <div class="bar-fill"></div>
+                        </div>
+                        <div class="value">80</div>
+                    </div>
+                    <div class="rating-bar" id="appearance">
+                        <div class="label">Appearance:</div>
+                        <div class="bar-container">
+                            <div class="bar-fill"></div>
+                        </div>
+                        <div class="value">65</div>
+                    </div>
+                </div>
+
+        </div>
+        
+    </div>
+    <div class="more-info">
+        <h3>More Information</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script>
+    function openNav() {
+      document.getElementById("myNav").classList.toggle("menu_width")
+      document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
+    }
+  </script>
+
+<script>
+    // Define the ratings list
+    const ratings = {
+        "flavor-profile": 85,
+        "balance": 75,
+        "intensity": 90,
+        "aftertaste": 70,
+        "texture": 80,
+        "appearance": 65
+    };
+
+    function setBarStyle(bar, value) {
+        var fill = bar.querySelector('.bar-fill');
+        fill.style.width = value + '%';
+        fill.style.backgroundColor = getColorBasedOnValue(value);
+        bar.querySelector('.value').textContent = value;
+    }
+
+    function getColorBasedOnValue(value) {
+        if (value >= 80) return 'blue';
+        if (value >= 60) return 'green';
+        if (value >= 40) return 'yellow';
+        return 'red';
+    }
+
+    function updateRatings() {
+        const ratingBars = document.querySelectorAll('.rating-bar');
+        let total = 0;
+        let count = 0;
+
+        ratingBars.forEach(bar => {
+            const id = bar.id;
+            const value = ratings[id];
+            setBarStyle(bar, value);
+            total += value;
+            count++;
+        });
+
+        const average = Math.round(total / count);
+        document.getElementById('average-rating').textContent = average;
+    }
+
+    // Update ratings on page load
+    updateRatings();
+</script>
+</body>
+</html>
