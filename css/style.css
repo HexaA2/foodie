@@ -708,7 +708,7 @@ a:focus {
 }
 
 .contact_section input.message-box {
-  height: 120px;
+  height: 200px;
 }
 
 .contact_section button {
@@ -730,7 +730,7 @@ a:focus {
 }
 
 .contact_section .map_container {
-  height: 725px;
+  height: 764px;
   border-radius: 100% 0 0 0;
   overflow: hidden;
   margin-left: 45px;
@@ -926,49 +926,87 @@ a:focus {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .color-palette {
-  margin-top: 10px;
-  display: flex;
-  gap: 5px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 columns in a row */
+  gap: 10px;
+  max-width: 800px; /* Adjust width as needed */
+  margin: auto;
 }
-.color-palette div {
-  width: 50px;
-  height: 50px;
+
+.color-item {
+  width: 50px; /* Width of each color block */
+  height: 50px; /* Height of each color block */
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.color-item:hover {
+  transform: scale(1.1);
+}
+
+.color-info {
+  position: absolute;
+  transform: translateX(-50%);
+  top: 110%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px;
   border-radius: 5px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
 }
 .rating-section {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align ratings to the left */
+  align-items: flex-start;
 }
 
-.rating-section h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
+.rating-items {
+  display: grid;
+  grid-template-columns: 1fr 3fr; /* Label takes 1 part, bar takes 3 parts */
+  gap: 10px;
+  width: 100%; /* Make grid items take the full width */
 }
 
-.ratings {
-  width: 300px; /* Adjust width to match the image width */
+.rating-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* One column for the average score */
+  gap: 10px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.label {
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #0a2050;
 }
 
 .rating-bar {
-  width: 100%;
-  height: 30px;
-  background-color: #e0e0e0;
-  border-radius: 5px;
-  margin: 10px 0;
+  height: 20px;
+  background-color: #eee;
+  border-radius: 10px;
   position: relative;
+  overflow: hidden;
 }
 
-.rating-bar span {
-  display: block;
-  height: 100%;
-  background-color: #4caf50;
-  border-radius: 5px;
+.rating-bar::after {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
+  height: 100%;
+  border-radius: 10px;
+  background-color: #4caf50; /* Default color */
+  transition: width 0.5s;
 }
-
 .more-info {
   padding: 20px;
   background: #fff;
@@ -982,4 +1020,33 @@ a:focus {
   justify-content: center;
   align-items: flex-start;
   padding: 20px;
+}
+
+.Food-Title h1 {
+  margin: 0;
+  color: #0a2050; /* Dark text color */
+  text-align: center; /* Center text horizontally */
+  padding: 20px;
+  border: 2px solid #0a2050; /* Border color */
+  border-radius: 10px; /* Rounded corners */
+  background-color: #fff; /* White background for the div */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  width: 80%; /* Responsive width */
+  max-width: 600px; /* Maximum width */
+  margin: auto; /* Center horizontally if needed */
+}
+
+
+
+.average-score {
+  justify: center;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #0a2050;
+  padding: 10px 20px;
+  border-radius: 15px; /* Rounded corners */
+  background-color: #f4f4f4; /* Light background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for a 3D effect */
 }

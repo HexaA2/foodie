@@ -53,9 +53,9 @@
             </div>
             <div id="myNav" class="overlay">
               <div class="overlay-content">
-                <a href="index.html">Home</a>
-                <a href="explore.html">Explore</a>
-                <a href="contact.html">Contact Us</a>
+                <a href="../index.html">Home</a>
+                <a href="../explore.html">Explore</a>
+                <a href="../contact.html">Contact Us</a>
               </div>
             </div>
           </div>
@@ -81,25 +81,25 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <tr data-url="Wendys/davesSingle.html">
                     <td>Dave's Single</td>
                     <td class="calorie-cell"></td>
                     <td class="score-cell"></td>
                     <td class="price-cell"></td>
                 </tr>
-                <tr>
+                <tr data-url="Wendys/davesDouble.html">
                     <td>Dave's Double</td>
                     <td class="calorie-cell"></td>
                     <td class="score-cell"></td>
                     <td class="price-cell"></td>
                 </tr>
-                <tr>
+                <tr data-url="Wendys/davesTriple.html">
                     <td>Dave's Triple</td>
                     <td class="calorie-cell"></td>
                     <td class="score-cell"></td>
                     <td class="price-cell"></td>
                 </tr>
-                <tr>
+                <tr data-url="Wendys/baconator.html">
                     <td>Baconator</td>
                     <td class="calorie-cell"></td>
                     <td class="score-cell"></td>
@@ -280,6 +280,18 @@
       
     </script>
 
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+    var rows = document.querySelectorAll("tr[data-url]");
+
+    rows.forEach(function(row) {
+        row.addEventListener("click", function() {
+            var url = this.getAttribute("data-url");
+            window.location.href = url;
+        });
+    });
+});
+    </script>
 </body>
 
 </html>
