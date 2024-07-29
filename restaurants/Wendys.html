@@ -74,10 +74,10 @@
         <table class="styled-table">
             <thead>
                 <tr>
-                    <th>Item</th>
-                    <th>Calories</th>
-                    <th>Score</th>
-                    <th>Price</th>
+                  <th id="name-header">Name</th>
+                  <th id="calories-header">Calories</th>
+                  <th id="score-header">Score</th>
+                  <th id="price-header">Price</th>
                 </tr>
             </thead>
             <tbody>
@@ -233,6 +233,52 @@
         }
     });
     </script>   
+
+
+    <script>
+        function sortTableByColumn(columnIndex, dataType) {
+            const table = document.querySelector('.styled-table tbody');
+            const rows = Array.from(table.querySelectorAll('tr'));
+            const header = document.getElementById(`${dataType}-header`);
+            
+            // Toggle sort direction
+            const isAscending = header.getAttribute('data-sort-direction') === 'asc';
+            header.setAttribute('data-sort-direction', isAscending ? 'desc' : 'asc');
+
+            rows.sort((rowA, rowB) => {
+                const cellA = rowA.children[columnIndex].textContent.trim();
+                const cellB = rowB.children[columnIndex].textContent.trim();
+                let valueA, valueB;
+
+                if (dataType === 'price') {
+                    valueA = parseFloat(cellA.replace(/[$,]/g, ''));
+                    valueB = parseFloat(cellB.replace(/[$,]/g, ''));
+                } else if (dataType === 'score' || dataType === 'calories') {
+                    valueA = parseFloat(cellA);
+                    valueB = parseFloat(cellB);
+                } else {
+                    valueA = cellA.toLowerCase();
+                    valueB = cellB.toLowerCase();
+                }
+
+                if (isAscending) {
+                    return valueA > valueB ? 1 : -1;
+                } else {
+                    return valueA < valueB ? 1 : -1;
+                }
+            });
+
+            // Re-append sorted rows to the table body
+            rows.forEach(row => table.appendChild(row));
+        }
+
+        // Add click event listeners to the headers
+        document.getElementById('name-header').addEventListener('click', () => sortTableByColumn(0, 'name'));
+        document.getElementById('calories-header').addEventListener('click', () => sortTableByColumn(1, 'calories'));
+        document.getElementById('score-header').addEventListener('click', () => sortTableByColumn(2, 'score'));
+        document.getElementById('price-header').addEventListener('click', () => sortTableByColumn(3, 'price'));
+      
+    </script>
 
 </body>
 
