@@ -109,8 +109,13 @@
         </div>
         
     </div>
-    <div class="more-info">
-      <h3>More Information</h3>
+    <div class="tab">
+      <button class="tablinks" onclick="openTab(event, 'food_information')" >Information</button>
+      <button class="tablinks" onclick="openTab(event, 'reviews')">Reviews</button>
+    </div>
+
+    <div id = "food_information" class="more-info tabcontent overview-tab">
+      <h3>Overview</h3>
       <div class="info-columns">
         <div class="nutrition-table">
           <table class="styled-table2">
@@ -283,7 +288,27 @@
         </div>
     </div>
   </div>
-
+  <div id = "reviews" class="tabcontent reviews-container">
+    <div class="review-box">
+      <h2 class="review-title">Great Product!</h2>
+      <p class="review-content">I loved this product! It exceeded my expectations and I would highly recommend it.</p>
+      <div class="review-author">
+        <img src="../../images/janeDoe.jpg" alt="Author Photo" class="author-photo">
+        <span class="author-name">Jane Doe</span>
+      </div>
+    </div>
+  
+    <div class="review-box">
+      <h2 class="review-title">Not as expected</h2>
+      <p class="review-content">The product was okay, but it did not meet my expectations based on the description.</p>
+      <div class="review-author">
+        <img src="../../images/johnSmith.jpg" alt="Author Photo" class="author-photo">
+        <span class="author-name">John Smith</span>
+      </div>
+    </div>
+  
+    <!-- Add more review boxes as needed -->
+  </div>
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <script>

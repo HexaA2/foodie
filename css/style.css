@@ -1247,3 +1247,101 @@ a:focus {
         #infoTable td:nth-child(2) {
             width: 40%; /* Width for the second column */
         }
+
+
+/* Style the tab */
+.tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  border-radius: 8px; /* Add rounded corners */
+  padding: 5px; /* Optional: Add padding around the tabs */
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  border-radius: 8px; /* Add rounded corners */
+  margin: 0 2px; /* Optional: Add spacing between buttons */
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+}
+
+.overview-tab {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 8px 8px; /* Add rounded corners to the bottom */
+}
+
+.reviews-container {
+  display: grid;
+  grid-template-columns: 1fr; /* One column layout */
+  gap: 20px; /* Space between reviews */
+  padding: 20px;
+  max-width: 600px; /* Set a max-width for the container */
+  margin: 0 auto; /* Center the container */
+}
+
+.review-box {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 15px;
+  transition: transform 0.2s;
+  margin-bottom: 20px;
+}
+
+.review-box:hover {
+  transform: translateY(-5px);
+}
+
+.review-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.review-content {
+  font-size: 1em;
+  margin-bottom: 15px;
+}
+
+.review-author {
+  display: flex;
+  align-items: center;
+}
+
+.author-photo {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.author-name {
+  font-weight: bold;
+  font-size: 1em;
+}
