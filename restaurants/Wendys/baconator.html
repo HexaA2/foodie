@@ -22,6 +22,7 @@
         <link href="../../css/style.css" rel="stylesheet" />
         <!-- responsive style -->
         <link href="../../css/responsive.css" rel="stylesheet" />
+        <script src="../../script.js" defer></script>
       </head>
 <body>
 
@@ -110,9 +111,179 @@
         
     </div>
     <div class="more-info">
-        <h3>More Information</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <h3>More Information</h3>
+      <div class="info-columns">
+        <div class="nutrition-table">
+          <table class="styled-table2">
+              <tbody>
+                  <tr>
+                      <td>Calories</td>
+                      <td>960</td>
+                  </tr>
+                  <tr>
+                      <td>Total Fat</td>
+                      <td>66g</td>
+                  </tr>
+                  <tr>
+                      <td>&nbsp;&nbsp;&nbsp;&nbsp;Saturated Fat</td>
+                      <td>27g</td>
+                  </tr>
+                  <tr>
+                      <td>&nbsp;&nbsp;&nbsp;&nbsp;Trans Fat</td>
+                      <td>3g</td>
+                  </tr>
+                  <tr>
+                      <td>Cholesterol</td>
+                      <td>155mg</td>
+                  </tr>
+                  <tr>
+                      <td>Sodium</td>
+                      <td>1600mg</td>
+                  </tr>
+                  <tr>
+                      <td>Total Carbs</td>
+                      <td>36g</td>
+                  </tr>
+                  <tr>
+                      <td>&nbsp;&nbsp;&nbsp;&nbsp;Dietary Fiber</td>
+                      <td>1g</td>
+                  </tr>
+                  <tr>
+                      <td>&nbsp;&nbsp;&nbsp;&nbsp;Total Sugars</td>
+                      <td>7g</td>
+                  </tr>
+                  <tr>
+                      <td>Protein</td>
+                      <td>57g</td>
+                  </tr>
+                  <tr>
+                      <td>Calcium</td>
+                      <td>15% DV</td>
+                  </tr>
+                  <tr>
+                      <td>Iron</td>
+                      <td>40% DV</td>
+                  </tr>
+                  <tr>
+                      <td>Potassium</td>
+                      <td>10% DV</td>
+                  </tr>
+                  <!-- and so on... -->
+              </tbody>
+          </table>
+        </div>
+
+        <div class="allergens">
+          <div class="allergen-grid">
+            <div class="allergen-item">
+                <img src="../../images/egg.svg" alt="Egg">
+                <p>Egg</p>
+            </div>
+            <div class="allergen-item">
+                <img src="../../images/milk.svg" alt="Milk">
+                <p>Milk</p>
+            </div>
+            <div class="allergen-item">
+                <img src="../../images/soy.svg" alt="Soy">
+                <p>Soy</p>
+            </div>
+            <div class="allergen-item">
+                <img src="../../images/sesame.svg" alt="Sesame">
+                <p>Sesame</p>
+            </div>
+            <div class="allergen-item">
+                <img src="../../images/wheat.svg" alt="Wheat">
+                <p>Wheat</p>
+            </div>
+            <!-- Add more allergens as needed -->
+        </div>
+        </div>
+        <div class="ingredients">
+          <table id="infoTable">
+            <thead>
+              <tr>
+                <th>Ingredients</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="clickable">
+                <td>Hamburger Patty</td>
+              </tr>
+              <tr class="details">
+                <td colspan="2">
+                  <p>Ground Beef, Salt. HAMBURGER PATTIES ARE COOKED ON THE SAME GRILL AS AND MAY COME IN CONTACT WITH INGREDIENTS THAT CONTAIN MILK AND SOY.</p>
+                </td>
+              </tr>
+              <tr class="clickable">
+                <td>Premium Bun</td>
+              </tr>
+              <tr class="details">
+                <td colspan="2">
+                  <p>Enriched Flour (Wheat Flour, Malted Barley Flour, Niacin, Reduced Iron, Thiamine Mononitrate, Riboflavin, Folic Acid), Water, High Fructose Corn Syrup and/or Sugar, Yeast, Soybean Oil, Contains less than 2% of each of the following: Ascorbic Acid (Vitamin C), Calcium Peroxide, Calcium Propionate (Added as a Preservative), Calcium Sulfate, Canola Oil, Citric Acid, Corn Starch, Dextrose, Enzymes, Maltodextrins, Modified Food Starch, Monocalcium Phosphate, Monoglycerides, Salt, Sodium Stearoyl Lactylate (SSL), Starch, Sunflower Oil, Vegetable Oil, Vegetable Proteins (Pea, Potato, Fava Bean), Wheat Dextrose, Wheat Flour, Wheat Gluten, Wheat Maltodextrins, Sesame Flour. CONTAINS: WHEAT, SESAME. BUNS ARE TOASTED IN A COMMON TOASTER WITH PRODUCTS THAT CONTAIN WHEAT, SOY, MILK, SESAME.</p>
+                </td>
+              </tr>
+              <tr class="clickable">
+                <td>American Cheese Slice</td>
+              </tr>
+              <tr class="details">
+                <td colspan="2">
+                  <p>Milk, Cream, Water, Sodium Citrate, Salt, Contains 2% or less of Apocarotenal and Beta Carotene (Color), Cheese Culture, Citric Acid, Enzymes, Sorbic Acid (Preservative), Soy Lecithin. CONTAINS: MILK, SOY.</p>
+                </td>
+              </tr>
+              <tr class="clickable">
+                <td>Tomato</td>
+              </tr>
+              <tr class="details">
+                <td colspan="2">
+                  <p>Tomato</p>
+                </td>
+              </tr>
+              <tr class="clickable">
+                <td>Crinkle Cut Pickles</td>
+              </tr>
+              <tr class="details">
+                <td colspan="2">
+                  <p>Cucumber, Water, Distilled Vinegar, Salt, Calcium Chloride, Sodium Benzoate (Preservative), Lactic Acid, Natural Flavors, Polysorbate 80 and Turmeric.</p>
+                </td>
+              </tr>
+              <tr class="clickable">
+                <td>Mayonnaise</td>
+              </tr>
+              <tr class="details">
+                <td colspan="2">
+                  <p>Soybean Oil, Water, Egg Yolks, Corn Syrup, Distilled Vinegar, Salt, Mustard Seed, Calcium Disodium Edta (To Protect Flavor). CONTAINS: EGG.</p>
+                </td>
+              </tr>
+              <tr class="clickable">
+                <td>Lettuce</td>
+              </tr>
+              <tr class="details">
+                <td colspan="2">
+                  <p>Lettuce</p>
+                </td>
+              </tr>
+              <tr class="clickable">
+                <td>Ketchup</td>
+              </tr>
+              <tr class="details">
+                <td colspan="2">
+                  <p>Tomato Concentrate from Red Ripe Tomatoes, Distilled Vinegar, High Fructose Corn Syrup, Corn Syrup, Salt, Natural Flavoring, Spices, Onion Powder. CONTAINS EGG.</p>
+                </td>
+              </tr>
+              <tr class="clickable">
+                <td>Onion</td>
+              </tr>
+              <tr class="details">
+                <td colspan="2">
+                  <p>Onion</p>
+                </td>
+              </tr>
+              <!-- Add more items as needed -->
+            </tbody>
+          </table>
+        </div>
     </div>
+  </div>
 
     <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.js"></script>
@@ -122,39 +293,6 @@
       document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
     }
   </script>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-    var ratingBars = document.querySelectorAll(".rating-bar");
-    var totalValue = 0;
-
-    ratingBars.forEach(function(bar) {
-        var value = parseInt(bar.getAttribute("data-value"));
-        var color = getColor(value);
-        bar.style.width = value + "%";
-        bar.style.backgroundColor = color;
-        totalValue += value;
-    });
-
-    var averageValue = totalValue / ratingBars.length;
-    document.getElementById("average-value").innerText = averageValue.toFixed(1);
-    var averageColor = getColor(averageValue);
-    var averageScoreElement = document.querySelector(".average-score");
-    averageScoreElement.style.backgroundColor = averageColor;
-
-    function getColor(value) {
-        if (value >= 90) return "#009392"; 
-        if (value >= 75) return "#39B185"; 
-        if (value >= 60) return "#9CCB86"; 
-        if (value >= 50) return "#E9E29C"; 
-        if (value >= 40) return "#EEB479";
-        if (value >= 30) return "#E88471 ";
-        return "#CF597E"; // Red
-    }
-    });
-
-</script>
-
 
 </body>
 </html>

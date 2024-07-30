@@ -150,10 +150,16 @@ a:focus {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+          
 }
 
 .navbar-brand img {
   width: 65px;
+  transition: transform 0.2s;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.1);
 }
 
 .custom_nav-container {
@@ -839,6 +845,11 @@ a:focus {
   max-height: 100%;
   width: auto;
   height: auto;
+  transition: transform 0.2s;
+}
+
+.logo_image:hover {
+  transform: scale(1.1);
 }
 
 .styled-table {
@@ -924,7 +935,13 @@ a:focus {
   border-radius: 15px; /* Rounds the corners of the image */
   margin-bottom: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s
 }
+
+.image-section img:hover {
+  transform: translateY(-5px);
+}
+
 .color-palette {
   display: grid;
   grid-template-columns: repeat(5, 1fr); /* 5 columns in a row */
@@ -987,6 +1004,11 @@ a:focus {
   text-overflow: ellipsis;
   white-space: nowrap;
   color: #0a2050;
+  transition: transform 0.2s;
+}
+
+.label:hover {
+  transform: translateY(-5px);
 }
 
 .rating-bar {
@@ -995,6 +1017,11 @@ a:focus {
   border-radius: 10px;
   position: relative;
   overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.rating-bar:hover{
+  transform: scale(1.1);
 }
 
 .rating-bar::after {
@@ -1054,6 +1081,11 @@ a:focus {
   border-radius: 15px; /* Rounded corners */
   background-color: #f4f4f4; /* Light background color */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for a 3D effect */
+  transition: transform 0.2s;
+}
+
+.average-score:hover {
+  transform: translateY(-5px);  
 }
 
 .nutrition-table {
