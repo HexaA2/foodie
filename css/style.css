@@ -1036,8 +1036,6 @@ a:focus {
   margin: auto; /* Center horizontally if needed */
 }
 
-
-
 .average-score {
   justify: center;
   text-align: center;
@@ -1050,3 +1048,167 @@ a:focus {
   background-color: #f4f4f4; /* Light background color */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for a 3D effect */
 }
+
+.nutrition_table {
+  display: flex;
+  flex: 3;
+  margin: 0 10px; /* Adjust margin as needed */
+}
+
+.styled-table2 {
+  border-collapse: separate;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 640px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  border-spacing: 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.styled-table2 th,
+.styled-table2 td {
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.styled-table2 tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.styled-table2 tr:nth-child(even) {
+  background-color: #f3f3f3;
+}
+
+.styled-table2 tbody tr:last-of-type {
+  border-bottom: 2px solid #0a2050;
+}
+
+.styled-table2 tbody tr:hover {
+  font-weight: bold;
+  color: #0a2050;
+  background-color: #e0e0e0;
+}
+
+.styled-table2 th:nth-child(1),
+        .styled-table2 td:nth-child(1) {
+            width: 60%; /* Width for the first column */
+        }
+
+        .styled-table2 th:nth-child(2),
+        .styled-table2 td:nth-child(2) {
+            width: 40%; /* Width for the second column */
+        }
+
+
+.info-columns {
+    display: flex;
+    justify-content: center;
+    text-align: left; /* Align text to the left inside each column */
+    align-items: flex-start;
+    
+}
+
+.allergens, .ingredients {
+  flex: 3;
+  margin-left: 10px; /* Add some margin between columns */
+  margin-bottom: 20px;
+  margin-top: 25px;
+}
+
+.allergen-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px; /* Increased gap between items */
+}
+
+.allergen-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #f9f9f9; /* Light background color for the boxes */
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+  transition: transform 0.2s; /* Smooth transition for hover effect */
+}
+
+.allergen-item:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.allergen-item img {
+    width: 100px; /* Set the desired width */
+    height: 100px; /* Set the desired height */
+    object-fit: cover; /* Cover the box while maintaining aspect ratio */
+    border-radius: 5px;
+    margin-bottom: 10px; /* Increased margin for spacing */
+}
+
+.allergen-item p {
+  margin: 0;
+  font-weight: bold; /* Bold text for emphasis */
+}
+
+#infoTable {
+  border-collapse: separate;
+  margin: 0px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  border-spacing: 0;
+  
+  border-radius: 10px;
+  overflow: hidden;
+  
+}
+
+#infoTable th,
+#infoTable td {
+    padding: 12px 15px;
+    text-align: center;
+}
+#infoTable tr.clickable {
+  cursor: pointer;
+}
+#infoTable tr.details {
+  display: none; /* Initially hide details rows */
+  align-items: center;
+  background-color: #f3f3f3;
+}
+
+#infoTable th{
+    background: #f5a9ee;
+}
+
+#infoTable tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+#infoTable tbody tr.clickable:nth-child(4n+3) {
+  background-color: #f9f9f9;
+}
+
+#infoTable tbody tr:last-of-type {
+  border-bottom: 2px solid #0a2050;
+}
+
+#infoTable tbody tr.clickable:hover {
+  font-weight: bold;
+  color: #0a2050;
+  background-color: #e0e0e0;
+}
+
+#infoTable th:nth-child(1),
+#infoTable td:nth-child(1) {
+            width: 60%; /* Width for the first column */
+        }
+        #infoTableth:nth-child(2),
+        #infoTable td:nth-child(2) {
+            width: 40%; /* Width for the second column */
+        }
