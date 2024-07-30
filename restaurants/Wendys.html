@@ -22,7 +22,8 @@
   <!-- Custom styles for this template -->
   <link href="../css/style.css" rel="stylesheet" />
   <!-- responsive style -->
-  <link href="../css/responsive.css" rel="stylesheet" />
+  <link href="../css/responsive.css" rel="stylesheet" /> 
+  <script src="restaurant.js" defer></script> 
 </head>
 
 <body class="sub_page">
@@ -70,37 +71,126 @@
     <div class="logo_image">
         <img src="../images/Wendys.png" alt="">
     </div>
-    <div class="food_table">
-        <table class="styled-table">
+
+    <div class="tab">
+      <button class="tablinks" onclick="openTab(event, 'main')" >Food</button>
+      <button class="tablinks" onclick="openTab(event, 'sides')">Sides</button>
+      <button class="tablinks" onclick="openTab(event, 'beverages')">Beverages</button>
+      <button class="tablinks" onclick="openTab(event, 'desserts')">Desserts</button>
+      <button class="tablinks" onclick="openTab(event, 'background-information')">Information</button>
+    </div>
+    <div class="center">
+          <div id = "main" class="tabcontent food_table">
+            <table id = "main_course_table" class="styled-table">
+              <thead>
+                <tr>
+                  <th data-column="name" onclick="sortTableByColumn('main_course_table', 0, 'name')">Name</th>
+                  <th data-column="calories" onclick="sortTableByColumn('main_course_table', 1, 'calories')">Calories</th>
+                  <th data-column="score" onclick="sortTableByColumn('main_course_table', 2, 'score')">Score</th>
+                  <th data-column="price" onclick="sortTableByColumn('main_course_table', 3, 'price')">Price</th>
+                </tr>
+            </thead>
+                <tbody>
+                    <tr data-url="Wendys/davesSingle.html">
+                        <td>Dave's Single</td>
+                        <td class="calorie-cell"></td>
+                        <td class="score-cell"></td>
+                        <td class="price-cell"></td>
+                    </tr>
+                    <tr data-url="Wendys/davesDouble.html">
+                        <td>Dave's Double</td>
+                        <td class="calorie-cell"></td>
+                        <td class="score-cell"></td>
+                        <td class="price-cell"></td>
+                    </tr>
+                    <tr data-url="Wendys/davesTriple.html">
+                        <td>Dave's Triple</td>
+                        <td class="calorie-cell"></td>
+                        <td class="score-cell"></td>
+                        <td class="price-cell"></td>
+                    </tr>
+                    <tr data-url="Wendys/baconator.html">
+                        <td>Baconator</td>
+                        <td class="calorie-cell"></td>
+                        <td class="score-cell"></td>
+                        <td class="price-cell"></td>
+                    </tr>
+                    <!-- and so on... -->
+                </tbody>
+            </table>
+        </div>
+
+        <div id = "sides" class="tabcontent food_table">
+          <table id = "sides_table" class="styled-table">
+            <thead>
+              <tr>
+                <th data-column="name" onclick="sortTableByColumn('sides_table', 0, 'name')">Name</th>
+                <th data-column="calories" onclick="sortTableByColumn('sides_table', 1, 'calories')">Calories</th>
+                <th data-column="score" onclick="sortTableByColumn('sides_table', 2, 'score')">Score</th>
+                <th data-column="price" onclick="sortTableByColumn('sides_table', 3, 'price')">Price</th>
+              </tr>
+          </thead>
+              <tbody>
+                  <tr data-url="Wendys/frenchFries.html">
+                      <td>French Fries</td>
+                      <td class="calorie-cell"></td>
+                      <td class="score-cell"></td>
+                      <td class="price-cell"></td>
+                  </tr>
+                  <tr data-url="Wendys/baconatorFries.html">
+                      <td>Baconator Fries</td>
+                      <td class="calorie-cell"></td>
+                      <td class="score-cell"></td>
+                      <td class="price-cell"></td>
+                  </tr>
+                  <tr data-url="Wendys/chiliCheeseFries.html">
+                      <td>Chili Cheese Fries</td>
+                      <td class="calorie-cell"></td>
+                      <td class="score-cell"></td>
+                      <td class="price-cell"></td>
+                  </tr>
+                  <tr data-url="Wendys/cheeseFries.html">
+                      <td>Cheese Fries</td>
+                      <td class="calorie-cell"></td>
+                      <td class="score-cell"></td>
+                      <td class="price-cell"></td>
+                  </tr>
+                  <!-- and so on... -->
+              </tbody>
+          </table>
+      </div>
+
+      <div id = "beverages" class="tabcontent food_table" >
+        <table id="beverage_table" class="styled-table">
             <thead>
                 <tr>
-                  <th id="name-header">Name</th>
-                  <th id="calories-header">Calories</th>
-                  <th id="score-header">Score</th>
-                  <th id="price-header">Price</th>
+                  <th data-column="name" onclick="sortTableByColumn('beverage_table', 0, 'name')">Name</th>
+                  <th data-column="calories" onclick="sortTableByColumn('beverage_table', 1, 'calories')">Calories</th>
+                  <th data-column="score" onclick="sortTableByColumn('beverage_table', 2, 'score')">Score</th>
+                  <th data-column="price" onclick="sortTableByColumn('beverage_table', 3, 'price')">Price</th>
                 </tr>
             </thead>
             <tbody>
-                <tr data-url="Wendys/davesSingle.html">
-                    <td>Dave's Single</td>
+                <tr data-url="Wendys/blueberryPomegranateLemonade.html">
+                    <td>Blueberry Pomegranate Lemonade</td>
                     <td class="calorie-cell"></td>
                     <td class="score-cell"></td>
                     <td class="price-cell"></td>
                 </tr>
-                <tr data-url="Wendys/davesDouble.html">
-                    <td>Dave's Double</td>
+                <tr data-url="Wendys/pineappleMangoLemonade.html">
+                    <td>Pineapple Mango Lemonade</td>
                     <td class="calorie-cell"></td>
                     <td class="score-cell"></td>
                     <td class="price-cell"></td>
                 </tr>
-                <tr data-url="Wendys/davesTriple.html">
-                    <td>Dave's Triple</td>
+                <tr data-url="Wendys/allNaturalLemonade.html">
+                    <td>All-Natural Lemonade</td>
                     <td class="calorie-cell"></td>
                     <td class="score-cell"></td>
                     <td class="price-cell"></td>
                 </tr>
-                <tr data-url="Wendys/baconator.html">
-                    <td>Baconator</td>
+                <tr data-url="Wendys/strawberryLemonade.html">
+                    <td>Strawberry Lemonade</td>
                     <td class="calorie-cell"></td>
                     <td class="score-cell"></td>
                     <td class="price-cell"></td>
@@ -109,6 +199,61 @@
             </tbody>
         </table>
     </div>
+    <div id = "desserts" class="tabcontent food_table">
+      <table id="desserts_table" class="styled-table">
+        <thead>
+          <tr>
+            <th data-column="name" onclick="sortTableByColumn('desserts_table', 0, 'name')">Name</th>
+            <th data-column="calories" onclick="sortTableByColumn('desserts_table', 1, 'calories')">Calories</th>
+            <th data-column="score" onclick="sortTableByColumn('desserts_table', 2, 'score')">Score</th>
+            <th data-column="price" onclick="sortTableByColumn('desserts_table', 3, 'price')">Price</th>
+          </tr>
+      </thead>
+          <tbody>
+              <tr data-url="Wendys/tripleBerryFrosty.html">
+                  <td>Triple Berry Frosty</td>
+                  <td class="calorie-cell"></td>
+                  <td class="score-cell"></td>
+                  <td class="price-cell"></td>
+              </tr>
+              <tr data-url="Wendys/classicChocolateFrosty.html">
+                  <td>Classic Chocolate Frosty</td>
+                  <td class="calorie-cell"></td>
+                  <td class="score-cell"></td>
+                  <td class="price-cell"></td>
+              </tr>
+              <tr data-url="Wendys/cinnabonPullApart.html">
+                  <td>Cinnabon Pull-Apart</td>
+                  <td class="calorie-cell"></td>
+                  <td class="score-cell"></td>
+                  <td class="price-cell"></td>
+              </tr>
+              <tr data-url="Wendys/chocolateChunkCookie.html">
+                  <td>Chocolate Chunk Cookie</td>
+                  <td class="calorie-cell"></td>
+                  <td class="score-cell"></td>
+                  <td class="price-cell"></td>
+              </tr>
+              <!-- and so on... -->
+          </tbody>
+      </table>
+    </div>
+    <div id = "background-information" class="tabcontent background-section">
+        <h1>Background</h1>
+        <p>Wendy's is an American international fast food restaurant chain founded by Dave Thomas on November 15, 1969, 
+          in Columbus, Ohio. Its headquarters moved to Dublin, Ohio, on January 29, 2006. As of December 31, 2018, 
+          Wendy's was the world's third-largest hamburger fast-food chain with 6,711 locations, following McDonald’s 
+          and Burger King. On September 29, 2008, the company merged with Triarc Companies Inc., the publicly 
+          traded parent company of Arby's; Wendy's headquarters remained in Dublin. Triarc then became known as Wendy's/Arby's Group,
+           and later as the Wendy's Company following the sale of Arby's to Roark Capital Group. As of November 2, 2023,
+            there were 7,166 Wendy's outlets, of which 415 are company-owned and 6,751 franchised, 83% of which are in the United States.
+            The company specifies stores' standards; owners control opening hours, decor, and staff uniforms and pay. 
+            The chain serves square hamburger patties on circular buns, sea salt fries, and the Frosty, soft ice cream mixed with starches. 
+            The food menu consists primarily of hamburgers, chicken sandwiches, and French fries. The company discontinued 
+            its Big Classic signature sandwich.</p>
+    </div>
+    </div>
+    
     
   </section>
 
@@ -195,7 +340,10 @@
 
     <script>
     
-    const cals = [590,860,1160,960]; 
+    const cals = [590,860,1160,960,
+    470,460,520,470,
+    450,420,330,420,
+    520,500,550,330]; 
 
     const calCells = document.querySelectorAll('.calorie-cell');
 
@@ -224,7 +372,10 @@
         return formatter.format(value);
     }
 
-    const prices = [6.59,7.79,8.99,8.49];
+    const prices = [6.59,7.79,8.99,8.49,
+    4.29,5.19,4.69,4.39,
+    4.19,4.19,4.19,4.19,
+    3.79,3.89,3.99,1.99];
 
     const priceCells = document.querySelectorAll('.price-cell');
     priceCells.forEach((cell, index) => {
@@ -234,64 +385,6 @@
     });
     </script>   
 
-
-    <script>
-        function sortTableByColumn(columnIndex, dataType) {
-            const table = document.querySelector('.styled-table tbody');
-            const rows = Array.from(table.querySelectorAll('tr'));
-            const header = document.getElementById(`${dataType}-header`);
-            
-            // Toggle sort direction
-            const isAscending = header.getAttribute('data-sort-direction') === 'asc';
-            header.setAttribute('data-sort-direction', isAscending ? 'desc' : 'asc');
-
-            rows.sort((rowA, rowB) => {
-                const cellA = rowA.children[columnIndex].textContent.trim();
-                const cellB = rowB.children[columnIndex].textContent.trim();
-                let valueA, valueB;
-
-                if (dataType === 'price') {
-                    valueA = parseFloat(cellA.replace(/[$,]/g, ''));
-                    valueB = parseFloat(cellB.replace(/[$,]/g, ''));
-                } else if (dataType === 'score' || dataType === 'calories') {
-                    valueA = parseFloat(cellA);
-                    valueB = parseFloat(cellB);
-                } else {
-                    valueA = cellA.toLowerCase();
-                    valueB = cellB.toLowerCase();
-                }
-
-                if (isAscending) {
-                    return valueA > valueB ? 1 : -1;
-                } else {
-                    return valueA < valueB ? 1 : -1;
-                }
-            });
-
-            // Re-append sorted rows to the table body
-            rows.forEach(row => table.appendChild(row));
-        }
-
-        // Add click event listeners to the headers
-        document.getElementById('name-header').addEventListener('click', () => sortTableByColumn(0, 'name'));
-        document.getElementById('calories-header').addEventListener('click', () => sortTableByColumn(1, 'calories'));
-        document.getElementById('score-header').addEventListener('click', () => sortTableByColumn(2, 'score'));
-        document.getElementById('price-header').addEventListener('click', () => sortTableByColumn(3, 'price'));
-      
-    </script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-    var rows = document.querySelectorAll("tr[data-url]");
-
-    rows.forEach(function(row) {
-        row.addEventListener("click", function() {
-            var url = this.getAttribute("data-url");
-            window.location.href = url;
-        });
-    });
-});
-    </script>
 </body>
 
 </html>
