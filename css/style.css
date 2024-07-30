@@ -1015,6 +1015,13 @@ a:focus {
   text-align: center; /* Center align the text */
 }
 
+.info-columns {
+  display: flex;
+  justify-content: center;
+  text-align: left; /* Align text to the left inside each column */
+  align-items: flex-start;
+}
+
 .specificFood {
   display: flex;
   justify-content: center;
@@ -1049,7 +1056,7 @@ a:focus {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for a 3D effect */
 }
 
-.nutrition_table {
+.nutrition-table {
   display: flex;
   flex: 3;
   margin: 0 10px; /* Adjust margin as needed */
@@ -1060,7 +1067,6 @@ a:focus {
   margin: 25px 0;
   font-size: 0.9em;
   font-family: sans-serif;
-  min-width: 640px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   width: 100%;
   border-spacing: 0;
@@ -1103,13 +1109,7 @@ a:focus {
         }
 
 
-.info-columns {
-    display: flex;
-    justify-content: center;
-    text-align: left; /* Align text to the left inside each column */
-    align-items: flex-start;
-    
-}
+
 
 .allergens, .ingredients {
   flex: 3;
