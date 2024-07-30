@@ -1152,6 +1152,10 @@ a:focus {
   margin-top: 25px;
 }
 
+.ingredients{
+  margin-left:20px
+}
+
 .allergen-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
