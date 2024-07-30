@@ -846,10 +846,13 @@ a:focus {
   width: auto;
   height: auto;
   transition: transform 0.2s;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 0px rgba(0, 0, 0, 0.15);
 }
 
-.logo_image:hover {
-  transform: scale(1.1);
+.logo_image img:hover {
+  transform: translateY(-5px);
 }
 
 .styled-table {
