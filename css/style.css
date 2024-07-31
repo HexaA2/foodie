@@ -923,7 +923,9 @@ a:focus {
   margin: 20px; /* Adjust margin as needed */
 }
 
-
+.food_table tr {
+  cursor: pointer;
+}
 
 .image-section {
   display: flex;
