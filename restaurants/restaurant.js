@@ -83,3 +83,5 @@ function sortTableByColumn(tableId, columnIndex, dataType) {
   // Re-append sorted rows to the table body
   rows.forEach(row => tbody.appendChild(row));
 }
+
+
