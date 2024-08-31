@@ -311,12 +311,6 @@ async function fetchAndPopulateTable(jsonFile, tableId) {
     }
 }
 
-jQuery(document).ready(function ($) {
-        $('[data-href]').click(function () {
-            window.location = $(this).data("href");
-        });
-    });
-
 // Function to populate the table
 function populateTable(jsonData, tableId) {
     const tableBody = document.querySelector(`#${tableId} tbody`);
@@ -331,7 +325,7 @@ function populateTable(jsonData, tableId) {
         
         // Add data-url attribute if present
         if (item.url) {
-            row.setAttribute('data-href', item.url);
+            row.setAttribute('data-url', item.url);
         }
 
         // Create and append cells for each item property
