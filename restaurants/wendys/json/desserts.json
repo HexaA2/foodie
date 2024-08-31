@@ -2,6 +2,12 @@
     {
         "name": "Triple Berry Frosty",
         "calories": 520,
+        "flavor":1,
+        "balance":1,
+        "intensity":1,
+        "aftertaste":1,        
+        "texture":1,
+        "appearance":1,
         "score": null,
         "price": 3.79,
         "url": "wendys/tripleBerryFrosty.html"
@@ -9,6 +15,12 @@
     {
         "name": "Classic Chocolate Frosty",
         "calories": 500,
+        "flavor":1,
+        "balance":1,
+        "intensity":1,
+        "aftertaste":1,        
+        "texture":1,
+        "appearance":1,
         "score": null,
         "price": 3.89,
         "url": "wendys/classicChocolateFrosty.html"
@@ -16,6 +28,12 @@
     {
         "name": "Cinnabon Pull-Apart",
         "calories": 550,
+        "flavor":1,
+        "balance":1,
+        "intensity":1,
+        "aftertaste":1,        
+        "texture":1,
+        "appearance":1,
         "score": null,
         "price": 3.99,
         "url": "wendys/cinnabonPullApart.html"
@@ -23,6 +41,12 @@
     {
         "name": "Chocolate Chunk Cookie",
         "calories": 330,
+        "flavor":1,
+        "balance":1,
+        "intensity":1,
+        "aftertaste":1,        
+        "texture":1,
+        "appearance":1,
         "score": null,
         "price": 1.99,
         "url": "wendys/chocolateChunkCookie.html"

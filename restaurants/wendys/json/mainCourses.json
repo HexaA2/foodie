@@ -15,6 +15,12 @@
     {
         "name": "Dave's Double",
         "calories": 860,
+        "flavor":1,
+        "balance":1,
+        "intensity":1,
+        "aftertaste":1,        
+        "texture":1,
+        "appearance":1,
         "score": null,
         "price": "$7.79",
         "url": "wendys/davesDouble.html"
@@ -22,6 +28,12 @@
     {
         "name": "Dave's Triple",
         "calories": 1160,
+        "flavor":1,
+        "balance":1,
+        "intensity":1,
+        "aftertaste":1,        
+        "texture":1,
+        "appearance":1,
         "score": null,
         "price": "$8.99",
         "url": "wendys/davesTriple.html"
@@ -29,6 +41,12 @@
     {
         "name": "Baconator",
         "calories": 960,
+        "flavor":1,
+        "balance":1,
+        "intensity":1,
+        "aftertaste":1,        
+        "texture":1,
+        "appearance":1,
         "score": null,
         "price": "$8.49",
         "url": "wendys/baconator.html"

@@ -306,22 +306,23 @@ async function fetchAndPopulateTable(jsonFile, tableId) {
         }); // Fetch the JSON file
         const jsonData = await response.json(); // Parse the JSON data
         jsonData.items.forEach(item => {
-        const values = [
-            item.flavor,
-            item.balance,
-            item.intensity,
-            item.aftertaste,
-            item.texture,
-            item.appearance
-        ];
+            const values = [
+                item.flavor,
+                item.balance,
+                item.intensity,
+                item.aftertaste,
+                item.texture,
+                item.appearance
+            ];
 
-        // Calculate the average score (ignore null values)
-        const validValues = values.filter(value => value !== null);
-        const score = validValues.reduce((acc, val) => acc + val, 0) / validValues.length;
+            // Calculate the average score (ignore null values)
+            const validValues = values.filter(value => value !== null);
+            const score = validValues.reduce((acc, val) => acc + val, 0) / validValues.length;
 
-        // Assign the calculated score back to the item
-        item.score = score;
-});
+            // Assign the calculated score back to the item
+            item.score = score;
+            console.log(score);
+        });
         populateTable(jsonData, tableId);       // Populate the table
     } catch (error) {
         console.error('Error fetching the JSON file:', error);

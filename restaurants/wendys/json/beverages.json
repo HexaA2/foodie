@@ -2,6 +2,12 @@
     {
         "name": "Blueberry Pomegranate Lemonade",
         "calories": 450,
+        "flavor":1,
+        "balance":1,
+        "intensity":1,
+        "aftertaste":1,        
+        "texture":1,
+        "appearance":1,
         "score": null,
         "price": 4.19,
         "url": "wendys/blueberryPomegranateLemonade.html"
@@ -9,6 +15,12 @@
     {
         "name": "Pineapple Mango Lemonade",
         "calories": 420,
+        "flavor":1,
+        "balance":1,
+        "intensity":1,
+        "aftertaste":1,        
+        "texture":1,
+        "appearance":1,
         "score": null,
         "price": 4.19,
         "url": "wendys/pineappleMangoLemonade.html"
@@ -16,6 +28,12 @@
     {
         "name": "All-Natural Lemonade",
         "calories": 330,
+        "flavor":1,
+        "balance":1,
+        "intensity":1,
+        "aftertaste":1,        
+        "texture":1,
+        "appearance":1,
         "score": null,
         "price": 4.19,
         "url": "wendys/allNaturalLemonade.html"
@@ -23,6 +41,12 @@
     {
         "name": "Strawberry Lemonade",
         "calories": 420,
+        "flavor":1,
+        "balance":1,
+        "intensity":1,
+        "aftertaste":1,        
+        "texture":1,
+        "appearance":1,
         "score": null,
         "price": 4.19,
         "url": "wendys/strawberryLemonade.html"
