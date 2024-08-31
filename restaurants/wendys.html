@@ -299,14 +299,10 @@
 
 
 <script>
-
-  
 async function fetchAndPopulateTable(jsonFile, tableId) {
     try {
         const response = await fetch(jsonFile,{
-          headers: {
-    'Accept': 'application/json'
-  }
+          
         }); // Fetch the JSON file
         const jsonData = await response.json(); // Parse the JSON data
         populateTable(jsonData, tableId);       // Populate the table
