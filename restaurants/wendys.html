@@ -312,8 +312,8 @@ async function fetchAndPopulateTable(jsonFile, tableId) {
 }
 
 jQuery(document).ready(function ($) {
-        $('[data-url]').click(function () {
-            window.location = $(this).data("url");
+        $('[data-href]').click(function () {
+            window.location = $(this).data("href");
         });
     });
 
@@ -331,7 +331,7 @@ function populateTable(jsonData, tableId) {
         
         // Add data-url attribute if present
         if (item.url) {
-            row.setAttribute('data-url', item.url);
+            row.setAttribute('data-href', item.url);
         }
 
         // Create and append cells for each item property
