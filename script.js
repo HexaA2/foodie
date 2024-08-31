@@ -80,11 +80,11 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('#main_course_table tbody').addEventListener('click', function(event) {
-        const row = event.target.closest('tr');
-        if (row && row.dataset.url) {
-            window.location.href = row.dataset.url;
-        }
-    });
+  document.querySelector('#main_course_table tbody').addEventListener('click', function(event) {
+      const row = event.target.closest('tr');
+      if (row && row.dataset.url) {
+          window.location.href = row.dataset.url;
+      }
+  });
 });
 
