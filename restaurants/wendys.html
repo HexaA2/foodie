@@ -95,30 +95,7 @@
                 </tr>
             </thead>
                 <tbody>
-                    <tr data-url="wendys/davesSingle.html">
-                        <td>Dave's Single</td>
-                        <td class="calorie-cell"></td>
-                        <td class="score-cell"></td>
-                        <td class="price-cell"></td>
-                    </tr>
-                    <tr data-url="wendys/davesDouble.html">
-                        <td>Dave's Double</td>
-                        <td class="calorie-cell"></td>
-                        <td class="score-cell"></td>
-                        <td class="price-cell"></td>
-                    </tr>
-                    <tr data-url="wendys/davesTriple.html">
-                        <td>Dave's Triple</td>
-                        <td class="calorie-cell"></td>
-                        <td class="score-cell"></td>
-                        <td class="price-cell"></td>
-                    </tr>
-                    <tr data-url="wendys/baconator.html">
-                        <td>Baconator</td>
-                        <td class="calorie-cell"></td>
-                        <td class="score-cell"></td>
-                        <td class="price-cell"></td>
-                    </tr>
+                    
                     <!-- and so on... -->
                 </tbody>
             </table>
@@ -341,54 +318,117 @@
       document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
     }
   </script>
-
-    <script>
+<!-- 
+<script>
     
-    const cals = [590,860,1160,960,
-    470,460,520,470,
-    450,420,330,420,
-    520,500,550,330]; 
+  const cals = [590,860,1160,960,
+  470,460,520,470,
+  450,420,330,420,
+  520,500,550,330]; 
 
-    const calCells = document.querySelectorAll('.calorie-cell');
+  const calCells = document.querySelectorAll('.calorie-cell');
 
-    calCells.forEach((cell, index) => {
-        if (cals[index] !== undefined) {
-            cell.textContent = cals[index];
-        }
-    });
-    
-    const scores = []; 
+  calCells.forEach((cell, index) => {
+      if (cals[index] !== undefined) {
+          cell.textContent = cals[index];
+      }
+  });
+  
+  const scores = []; 
 
-    const scoreCells = document.querySelectorAll('.score-cell');
+  const scoreCells = document.querySelectorAll('.score-cell');
 
-    scoreCells.forEach((cell, index) => {
-        if (scores[index] !== undefined) {
-            cell.textContent = scores[index];
-        }
-    });
+  scoreCells.forEach((cell, index) => {
+      if (scores[index] !== undefined) {
+          cell.textContent = scores[index];
+      }
+  });
 
-    function formatAsPrice(value) {
-        const formatter = new Intl.NumberFormat('en-US', {
-            style: 'currency',
-            currency: 'USD',
-            minimumFractionDigits: 2
-        });
-        return formatter.format(value);
+  function formatAsPrice(value) {
+      const formatter = new Intl.NumberFormat('en-US', {
+          style: 'currency',
+          currency: 'USD',
+          minimumFractionDigits: 2
+      });
+      return formatter.format(value);
+  }
+
+  const prices = [6.59,7.79,8.99,8.49,
+  4.29,5.19,4.69,4.39,
+  4.19,4.19,4.19,4.19,
+  3.79,3.89,3.99,1.99];
+
+  const priceCells = document.querySelectorAll('.price-cell');
+  priceCells.forEach((cell, index) => {
+      if (prices[index] !== undefined) {
+          cell.textContent = formatAsPrice(prices[index]);
+      }
+  });
+  </script>  -->
+
+
+<script>
+async function fetchAndPopulateTable(jsonFile, tableId) {
+    try {
+        const response = await fetch(jsonFile,{
+          headers: {
+    'Accept': 'application/json'
+  }
+        }); // Fetch the JSON file
+        const jsonData = await response.json(); // Parse the JSON data
+        populateTable(jsonData, tableId);       // Populate the table
+    } catch (error) {
+        console.error('Error fetching the JSON file:', error);
     }
+}
 
-    const prices = [6.59,7.79,8.99,8.49,
-    4.29,5.19,4.69,4.39,
-    4.19,4.19,4.19,4.19,
-    3.79,3.89,3.99,1.99];
+// Function to populate the table
+function populateTable(jsonData, tableId) {
+    const tableBody = document.querySelector(`#${tableId} tbody`);
 
-    const priceCells = document.querySelectorAll('.price-cell');
-    priceCells.forEach((cell, index) => {
-        if (prices[index] !== undefined) {
-            cell.textContent = formatAsPrice(prices[index]);
+    // Clear existing rows
+    tableBody.innerHTML = '';
+
+    // Iterate over each item in the JSON array
+    jsonData.forEach(item => {
+        // Create a new row
+        const row = document.createElement('tr');
+        
+        // Add data-url attribute if present
+        if (item.url) {
+            row.setAttribute('data-url', item.url);
         }
-    });
-    </script>   
 
+        // Create and append cells for each item property
+        const cellName = document.createElement('td');
+        cellName.textContent = item.name;
+        row.appendChild(cellName);
+
+        const cellCalories = document.createElement('td');
+        cellCalories.className = 'calorie-cell';
+        cellCalories.textContent = item.calories !== null ? item.calories : '';
+        row.appendChild(cellCalories);
+
+        const cellScore = document.createElement('td');
+        cellScore.className = 'score-cell';
+        cellScore.textContent = item.score !== null ? item.score : '';
+        row.appendChild(cellScore);
+
+        const cellPrice = document.createElement('td');
+        cellPrice.className = 'price-cell';
+        cellPrice.textContent = item.price !== null ? item.price : '';
+        row.appendChild(cellPrice);
+
+        // Append the row to the table body
+        tableBody.appendChild(row);
+    });
+    console.log(jsonData);
+}
+
+// Call the function to fetch data and populate the table
+fetchAndPopulateTable('/restaurants/wendys/json/mainCourses.json', 'main_course_table');
+
+</script>
 </body>
 
 </html>
