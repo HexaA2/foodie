@@ -80,12 +80,11 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // Add event listener to the table body or the entire table
-document.querySelector('#main_course_table tbody').addEventListener('click', function(event) {
-  // Find the closest <tr> element
-  const row = event.target.closest('tr');
-  
-  // Check if the row has a data-url attribute and navigate to it
-  if (row && row.dataset.url) {
-      window.location.href = row.dataset.url;
-  }
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelector('#main_course_table tbody').addEventListener('click', function(event) {
+      const row = event.target.closest('tr');
+      if (row && row.dataset.url) {
+          window.location.href = row.dataset.url;
+      }
+  });
 });
