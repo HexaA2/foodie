@@ -311,6 +311,12 @@ async function fetchAndPopulateTable(jsonFile, tableId) {
     }
 }
 
+jQuery(document).ready(function ($) {
+        $('[data-url]').click(function () {
+            window.location = $(this).data("url");
+        });
+    });
+
 // Function to populate the table
 function populateTable(jsonData, tableId) {
     const tableBody = document.querySelector(`#${tableId} tbody`);
