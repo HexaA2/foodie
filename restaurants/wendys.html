@@ -340,7 +340,7 @@ function populateTable(jsonData, tableId) {
 
         const cellScore = document.createElement('td');
         cellScore.className = 'score-cell';
-        cellScore.textContent = item.score !== null ? item.score : '';
+        cellScore.textContent = (item.flavor+item.balance+item.intensity+item.aftertaste+item.texture+item.appearance)/6 !== null ? item.score : '';
         row.appendChild(cellScore);
 
         const cellPrice = document.createElement('td');

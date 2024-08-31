@@ -2,7 +2,12 @@
     {
         "name": "Dave's Single",
         "calories": 590,
-        "score": null,
+        "flavor":1,
+        "balance":1,
+        "intensity":1,
+        "aftertaste":1,        
+        "texture":1,
+        "appearance":1,
         "price": "$6.59",
         "url": "wendys/davesSingle.html"
     },
