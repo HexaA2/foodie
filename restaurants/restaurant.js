@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Verify that the event listener is being added
   console.log('DOM fully loaded and parsed');
 
-  const tableBody = document.querySelector('#main_course_table tbody');
+  const tableBody = document.querySelector('tbody');
   
   // Ensure that the table body element is found
   if (tableBody) {
