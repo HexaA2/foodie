@@ -2,12 +2,6 @@
     {
         "name": "French Fries",
         "calories": 470,
-        "flavor":1,
-        "balance":1,
-        "intensity":1,
-        "aftertaste":1,        
-        "texture":1,
-        "appearance":1,
         "score": null,
         "price": 4.29,
         "url": "wendys/frenchFries.html"
@@ -15,12 +9,6 @@
     {
         "name": "Baconator Fries",
         "calories": 460,
-        "flavor":1,
-        "balance":1,
-        "intensity":1,
-        "aftertaste":1,        
-        "texture":1,
-        "appearance":1,
         "score": null,
         "price": 5.19,
         "url": "wendys/baconatorFries.html"
@@ -28,12 +16,6 @@
     {
         "name": "Chili Cheese Fries",
         "calories": 520,
-        "flavor":1,
-        "balance":1,
-        "intensity":1,
-        "aftertaste":1,        
-        "texture":1,
-        "appearance":1,
         "score": null,
         "price": 4.69,
         "url": "wendys/chiliCheeseFries.html"
@@ -41,12 +23,6 @@
     {
         "name": "Cheese Fries",
         "calories": 470,
-        "flavor":1,
-        "balance":1,
-        "intensity":1,
-        "aftertaste":1,        
-        "texture":1,
-        "appearance":1,
         "score": null,
         "price": 4.39,
         "url": "wendys/cheeseFries.html"
