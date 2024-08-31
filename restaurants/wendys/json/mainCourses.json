@@ -1,30 +1,30 @@
 [
     {
         "name": "Dave's Single",
-        "calories": 600,
+        "calories": 590,
         "score": null,
-        "price": "6.59",
+        "price": 6.59,
         "url": "wendys/davesSingle.html"
     },
     {
         "name": "Dave's Double",
         "calories": 860,
         "score": null,
-        "price": "7.79",
+        "price": 7.79,
         "url": "wendys/davesDouble.html"
     },
     {
         "name": "Dave's Triple",
         "calories": 1160,
         "score": null,
-        "price": "8.99",
+        "price": 8.99,
         "url": "wendys/davesTriple.html"
     },
     {
         "name": "Baconator",
         "calories": 960,
         "score": null,
-        "price": "8.49",
+        "price": 8.49,
         "url": "wendys/baconator.html"
     }
 ]
