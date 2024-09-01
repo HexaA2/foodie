@@ -86,25 +86,10 @@ function sortTableByColumn(tableId, columnIndex, dataType) {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Verify that the event listener is being added
-  console.log('DOM fully loaded and parsed');
-
-  const tableBody = document.querySelector('tbody');
-  
-  // Ensure that the table body element is found
-  if (tableBody) {
-      tableBody.addEventListener('click', function(event) {
-          const row = event.target.closest('tr');
-          
-          // Ensure that a row was clicked and has a data-url attribute
-          if (row && row.dataset.url) {
-              console.log('Redirecting to:', row.dataset.url);
-              window.location.href = row.dataset.url;
-          } else {
-              console.log('Clicked element is not a row or missing data-url');
-          }
-      });
-  } else {
-      console.error('Table body not found');
-  }
+  document.querySelector('#main_course_table tbody').addEventListener('click', function(event) {
+      const row = event.target.closest('tr');
+      if (row && row.dataset.url) {
+          window.location.href = row.dataset.url;
+      }
+  });
 });
