@@ -86,10 +86,16 @@ function sortTableByColumn(tableId, columnIndex, dataType) {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  document.querySelector('tbody').addEventListener('click', function(event) {
-      const row = event.target.closest('tr');
-      if (row && row.dataset.url) {
-          window.location.href = row.dataset.url;
-      }
+  // Select all tbody elements in the document
+  const tableBodies = document.querySelectorAll('tbody');
+
+  // Loop through each tbody and add the event listener
+  tableBodies.forEach(tbody => {
+      tbody.addEventListener('click', function(event) {
+          const row = event.target.closest('tr');
+          if (row && row.dataset.url) {
+              window.location.href = row.dataset.url;
+          }
+      });
   });
 });
