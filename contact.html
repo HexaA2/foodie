@@ -77,21 +77,19 @@
               Please fill out the following form if you would like to contribute!
             </p>
             <p>We cannot confirm that your submission will be posted.</p>
-            <p>Please email foodmeetsbusiness@gmail.com (temporary) for more information</p>
+            <p>Please email mbhsfoodmeetsbusiness@gmail.com for more information</p>
           </div>
-          <form action="">
+          <form action="https://formsubmit.co/mbhsfoodmeetsbusiness@gmail.com" method="POST">
             <div>
               <input type="text" placeholder="Full Name " />
-            </div>
-            <div>
-              <input type="text" placeholder="Phone number" />
             </div>
             <div>
               <input type="email" placeholder="Email" />
             </div>
             <div>
-              <input type="text" class="message-box" placeholder="Blog Post" />
+              <textarea class="message-box" placeholder="Blog Post"></textarea>
             </div>
+            
             <div class="d-flex ">
               <button>
                 SEND
@@ -100,7 +98,9 @@
           </form>
         </div>
       </div>
+      
       <div class="col-md-6 px-0">
+        
         <div class="map_container">
           <div class="map-responsive">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.965780761865!2d-77.0146384233355!3d39.018585571698466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7cf586f9b73d5%3A0xc227c473fffb50c7!2sMontgomery%20Blair%20High%20School!5e1!3m2!1sen!2sus!4v1722221135528!5m2!1sen!2sus" width="600" height="300" frameborder="0" style="border:0; width: 100%; height:100%" allowfullscreen></iframe>
@@ -120,6 +120,13 @@
       document.getElementById("myNav").classList.toggle("menu_width")
       document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
     }
+  </script>
+  <script>
+    document.querySelector('.message-box').addEventListener('input', function () {
+  this.style.height = 'auto'; // Reset height to auto to shrink if needed
+  this.style.height = this.scrollHeight + 'px'; // Set height based on content
+});
+
   </script>
 
 </body>

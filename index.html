@@ -368,34 +368,30 @@
   <!-- contact section -->
 
   <section class="contact_section layout_padding-top">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-5 offset-md-1">
-          <div class="form_container">
-            <div class="heading_container">
-              <img src="images/heading-img.png" alt="">
-              <h2>
-                Join Our Mailing List!
-              </h2>
-              <p>
-                Please fill out the following form
-              </p>
-              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeeXInMTBtLDlIbC64IPlKnDxQZuKj67iL4CqunYC8oCKRSGw/viewform?embedded=true" width="640" height="660" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-
-            </div>
-            
-          </div>
-        </div>
-        <div class="col-md-6 px-0">
-          <div class="map_container">
-            <div class="map-responsive">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.965780761865!2d-77.0146384233355!3d39.018585571698466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89b7cf586f9b73d5%3A0xc227c473fffb50c7!2sMontgomery%20Blair%20High%20School!5e1!3m2!1sen!2sus!4v1722221135528!5m2!1sen!2sus" width="600" height="300" frameborder="0" style="border:0; width: 100%; height:100%" allowfullscreen></iframe>
-            </div>
-          </div>
+    <div class="d-flex justify-content-center">
+      <div class="form_container text-center" style="max-width: 800px; width: 100%;">
+        <div class="heading_container">
+          <img src="images/heading-img.png" alt="">
+          <h1>
+            Join Our Mailing List!
+          </h2>
+          <p>
+            Please fill out the following form
+          </p>
+          <hr>
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeeXInMTBtLDlIbC64IPlKnDxQZuKj67iL4CqunYC8oCKRSGw/viewform?embedded=true" width="100%" height="910" frameborder="0" marginheight="10" marginwidth="10">Loading…</iframe>
         </div>
       </div>
     </div>
   </section>
+
+  <section id="scrollButtonSection" class="scroll-btn-section">
+    <button id="scrollTopBtn" class="scroll-top-btn">
+      &#9650; Back to Top
+    </button>
+  </section>
+  
+  
 
   <!-- end contact section -->
 
@@ -408,6 +404,14 @@
       document.getElementById("myNav").classList.toggle("menu_width")
       document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
     }
+  </script>
+  <script>
+document.getElementById('scrollButtonSection').addEventListener('click', function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth' // Smooth scrolling effect
+  });
+});
   </script>
 
 </body>

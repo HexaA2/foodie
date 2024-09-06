@@ -52,6 +52,10 @@ body {
   font-weight: bold;
 }
 
+.heading_container h1 {
+  font-weight: bold;
+}
+
 /*header section*/
 .hero_area {
   height: 100vh;
@@ -717,6 +721,34 @@ a:focus {
 .contact_section input.message-box {
   height: 200px;
 }
+
+/* General styling for textarea within contact_section */
+.contact_section textarea {
+  width: 100%; /* Full width or adjust as needed */
+  height: 50px; /* Adjust height as needed */
+  padding: 10px; /* Add some padding */
+  border: 1px solid #ccc; /* Border styling */
+  border-radius: 4px; /* Rounded corners */
+  box-sizing: border-box; /* Include padding and border in element's total width */
+  background-color: #ebebeb; /* Background color */
+  color: #101010; /* Text color */
+  outline: none; /* Remove default outline */
+  margin-bottom: 25px; /* Space below textarea */
+  resize: vertical; /* Allow vertical resizing */
+  overflow: auto; /* Show scrollbars if needed */
+}
+
+/* Placeholder styling */
+.contact_section textarea::placeholder {
+  color: #979696; /* Placeholder text color */
+}
+
+/* Styling for .message-box if needed */
+.contact_section textarea.message-box {
+  /* Add any specific styles for message-box class here */
+}
+
+
 
 .contact_section button {
   display: inline-block;
@@ -1508,4 +1540,43 @@ a:focus {
   font-size: 1rem;
   font-weight: bold;
   color: #555;
+}
+
+/* Style for the button section */
+.scroll-btn-section {
+  width: 100%; /* Full width */
+  background-color: #0a2050; /* Base color for the section */
+  text-align: center;
+  padding: 20px 0; /* Add some padding */
+  margin-top: 40px; /* Space above the section */
+  cursor: pointer; /* Show pointer cursor to indicate clickability */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Style for the button */
+.scroll-top-btn {
+  background-color: #0a2050; /* Same color as the section */
+  color: #ffffff; /* White text color for contrast */
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect for the section */
+.scroll-btn-section:hover {
+  background-color: #1b3a7a; /* Lighter blue on hover */
+}
+
+/* Hover effect for the button within the section */
+.scroll-btn-section:hover .scroll-top-btn {
+  background-color: #1b3a7a; /* Button color changes to match section on hover */
+  color: #ffffff; /* Ensure text color remains readable */
+}
+
+/* Optional: Hover effect for the button itself */
+.scroll-top-btn:hover {
+  background-color: #1b3a7a; /* Darker blue on hover */
+  color: #ffffff; /* Ensure text color remains readable */
 }
