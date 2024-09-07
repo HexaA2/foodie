@@ -287,16 +287,16 @@ document.getElementById('scrollButtonSection').addEventListener('click', functio
   async function fetchBlogs() {
     try {
       // Fetch the blog data
-      const response = await fetch('blog/json/blog.json');
+      const response = await fetch('/blog/json/blog.json');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
-      const blogs = await response.json();
+      const getblogs = await response.json();
 
       // Sort the blogs in descending order based on their IDs
-      blogs.sort((a, b) => b.id - a.id);
+      getblogs.sort((a, b) => b.id - a.id);
 
-      blogs = blogs.slice(0, 3);
+      const blogs = blogs.slice(0, 3);
 
       // Get the container where blogs will be inserted
       const blogContainer = document.querySelector('.blog_section .row');
