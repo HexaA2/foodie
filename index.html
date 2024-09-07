@@ -246,55 +246,17 @@
   end about section -->
 
   <!-- blog section -->
-<section class="blog_section layout_padding">
-  <div class="container">
-    <div class="heading_container">
-      <a href="blog/overview.html"><h2>Our Latest Blog Posts</h2></a>
-      <p>Explore our latest updates and food stories</p>
-    </div>
-    <div class="row">
-      <div class="col-md-4">
-        <div class="blog_box">
-          <div class="img-box">
-            <a href = "blog/blog1.html"><img src="images/burger.jpg" alt="Blog 1"></a>
-          </div>
-          <div class="detail-box">
-            <div class="date">August 15, 2024</div>
-            <a href = "blog/blog1.html"><h5>Blog Post Title 1</h5></a>
-            <p>Brief description or introduction to the blog post content. Learn more about the topic here...</p>
-            <a href="blog/blog1.html">Read More</a>
-          </div>
-        </div>
+  <section class="blog_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <a href="blog/overview.html"><h2>Our Latest Blog Posts</h2></a>
+        <p>Explore our latest updates and food stories</p>
       </div>
-      <div class="col-md-4">
-        <div class="blog_box">
-          <div class="img-box">
-            <a href = "blog/blog2.html"><img src="images/cupcake.jpg" alt="Blog 2"></a>
-          </div>
-          <div class="detail-box">
-            <div class="date">August 15, 2024</div>
-            <a href = "blog/blog2.html"><h5>Blog Post Title 2</h5></a>
-            <p>Brief description or introduction to the blog post content. Discover insights and tips here...</p>
-            <a href="blog/blog2.html">Read More</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="blog_box">
-          <div class="img-box">
-            <a href = "blog/blog2.html"><img src="images/frappuccino.jpg" alt="Blog 3"></a>
-          </div>
-          <div class="detail-box">
-            <div class="date">August 15, 2024</div>
-            <a href = "blog/blog3.html"><h5>Blog Post Title 3</h5></a>
-            <p>Brief description or introduction to the blog post content. Explore the story behind the dish...</p>
-            <a href="blog/blog3.html">Read More</a>
-          </div>
-        </div>
+      <div class="row">
+        <!-- Blog posts will be inserted here by JavaScript -->
       </div>
     </div>
-  </div>
-</section>
+  </section>
 <!-- end blog section -->
 
 
@@ -413,6 +375,63 @@ document.getElementById('scrollButtonSection').addEventListener('click', functio
   });
 });
   </script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    fetchBlogs();
+  });
+
+  async function fetchBlogs() {
+    try {
+      // Fetch the blog data from your JSON file
+      const response = await fetch('/blog/json/blog.json');
+      const blogs = await response.json();
+
+      // Sort blogs in descending order by ID to get the most recent ones first
+      const sortedBlogs = blogs.sort((a, b) => b.id - a.id);
+
+      // Get only the 3 most recent blogs
+      const recentBlogs = sortedBlogs.slice(0, 3);
+
+      // Get the blog section container
+      const blogContainer = document.querySelector('.blog_section .row');
+
+      // Clear any existing content in the blog container
+      blogContainer.innerHTML = '';
+
+      // Loop through each recent blog and create HTML elements
+      recentBlogs.forEach(blog => {
+        const blogElement = document.createElement('div');
+        blogElement.classList.add('col-md-4');
+        blogElement.classList.add('blog_box');
+
+        blogElement.innerHTML = `
+          <div class="img-box">
+            <a href="blog/blog${blog.id}.html"><img src="${blog.image}" alt="${blog.title}"></a>
+          </div>
+          <div class="detail-box">
+            <div class="date">${formatDate(blog.date)}</div>
+            <a href="blog/blog${blog.id}.html"><h5>${blog.title}</h5></a>
+            <p>${blog.text[0]}</p>
+            <a href="blog/blog${blog.id}.html">Read More</a>
+          </div>
+        `;
+
+        // Append the new blog element to the container
+        blogContainer.appendChild(blogElement);
+      });
+
+    } catch (error) {
+      console.error('Error fetching blogs:', error);
+    }
+  }
+
+  function formatDate(dateString) {
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const date = new Date(dateString);
+    return date.toLocaleDateString(undefined, options);
+  }
+</script>
 
 </body>
 
