@@ -1,0 +1,508 @@
+[
+    {
+        "id": 1,
+        "name": "Dave's Single",
+        "calories": 590,
+        "price": 6.59,
+        "url": "wendys/davesSingle.html",
+        "restaurant": "Wendys",
+        "group": "main",
+        "reviews": [
+            {
+                "title": "Classic and satisfying",
+                "content": "A well-balanced burger with juicy beef and fresh toppings.",
+                "author": "Tony Song",
+                "authorPhoto": "../../images/tonySong.jpg"
+            },
+            {
+                "title": "Just okay",
+                "content": "The burger was decent but not extraordinary.",
+                "author": "Andrew Zhao",
+                "authorPhoto": "../../images/andrewZhao.jpg"
+            }
+        ],
+        "scores": {
+            "flavor": 80,
+            "balance": 70,
+            "intensity": 70,
+            "aftertaste": 70,
+            "texture": 80,
+            "appearance": 70
+        },
+        "overallScore": 71.0
+    },
+    {
+        "id": 2,
+        "name": "Dave's Double",
+        "calories": 860,
+        "price": 7.79,
+        "url": "wendys/davesDouble.html",
+        "restaurant": "Wendys",
+        "group": "main",
+        "reviews": [
+            {
+                "title": "Hearty and filling",
+                "content": "The extra patty makes it a hearty meal. Great for big appetites!",
+                "author": "Sophia Li",
+                "authorPhoto": "../../images/sophiaLi.jpg"
+            },
+            {
+                "title": "Too greasy for my taste",
+                "content": "Found it a bit too greasy. Prefer something lighter.",
+                "author": "Doris Wang",
+                "authorPhoto": "../../images/dorisWang.jpg"
+            }
+        ],
+        "scores": {
+            "flavor": 80,
+            "balance": 70,
+            "intensity": 80,
+            "aftertaste": 60,
+            "texture": 80,
+            "appearance": 70
+        },
+        "overallScore": 72.3
+    },
+    {
+        "id": 3,
+        "name": "Dave's Triple",
+        "calories": 1160,
+        "price": 8.99,
+        "url": "wendys/davesTriple.html",
+        "restaurant": "Wendys",
+        "group": "main",
+        "reviews": [
+            {
+                "title": "Massive and delicious",
+                "content": "This burger is a beast and worth every calorie!",
+                "author": "Sarah Liang",
+                "authorPhoto": "../../images/sarahLiang.jpg"
+            },
+            {
+                "title": "Overwhelming",
+                "content": "A bit too much for me. The flavors were overwhelming.",
+                "author": "Annika Balaji",
+                "authorPhoto": "../../images/annikaBalaji.jpg"
+            }
+        ],
+        "scores": {
+            "flavor": 90,
+            "balance": 60,
+            "intensity": 90,
+            "aftertaste": 70,
+            "texture": 80,
+            "appearance": 80
+        },
+        "overallScore": 78.3
+    },
+    {
+        "id": 4,
+        "name": "Baconator",
+        "calories": 960,
+        "price": 8.49,
+        "url": "wendys/baconator.html",
+        "restaurant": "Wendys",
+        "group": "main",
+        "reviews": [
+            {
+                "title": "Bacon heaven",
+                "content": "Loaded with bacon, this burger is for bacon lovers.",
+                "author": "Tony Song",
+                "authorPhoto": "../../images/tonySong.jpg"
+            },
+            {
+                "title": "Too rich",
+                "content": "The bacon is great, but the burger is a bit too rich.",
+                "author": "Andrew Zhao",
+                "authorPhoto": "../../images/andrewZhao.jpg"
+            }
+        ],
+        "scores": {
+            "flavor": 90,
+            "balance": 70,
+            "intensity": 80,
+            "aftertaste": 60,
+            "texture": 80,
+            "appearance": 80
+        },
+        "overallScore": 76.0
+    },
+    {
+        "id": 5,
+        "name": "French Fries",
+        "calories": 470,
+        "price": 4.29,
+        "url": "wendys/frenchFries.html",
+        "restaurant": "Wendys",
+        "group": "side",
+        "reviews": [
+            {
+                "title": "Crispy and golden",
+                "content": "Perfectly crispy and golden brown.",
+                "author": "Sophia Li",
+                "authorPhoto": "../../images/sophiaLi.jpg"
+            },
+            {
+                "title": "A bit salty",
+                "content": "Good fries, but sometimes they are a bit too salty.",
+                "author": "Doris Wang",
+                "authorPhoto": "../../images/dorisWang.jpg"
+            }
+        ],
+        "scores": {
+            "flavor": 70,
+            "balance": 60,
+            "intensity": 60,
+            "aftertaste": 70,
+            "texture": 80,
+            "appearance": 70
+        },
+        "overallScore": 65.0
+    },
+    {
+        "id": 6,
+        "name": "Baconator Fries",
+        "calories": 460,
+        "price": 5.19,
+        "url": "wendys/baconatorFries.html",
+        "restaurant": "Wendys",
+        "group": "side",
+        "reviews": [
+            {
+                "title": "Deliciously cheesy",
+                "content": "The cheese and bacon combo is to die for.",
+                "author": "Sarah Liang",
+                "authorPhoto": "../../images/sarahLiang.jpg"
+            },
+            {
+                "title": "Overwhelming",
+                "content": "Too much going on. The flavors are overwhelming.",
+                "author": "Annika Balaji",
+                "authorPhoto": "../../images/annikaBalaji.jpg"
+            }
+        ],
+        "scores": {
+            "flavor": 80,
+            "balance": 60,
+            "intensity": 70,
+            "aftertaste": 60,
+            "texture": 80,
+            "appearance": 70
+        },
+        "overallScore": 68.3
+    },
+    {
+        "id": 7,
+        "name": "Chili Cheese Fries",
+        "calories": 520,
+        "price": 4.69,
+        "url": "wendys/chiliCheeseFries.html",
+        "restaurant": "Wendys",
+        "group": "side",
+        "reviews": [
+            {
+                "title": "Loaded and satisfying",
+                "content": "Great taste with loaded chili and cheese.",
+                "author": "Tony Song",
+                "authorPhoto": "../../images/tonySong.jpg"
+            },
+            {
+                "title": "A bit greasy",
+                "content": "Tasty but quite greasy.",
+                "author": "Andrew Zhao",
+                "authorPhoto": "../../images/andrewZhao.jpg"
+            }
+        ],
+        "scores": {
+            "flavor": 80,
+            "balance": 70,
+            "intensity": 80,
+            "aftertaste": 60,
+            "texture": 70,
+            "appearance": 70
+        },
+        "overallScore": 71.0
+    },
+    {
+        "id": 8,
+        "name": "Cheese Fries",
+        "calories": 470,
+        "price": 4.39,
+        "url": "wendys/cheeseFries.html",
+        "restaurant": "Wendys",
+        "group": "side",
+        "reviews": [
+            {
+                "title": "Classic comfort",
+                "content": "A classic, comforting choice with melted cheese.",
+                "author": "Sophia Li",
+                "authorPhoto": "../../images/sophiaLi.jpg"
+            },
+            {
+                "title": "Mediocre",
+                "content": "Nothing special, just standard cheese fries.",
+                "author": "Doris Wang",
+                "authorPhoto": "../../images/dorisWang.jpg"
+            }
+        ],
+        "scores": {
+            "flavor": 70,
+            "balance": 60,
+            "intensity": 60,
+            "aftertaste": 60,
+            "texture": 70,
+            "appearance": 60
+        },
+        "overallScore": 62.0
+    },
+    {
+        "id": 9,
+        "name": "Blueberry Pomegranate Lemonade",
+        "calories": 450,
+        "price": 4.19,
+        "url": "wendys/blueberryPomegranateLemonade.html",
+        "restaurant": "Wendys",
+        "group": "beverage",
+        "reviews": [
+            {
+                "title": "Refreshing!",
+                "content": "Loved this drink, perfect balance of sweetness.",
+                "author": "Tony Song",
+                "authorPhoto": "../../images/tonySong.jpg"
+            },
+            {
+                "title": "Too sweet for me",
+                "content": "I found it a bit too sweet for my taste.",
+                "author": "Andrew Zhao",
+                "authorPhoto": "../../images/andrewZhao.jpg"
+            }
+        ],
+        "scores": {
+            "flavor": 80,
+            "balance": 70,
+            "intensity": 60,
+            "aftertaste": 70,
+            "texture": 80,
+            "appearance": 80
+        },
+        "overallScore": 71.0
+    },
+    {
+        "id": 10,
+        "name": "Pineapple Mango Lemonade",
+        "calories": 420,
+        "price": 4.19,
+        "url": "wendys/pineappleMangoLemonade.html",
+        "restaurant": "Wendys",
+        "group": "beverage",
+        "reviews": [
+            {
+                "title": "Tropical treat!",
+                "content": "This drink is like a vacation in a cup!",
+                "author": "Sophia Li",
+                "authorPhoto": "../../images/sophiaLi.jpg"
+            }
+        ],
+        "scores": {
+            "flavor": 80,
+            "balance": 80,
+            "intensity": 70,
+            "aftertaste": 80,
+            "texture": 70,
+            "appearance": 80
+        },
+        "overallScore": 76.2
+    },
+    {
+        "id": 11,
+        "name": "All-Natural Lemonade",
+        "calories": 330,
+        "price": 4.19,
+        "url": "wendys/allNaturalLemonade.html",
+        "restaurant": "Wendys",
+        "group": "beverage",
+        "reviews": [
+            {
+                "title": "Pure and simple",
+                "content": "A straightforward lemonade with natural flavors.",
+                "author": "Sarah Liang",
+                "authorPhoto": "../../images/sarahLiang.jpg"
+            },
+            {
+                "title": "A bit too tart",
+                "content": "The tartness was a bit overwhelming.",
+                "author": "Annika Balaji",
+                "authorPhoto": "../../images/annikaBalaji.jpg"
+            }
+        ],
+        "scores": {
+            "flavor": 70,
+            "balance": 60,
+            "intensity": 60,
+            "aftertaste": 60,
+            "texture": 70,
+            "appearance": 70
+        },
+        "overallScore": 65.0
+    },
+    {
+        "id": 12,
+        "name": "Strawberry Lemonade",
+        "calories": 420,
+        "price": 4.19,
+        "url": "wendys/strawberryLemonade.html",
+        "restaurant": "Wendys",
+        "group": "beverage",
+        "reviews": [
+            {
+                "title": "Fruity and refreshing",
+                "content": "A delightful lemonade with a nice fruity twist.",
+                "author": "Tony Song",
+                "authorPhoto": "../../images/tonySong.jpg"
+            },
+            {
+                "title": "Too sweet",
+                "content": "A bit too sugary for my taste.",
+                "author": "Andrew Zhao",
+                "authorPhoto": "../../images/andrewZhao.jpg"
+            }
+        ],
+        "scores": {
+            "flavor": 70,
+            "balance": 70,
+            "intensity": 60,
+            "aftertaste": 70,
+            "texture": 70,
+            "appearance": 80
+        },
+        "overallScore": 68.3
+    },
+    {
+        "id": 13,
+        "name": "Triple Berry Frosty",
+        "calories": 520,
+        "price": 3.79,
+        "url": "wendys/tripleBerryFrosty.html",
+        "restaurant": "Wendys",
+        "group": "dessert",
+        "reviews": [
+            {
+                "title": "Berry bliss",
+                "content": "A delightful blend of berries in a creamy treat.",
+                "author": "Sarah Liang",
+                "authorPhoto": "../../images/sarahLiang.jpg"
+            },
+            {
+                "title": "Too much berry",
+                "content": "A bit overwhelming with berry flavor. Less is more.",
+                "author": "Annika Balaji",
+                "authorPhoto": "../../images/annikaBalaji.jpg"
+            }
+        ],
+        "scores": {
+            "flavor": 80,
+            "balance": 70,
+            "intensity": 70,
+            "aftertaste": 80,
+            "texture": 80,
+            "appearance": 80
+        },
+        "overallScore": 76.7
+    },
+    {
+        "id": 14,
+        "name": "Classic Chocolate Frosty",
+        "calories": 500,
+        "price": 3.89,
+        "url": "wendys/classicChocolateFrosty.html",
+        "restaurant": "Wendys",
+        "group": "dessert",
+        "reviews": [
+            {
+                "title": "Rich and creamy",
+                "content": "A classic favorite with rich, creamy chocolate flavor.",
+                "author": "Tony Song",
+                "authorPhoto": "../../images/tonySong.jpg"
+            },
+            {
+                "title": "Too sweet",
+                "content": "Very sweet. Could use a bit more balance.",
+                "author": "Andrew Zhao",
+                "authorPhoto": "../../images/andrewZhao.jpg"
+            }
+        ],
+        "scores": {
+            "flavor": 80,
+            "balance": 60,
+            "intensity": 70,
+            "aftertaste": 70,
+            "texture": 90,
+            "appearance": 80
+        },
+        "overallScore": 75.0
+    },
+    {
+        "id": 15,
+        "name": "Cinnabon Pull-Apart",
+        "calories": 550,
+        "price": 3.99,
+        "url": "wendys/cinnabonPullApart.html",
+        "restaurant": "Wendys",
+        "group": "dessert",
+        "reviews": [
+            {
+                "title": "Decadent and delicious",
+                "content": "A sweet and indulgent treat with a delightful cinnamon flavor.",
+                "author": "Sophia Li",
+                "authorPhoto": "../../images/sophiaLi.jpg"
+            },
+            {
+                "title": "Too rich",
+                "content": "Very rich and sweet, might be too much for some.",
+                "author": "Doris Wang",
+                "authorPhoto": "../../images/dorisWang.jpg"
+            }
+        ],
+        "scores": {
+            "flavor": 90,
+            "balance": 70,
+            "intensity": 80,
+            "aftertaste": 80,
+            "texture": 90,
+            "appearance": 80
+        },
+        "overallScore": 78.3
+    },
+    {
+        "id": 16,
+        "name": "Chocolate Chunk Cookie",
+        "calories": 330,
+        "price": 1.99,
+        "url": "wendys/chocolateChunkCookie.html",
+        "restaurant": "Wendys",
+        "group": "dessert",
+        "reviews": [
+            {
+                "title": "Classic cookie",
+                "content": "A classic cookie with big chunks of chocolate.",
+                "author": "Tony Song",
+                "authorPhoto": "../../images/tonySong.jpg"
+            },
+            {
+                "title": "Nothing special",
+                "content": "Just an average chocolate chip cookie.",
+                "author": "Andrew Zhao",
+                "authorPhoto": "../../images/andrewZhao.jpg"
+            }
+        ],
+        "scores": {
+            "flavor": 70,
+            "balance": 60,
+            "intensity": 60,
+            "aftertaste": 70,
+            "texture": 70,
+            "appearance": 70
+        },
+        "overallScore": 68.3
+    }
+]
