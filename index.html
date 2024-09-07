@@ -296,7 +296,7 @@ document.getElementById('scrollButtonSection').addEventListener('click', functio
       // Sort the blogs in descending order based on their IDs
       getblogs.sort((a, b) => b.id - a.id);
 
-      const blogs = blogs.slice(0, 3);
+      const blogs = getblogs.slice(0, 3);
 
       // Get the container where blogs will be inserted
       const blogContainer = document.querySelector('.blog_section .row');
