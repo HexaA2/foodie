@@ -36,21 +36,19 @@
                         <a class="navbar-brand" href="../../index.html">
                             <img src="../../images/logo.png" alt="">
                         </a>
-                        <div class="" id="">
-                            <div class="custom_menu-btn">
-                                <button onclick="openNav()">
-                                    <span class="s-1"></span>
-                                    <span class="s-2"></span>
-                                    <span class="s-3"></span>
-                                </button>
-                            </div>
-                            <div id="myNav" class="overlay">
-                                <div class="overlay-content">
-                                    <a href="../../index.html">Home</a>
-                                    <a href="../../explore.html">Explore</a>
-                                    <a href="../../overview.html">Blog</a>
-                                    <a href="../../contact.html">Contact Us</a>
-                                </div>
+                        <div class="custom_menu-btn">
+                            <button onclick="openNav()">
+                                <span class="s-1"></span>
+                                <span class="s-2"></span>
+                                <span class="s-3"></span>
+                            </button>
+                        </div>
+                        <div id="myNav" class="overlay">
+                            <div class="overlay-content">
+                                <a href="../../index.html">Home</a>
+                                <a href="../../explore.html">Explore</a>
+                                <a href="../../overview.html">Blog</a>
+                                <a href="../../contact.html">Contact Us</a>
                             </div>
                         </div>
                     </nav>
@@ -59,13 +57,13 @@
             <!-- end header section -->
         </div>
 
-        <div class="Food-Title">
-            <h1 id="food-title">French Fries</h1>
+        <div class="food-title">
+            <h1 id="food-title">Food Title</h1>
         </div>
         
-        <div class="specificFood">
+        <div class="specific-food">
             <div class="image-section">
-                <img id="food-image" src="images/frenchFries.png" alt="Food Image">
+                <img id="food-image" src="images/placeholder.png" alt="Food Image">
             </div>
             <div class="rating-section">
                 <div class="rating-grid">
@@ -73,10 +71,10 @@
                         Score: <span id="average-value"></span>
                     </div>
                     <div class="rating-items" id="rating-items"></div>
-                    <div class="label">Calories: </div>
-                    <div id="calories"></div>
-                    <div class="label">Price: </div>
-                    <div id="price"></div>
+                    <div class="label">Calories:</div>
+                    <div class="label" id="calories"></div>
+                    <div class="label">Price:</div>
+                    <div class="label" id="price"></div>
                 </div>
             </div>
         </div>
@@ -86,93 +84,21 @@
             <button class="tablinks" onclick="openTab(event, 'reviews')">Reviews</button>
         </div>
         
-        <div id="food_information" class="more-info tabcontent overview-tab">
+        <div id="food_information" class="more-info tabcontent">
             <h3>Overview</h3>
             <div class="info-columns">
               <div class="nutrition-table">
-                <table class="styled-table2">
-                    <tbody>
-                        <tr>
-                            <td>Calories</td>
-                            <td>470</td>
-                        </tr>
-                        <tr>
-                            <td>Total Fat</td>
-                            <td>21g</td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;&nbsp;&nbsp;&nbsp;Saturated Fat</td>
-                            <td>3.5g</td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;&nbsp;&nbsp;&nbsp;Trans Fat</td>
-                            <td>0g</td>
-                        </tr>
-                        <tr>
-                            <td>Cholesterol</td>
-                            <td>0mg</td>
-                        </tr>
-                        <tr>
-                            <td>Sodium</td>
-                            <td>740mg</td>
-                        </tr>
-                        <tr>
-                            <td>Total Carbs</td>
-                            <td>63g</td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;&nbsp;&nbsp;&nbsp;Dietary Fiber</td>
-                            <td>5g</td>
-                        </tr>
-                        <tr>
-                            <td>&nbsp;&nbsp;&nbsp;&nbsp;Total Sugars</td>
-                            <td>0g</td>
-                        </tr>
-                        <tr>
-                            <td>Protein</td>
-                            <td>7g</td>
-                        </tr>
-                        <tr>
-                            <td>Calcium</td>
-                            <td>2% DV</td>
-                        </tr>
-                        <tr>
-                            <td>Iron</td>
-                            <td>10% DV</td>
-                        </tr>
-                        <tr>
-                            <td>Potassium</td>
-                            <td>25% DV</td>
-                        </tr>
-                        <!-- and so on... -->
+                <table class="styled-table">
+                    <tbody id="nutrition-info">
+                        <!-- Nutrition info will be populated here -->
                     </tbody>
                 </table>
               </div>
     
               <div class="allergens">
-                <div class="allergen-grid">
-                  <div class="allergen-item">
-                      <img src="../../images/egg.svg" alt="Egg">
-                      <p>Egg</p>
-                  </div>
-                  <div class="allergen-item">
-                      <img src="../../images/milk.svg" alt="Milk">
-                      <p>Milk</p>
-                  </div>
-                  <div class="allergen-item">
-                      <img src="../../images/soy.svg" alt="Soy">
-                      <p>Soy</p>
-                  </div>
-                  <div class="allergen-item">
-                      <img src="../../images/sesame.svg" alt="Sesame">
-                      <p>Sesame</p>
-                  </div>
-                  <div class="allergen-item">
-                      <img src="../../images/wheat.svg" alt="Wheat">
-                      <p>Wheat</p>
-                  </div>
-                  <!-- Add more allergens as needed -->
-              </div>
+                <div class="allergen-grid" id="allergen-grid">
+                  <!-- Allergen items will be populated here -->
+                </div>
               </div>
               <div class="ingredients">
                 <table id="infoTable">
@@ -181,38 +107,16 @@
                       <th>Ingredients</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    
-                    <tr class="clickable">
-                      <td>French Fries</td>
-                    </tr>
-                    <tr class="details">
-                      <td colspan="2">
-                        <p>
-                          Potatoes, Vegetable Oil (Soybean, Canola, and/or Cottonseed Oils), Modified Food Starch (Potato, Corn, Tapioca), Rice Flour, Dextrin, Salt, Pea Starch, Leavening (Disodium Dihydrogen Pyrophosphate, Sodium Bicarbonate, Monocalcium Phosphate), Dextrose, Xanthan Gum, Disodium Dihydrogen Pyrophosphate (To Promote Color Retention). Cooked In Vegetable Oil (Soybean Oil, Vegetable Oil [May Contain One Or More Of The Following: Canola, Corn, Or Cottonseed], Hydrogenated Soybean Oil, Dimethylpolysiloxane [Anti-Foaming Agent]). Seasoned With Sea Salt. COOKED IN THE SAME OIL AS MENU ITEMS THAT CONTAIN WHEAT, MILK, EGG, SOY, SESAME, AND FISH.
-                        </p>
-                      </td>
-                    </tr>
-                    
-                    
-                    <tr class="clickable">
-                      <td>Salt</td>
-                    </tr>
-                    <tr class="details">
-                      <td colspan="2">
-                        <p>
-                          Sea Salt
-                        </p>
-                      </td>
-                    </tr>
-                    
-                    <!-- Add more items as needed -->
+                  <tbody id="ingredients-info">
+                    <!-- Ingredients info will be populated here -->
                   </tbody>
                 </table>
               </div>
         </div>
 
-        <div id="reviews" class="tabcontent reviews-container" id="reviews-container"></div>
+        <div id="reviews" class="tabcontent">
+            <!-- Reviews will be populated here by JavaScript -->
+        </div>
 
         <script type="text/javascript" src="../../js/jquery-3.4.1.min.js"></script>
         <script type="text/javascript" src="../../js/bootstrap.js"></script>
@@ -235,12 +139,14 @@
                       }
           
                       // Update HTML content with the fetched data
-                      document.querySelector('.Food-Title h1').textContent = frenchFries.name;
+                      document.querySelector('#food-title').textContent = frenchFries.name;
+                      document.querySelector('#food-image').src = frenchFries.image;
+                      document.querySelector('#average-value').textContent = frenchFries.overallScore.toFixed(1);
+                      document.querySelector('#calories').textContent = `${frenchFries.calories} kcal`;
+                      document.querySelector('#price').textContent = `$${frenchFries.price.toFixed(2)}`;
           
                       // Update rating section
-                      document.querySelector('.average-score #average-value').textContent = frenchFries.overallScore.toFixed(1);
-          
-                      const ratingItems = document.querySelector('.rating-items');
+                      const ratingItems = document.querySelector('#rating-items');
                       ratingItems.innerHTML = ''; // Clear previous content if any
                       for (const [key, value] of Object.entries(frenchFries.scores)) {
                           ratingItems.innerHTML += `
@@ -249,11 +155,48 @@
                           `;
                       }
           
-                      document.querySelector('.rating-items .label:nth-child(8)').textContent = `${frenchFries.calories} kcal`;
-                      document.querySelector('.rating-items .label:nth-child(10)').textContent = `$${frenchFries.price.toFixed(2)}`;
+                      // Update nutrition information
+                      const nutritionInfo = document.querySelector('#nutrition-info');
+                      nutritionInfo.innerHTML = '';
+                      Object.entries(frenchFries.nutrition).forEach(([nutrient, amount]) => {
+                          nutritionInfo.innerHTML += `
+                              <tr>
+                                  <td>${nutrient}</td>
+                                  <td>${amount}</td>
+                              </tr>
+                          `;
+                      });
+
+                      // Update allergens
+                      const allergenGrid = document.querySelector('#allergen-grid');
+                      allergenGrid.innerHTML = '';
+                      frenchFries.allergens.forEach(allergen => {
+                          allergenGrid.innerHTML += `
+                              <div class="allergen-item">
+                                  <img src="${allergen.icon}" alt="${allergen.name}">
+                                  <p>${allergen.name}</p>
+                              </div>
+                          `;
+                      });
+
+                      // Update ingredients information
+                      const ingredientsInfo = document.querySelector('#ingredients-info');
+                      ingredientsInfo.innerHTML = '';
+                      frenchFries.ingredients.forEach(ingredient => {
+                          ingredientsInfo.innerHTML += `
+                              <tr class="clickable">
+                                  <td>${ingredient.name}</td>
+                              </tr>
+                              <tr class="details">
+                                  <td colspan="2">
+                                      <p>${ingredient.details}</p>
+                                  </td>
+                              </tr>
+                          `;
+                      });
           
                       // Update reviews
-                      const reviewsContainer = document.querySelector('.reviews-container');
+                      const reviewsContainer = document.querySelector('#reviews');
                       reviewsContainer.innerHTML = ''; // Clear previous reviews if any
                       frenchFries.reviews.forEach(review => {
                           reviewsContainer.innerHTML += `
@@ -270,9 +213,7 @@
                   })
                   .catch(error => console.error('Error fetching data:', error));
           });
-          </script>
-          
-          
+        </script>
           
     </body>
 </html>

@@ -132,6 +132,7 @@
         "name": "French Fries",
         "calories": 470,
         "price": 4.29,
+        "image": "images/frenchFries.png",
         "url": "wendys/frenchFries.html",
         "restaurant": "Wendys",
         "group": "side",
@@ -157,7 +158,54 @@
             "texture": 80,
             "appearance": 70
         },
-        "overallScore": 65.0
+        "overallScore": 65.0,
+        "nutrition": {
+            "Calories": "470 kcal",
+            "Total Fat": "21g",
+            "Saturated Fat": "3.5g",
+            "Trans Fat": "0g",
+            "Cholesterol": "0mg",
+            "Sodium": "740mg",
+            "Total Carbs": "63g",
+            "Dietary Fiber": "5g",
+            "Total Sugars": "0g",
+            "Protein": "7g",
+            "Calcium": "2% DV",
+            "Iron": "10% DV",
+            "Potassium": "25% DV"
+        },
+        "allergens": [
+            {
+                "name": "Egg",
+                "icon": "../../images/egg.svg"
+            },
+            {
+                "name": "Milk",
+                "icon": "../../images/milk.svg"
+            },
+            {
+                "name": "Soy",
+                "icon": "../../images/soy.svg"
+            },
+            {
+                "name": "Sesame",
+                "icon": "../../images/sesame.svg"
+            },
+            {
+                "name": "Wheat",
+                "icon": "../../images/wheat.svg"
+            }
+        ],
+        "ingredients": [
+            {
+                "name": "French Fries",
+                "details": "Potatoes, Vegetable Oil (Soybean, Canola, and/or Cottonseed Oils), Modified Food Starch (Potato, Corn, Tapioca), Rice Flour, Dextrin, Salt, Pea Starch, Leavening (Disodium Dihydrogen Pyrophosphate, Sodium Bicarbonate, Monocalcium Phosphate), Dextrose, Xanthan Gum, Disodium Dihydrogen Pyrophosphate (To Promote Color Retention). Cooked In Vegetable Oil (Soybean Oil, Vegetable Oil [May Contain One Or More Of The Following: Canola, Corn, Or Cottonseed], Hydrogenated Soybean Oil, Dimethylpolysiloxane [Anti-Foaming Agent]). Seasoned With Sea Salt. COOKED IN THE SAME OIL AS MENU ITEMS THAT CONTAIN WHEAT, MILK, EGG, SOY, SESAME, AND FISH."
+            },
+            {
+                "name": "Salt",
+                "details": "Sea Salt"
+            }
+        ]
     },
     {
         "id": 6,
