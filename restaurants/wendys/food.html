@@ -249,5 +249,20 @@
                   .catch(error => console.error('Error fetching data:', error));
           });
         </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+    const clickableRows = document.querySelectorAll('#infoTable .clickable');
+    
+    clickableRows.forEach(row => {
+      row.addEventListener('click', function() {
+        // Toggle the next sibling row with class 'details'
+        const detailsRow = this.nextElementSibling;
+        if (detailsRow && detailsRow.classList.contains('details')) {
+          detailsRow.style.display = detailsRow.style.display === 'none' ? 'table-row' : 'none';
+        }
+      });
+    });
+  });
+        </script>
 </body>       
 </html>
