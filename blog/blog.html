@@ -101,8 +101,7 @@
         const blogs = await response.json();
         
         // Find the blog post with the matching ID
-        const blogPost = blogs.find(blog => blog.id === blogId);
-        
+        const blogPost = blogs.find(blog => blog.id === parseInt(blogId, 10));
         if (!blogPost) {
           throw new Error('Blog post not found');
         }
