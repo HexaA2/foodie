@@ -1512,6 +1512,9 @@ a:focus {
   padding: 20px;
   max-width: 800px;
   margin: 0 auto;
+  align-items: center;
+  text-align: center;
+  display:flex
 }
 
 .blog-post img.cover-image {
