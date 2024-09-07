@@ -8,22 +8,26 @@
             {
                 "name": "Dave's Single",
                 "id": 1,
-                "image": "/restaurants/images/wendys/davesSingle.png"
+                "image": "/restaurants/images/wendys/davesSingle.png",
+                "description": "A quarter-pound of fresh, never frozen beef, American cheese, crisp lettuce, tomato, pickle, ketchup, mayo, and onion on a toasted bun, just the way Dave intended."
             },
             {
                 "name": "Dave's Double",
                 "id": 2,
-                "image": "/restaurants/images/wendys/davesDouble.png"
+                "image": "/restaurants/images/wendys/davesDouble.png",
+                "description": "A half-pound of fresh, never frozen beef, American cheese, crisp lettuce, tomato, pickle, ketchup, mayo, and onion on a toasted bun, just the way Dave intended."
             },
             {
                 "name": "Baconator",
                 "id": 4,
-                "image": "/restaurants/images/wendys/baconator.png"
+                "image": "/restaurants/images/wendys/baconator.png",
+                "description": "A half-pound of fresh, never frozen beef, American cheese, 6 pieces of crispy Applewood smoked bacon, ketchup, and mayo. Carnivores rejoice!"
             },
             {
                 "name": "Chili Cheese Fries",
                 "id": 7,
-                "image": "/restaurants/images/wendys/chiliCheeseFries.png"
+                "image": "/restaurants/images/wendys/chiliCheeseFries.png",
+                "description": "Natural-cut, skin-on, sea-salted fries topped with our hearty chili and rich, creamy cheese sauce. It's a side, it's a meal, it's a side that's a meal."
             }
         ]
     }

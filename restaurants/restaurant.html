@@ -250,6 +250,7 @@ function populateHighlights(jsonData, restaurantId) {
                     </a>
                     <div class="detail-box">
                         <h5><a href="/restaurants/food.html?id=${highlight.id}">${highlight.name}</a></h5>
+                        <p>${highlight.description || 'No description available.'}</p>
                     </div>
                 `;
 
