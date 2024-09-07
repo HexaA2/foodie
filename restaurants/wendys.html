@@ -177,6 +177,17 @@ async function fetchAndPopulateTables(jsonFile) {
     }
 }
 
+async function fetchAndPopulateInfo(jsonFile) {
+    try {
+        const response = await fetch(jsonFile);
+        const jsonData = await response.json();
+        populateHighlights(jsonData);
+        populateBackground(jsonData);
+    } catch (error) {
+        console.error('Error fetching the JSON file:', error);
+    }
+}
+
 function populateTables(jsonData) {
     const tables = {
         main: 'main_course_table',
@@ -252,8 +263,7 @@ function populateHighlights(jsonData) {
         });
     }
 fetchAndPopulateTables('/restaurants/json/foodData.json');
-populateHighlights('/restaurants/json/restaurants.json')
-populateBackground('/restaurants/json/restaurants.json')
+fetchAndPopulateInfo('/restaurants/json/restaurants.json');
 
   </script>
 </body>
