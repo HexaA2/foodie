@@ -217,65 +217,56 @@
         <script type="text/javascript" src="../../js/jquery-3.4.1.min.js"></script>
         <script type="text/javascript" src="../../js/bootstrap.js"></script>
         <script>
-        function openNav() {
-            document.getElementById("myNav").classList.toggle("menu_width");
-            document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style");
-        }
-        
-        function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(tabName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
-
-        // Fetch data from JSON file
-        fetch('/restaurants/wendys/json/foodData.json')
-            .then(response => response.json())
-            .then(data => {
-                const frenchFries = data;
-
-                // Update HTML content with the fetched data
-                document.getElementById('food-title').textContent = frenchFries.name;
-                document.getElementById('food-image').src = `images/frenchFries.png`; // Assuming you want to use the URL from JSON
-
-                // Update rating section
-                document.getElementById('average-value').textContent = frenchFries.overallScore.toFixed(1);
-
-                const ratingItems = document.getElementById('rating-items');
-                for (const [key, value] of Object.entries(frenchFries.scores)) {
-                    ratingItems.innerHTML += `
-                        <div class="label">${key.charAt(0).toUpperCase() + key.slice(1)}</div>
-                        <div class="rating-bar" style="width: ${value}%"></div>
-                    `;
-                }
-
-                document.getElementById('calories').textContent = `${frenchFries.calories} kcal`;
-                document.getElementById('price').textContent = `$${frenchFries.price.toFixed(2)}`;
-
-                // Update reviews
-                const reviewsContainer = document.getElementById('reviews-container');
-                frenchFries.reviews.forEach(review => {
-                    reviewsContainer.innerHTML += `
-                        <div class="review">
-                            <img src="${review.authorPhoto}" alt="${review.author}" class="review-author-photo">
-                            <div class="review-content">
-                                <h4>${review.title}</h4>
-                                <p>${review.content}</p>
-                                <p><strong>— ${review.author}</strong></p>
-                            </div>
-                        </div>
-                    `;
-                });
-            })
-            .catch(error => console.error('Error fetching data:', error));
-        </script>
+          document.addEventListener('DOMContentLoaded', () => {
+              // Fetch data from JSON file
+              fetch('/restaurants/wendys/json/foodData.json')
+                  .then(response => {
+                      if (!response.ok) {
+                          throw new Error(`HTTP error! status: ${response.status}`);
+                      }
+                      return response.json();
+                  })
+                  .then(data => {
+                      const frenchFries = data;
+          
+                      // Update HTML content with the fetched data
+                      document.getElementById('food-title').textContent = frenchFries.name;
+          
+                      // Image source might need adjustment based on JSON URL structure
+                      document.getElementById('food-image').src = `../../images/frenchFries.png`; 
+          
+                      // Update rating section
+                      document.getElementById('average-value').textContent = frenchFries.overallScore.toFixed(1);
+          
+                      const ratingItems = document.getElementById('rating-items');
+                      for (const [key, value] of Object.entries(frenchFries.scores)) {
+                          ratingItems.innerHTML += `
+                              <div class="label">${key.charAt(0).toUpperCase() + key.slice(1)}</div>
+                              <div class="rating-bar" style="width: ${value}%"></div>
+                          `;
+                      }
+          
+                      document.getElementById('calories').textContent = `${frenchFries.calories} kcal`;
+                      document.getElementById('price').textContent = `$${frenchFries.price.toFixed(2)}`;
+          
+                      // Update reviews
+                      const reviewsContainer = document.getElementById('reviews-container');
+                      frenchFries.reviews.forEach(review => {
+                          reviewsContainer.innerHTML += `
+                              <div class="review">
+                                  <img src="${review.authorPhoto}" alt="${review.author}" class="review-author-photo">
+                                  <div class="review-content">
+                                      <h4>${review.title}</h4>
+                                      <p>${review.content}</p>
+                                      <p><strong>— ${review.author}</strong></p>
+                                  </div>
+                              </div>
+                          `;
+                      });
+                  })
+                  .catch(error => console.error('Error fetching data:', error));
+          });
+          </script>
+          
     </body>
 </html>
