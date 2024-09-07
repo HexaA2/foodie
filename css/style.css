@@ -1424,13 +1424,16 @@ a:focus {
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
 }
 
 .blog_section .img-box img {
   width: 100%;
-  object-fit: cover; 
+  max-height: 100%;
+  object-fit: contain; 
   object-position: center center;
-  border-radius: 15px; 
 }
 
 .blog_section .img-box:hover {
