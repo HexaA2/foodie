@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    
+    <title>Food Meets Business</title>
+    
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css" />
+    
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poppins:400,700&display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../../css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="../../css/responsive.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" href="../../images/logo.png">
+    <script src="../../script.js" defer></script>
+</head>
+<body>
+
+    <div class="sub_page">
+        <div class="hero_area">
+            <!-- header section starts -->
+            <header class="header_section">
+                <div class="container-fluid">
+                    <nav class="navbar navbar-expand-lg custom_nav-container">
+                        <a class="navbar-brand" href="../../index.html">
+                            <img src="../../images/logo.png" alt="">
+                        </a>
+                        <div class="" id="">
+                            <div class="custom_menu-btn">
+                                <button onclick="openNav()">
+                                    <span class="s-1"></span>
+                                    <span class="s-2"></span>
+                                    <span class="s-3"></span>
+                                </button>
+                            </div>
+                            <div id="myNav" class="overlay">
+                                <div class="overlay-content">
+                                    <a href="../../index.html">Home</a>
+                                    <a href="../../explore.html">Explore</a>
+                                    <a href="../../overview.html">Blog</a>
+                                    <a href="../../contact.html">Contact Us</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+            <!-- end header section -->
+        </div>
+
+        <div class="Food-Title">
+            <h1 id="food-title"></h1>
+        </div>
+        
+        <div class="specificFood">
+            <div class="image-section">
+                <img id="food-image" alt="Food Image">
+            </div>
+            <div class="rating-section">
+                <div class="rating-grid">
+                    <div class="average-score">
+                        Score: <span id="average-value"></span>
+                    </div>
+                    <div class="rating-items" id="rating-items"></div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'food_information')">Information</button>
+            <button class="tablinks" onclick="openTab(event, 'reviews')">Reviews</button>
+        </div>
+        
+        <div id="food_information" class="more-info tabcontent overview-tab">
+            <h3>Overview</h3>
+            <div class="info-columns">
+              <div class="nutrition-table">
+                <table class="styled-table2">
+                    <tbody id="nutrition-table-body">
+                        <!-- Nutrition information will be populated here -->
+                    </tbody>
+                </table>
+              </div>
+    
+              <div class="allergens">
+                <div class="allergen-grid" id="allergen-grid">
+                  <!-- Allergen items will be populated here -->
+              </div>
+              </div>
+              <div class="ingredients">
+                <table id="infoTable">
+                  <thead>
+                    <tr>
+                      <th>Ingredients</th>
+                    </tr>
+                  </thead>
+                  <tbody id="ingredients-table-body">
+                    <!-- Ingredients will be populated here -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+        </div>
+
+        <div id="reviews" class="tabcontent reviews-container"></div>
+      
+        <script type="text/javascript" src="../../js/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="../../js/bootstrap.js"></script>
+        <script>
+          // Function to get URL parameters
+          function getParameterByName(name) {
+              const regex = new RegExp(`[?&]${name}=([^&#]*)`);
+              const results = regex.exec(window.location.search);
+              return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+          }
+
+          document.addEventListener('DOMContentLoaded', () => {
+              // Get the ID from the URL parameter
+              const id = getParameterByName('id');
+
+              if (!id) {
+                  console.error('ID parameter not found in the URL');
+                  return;
+              }
+
+              // Fetch data from JSON file
+              fetch('/restaurants/wendys/json/foodData.json')
+                  .then(response => {
+                      if (!response.ok) {
+                          throw new Error(`HTTP error! status: ${response.status}`);
+                      }
+                      return response.json();
+                  })
+                  .then(data => {
+                      // Find the item with the ID from the URL
+                      const item = data.find(item => item.id === parseInt(id, 10));
+
+                      if (!item) {
+                          throw new Error(`Item with ID ${id} not found in JSON data`);
+                      }
+
+                      // Update HTML content with the fetched data
+                      document.querySelector('.Food-Title h1').textContent = item.name;
+                      document.querySelector('#food-image').src = item.image;
+                      document.querySelector('#food-image').alt = `${item.name} Image`;
+                      const averageValueElement = document.querySelector('#average-value');
+                      const averageScoreElement = document.querySelector('.average-score');
+                      
+                      if (averageValueElement && averageScoreElement) {
+                          const overallScore = item.overallScore;
+                          averageValueElement.textContent = overallScore.toFixed(1);
+                          averageScoreElement.style.backgroundColor = getColor(overallScore);
+                      }
+
+                      function getColor(value) {
+                          if (value >= 90) return "#009392"; 
+                          if (value >= 75) return "#39B185"; 
+                          if (value >= 60) return "#9CCB86"; 
+                          if (value >= 50) return "#E9E29C"; 
+                          if (value >= 40) return "#EEB479";
+                          if (value >= 30) return "#E88471";
+                          return "#CF597E"; // Red
+                      }
+                      
+                      const ratingItems = document.querySelector('#rating-items');
+                      ratingItems.innerHTML = ''; // Clear previous content if any
+                      for (const [key, value] of Object.entries(item.scores)) {
+                          const color = getColor(value);
+                          ratingItems.innerHTML += `
+                              <div class="label">${key.charAt(0).toUpperCase() + key.slice(1)}</div>
+                              <div class="rating-bar" data-value="${value}" style="width: ${value}%; background-color: ${color};"></div>
+                          `;
+                      }
+                      ratingItems.innerHTML += `
+                          <div class="label">Calories</div>
+                          <div class="label">${item.calories}</div>
+                          <div class="label">Price</div>
+                          <div class="label">$${item.price.toFixed(2)}</div>
+                      `;
+          
+                      // Update nutrition table
+                      const nutritionTableBody = document.querySelector('#nutrition-table-body');
+                      nutritionTableBody.innerHTML = ''; // Clear previous content if any
+                      for (const [key, value] of Object.entries(item.nutrition)) {
+                          nutritionTableBody.innerHTML += `
+                              <tr>
+                                  <td>${key}</td>
+                                  <td>${value}</td>
+                              </tr>
+                          `;
+                      }
+          
+                      // Update allergens
+                      const allergenGrid = document.querySelector('#allergen-grid');
+                      allergenGrid.innerHTML = ''; // Clear previous content if any
+                      item.allergens.forEach(allergen => {
+                          allergenGrid.innerHTML += `
+                              <div class="allergen-item">
+                                  <img src="${allergen.icon}" alt="${allergen.name}">
+                                  <p>${allergen.name}</p>
+                              </div>
+                          `;
+                      });
+
+                      // Update ingredients table
+                      const ingredientsTableBody = document.querySelector('#ingredients-table-body');
+                      ingredientsTableBody.innerHTML = ''; // Clear previous content if any
+                      item.ingredients.forEach(ingredient => {
+                          ingredientsTableBody.innerHTML += `
+                              <tr class="clickable">
+                                  <td>${ingredient.name}</td>
+                              </tr>
+                              <tr class="details">
+                                  <td colspan="2">
+                                      <p>${ingredient.details}</p>
+                                  </td>
+                              </tr>
+                          `;
+                      });
+
+                      // Update reviews
+                      const reviewsContainer = document.querySelector('#reviews');
+                      reviewsContainer.innerHTML = ''; // Clear previous reviews if any
+                      item.reviews.forEach(review => {
+                          reviewsContainer.innerHTML += `
+                              <div class="review-box">
+                                  <h2 class="review-title">${review.title}</h2>
+                                  <p class="review-content">${review.content}</p>
+                                  <div class="review-author">
+                                      <img src="${review.authorPhoto}" alt="${review.author}" class="author-photo">
+                                      <span class="author-name">${review.author}</span>
+                                  </div>
+                              </div>
+                          `;
+                      });
+                  })
+                  .catch(error => console.error('Error fetching data:', error));
+          });
+        </script>
+</body>       
+</html>
