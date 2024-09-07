@@ -1511,6 +1511,7 @@ a:focus {
   margin-bottom: 20px;
   border-radius: 15px;
   object-fit: cover; 
+  object-position: center;
 }
 
 .author-section {
