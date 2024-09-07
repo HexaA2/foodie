@@ -1512,7 +1512,11 @@ a:focus {
   border-radius: 15px;
   object-position: center;
   object-fit: cover; 
-  
+  transition: transform 0.2s;
+}
+
+.blog-post img.cover-image:hover {
+  transform: translateY(-5px);
 }
 
 .author-section {

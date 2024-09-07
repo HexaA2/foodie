@@ -176,6 +176,58 @@
   </script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
+      fetchBlogs();
+    });
+  
+    async function fetchBlogs() {
+      try {
+        // Fetch the blog data
+        const response = await fetch('/blogjson/blog.json');
+        const blogs = await response.json();
+        
+        // Get the container where blogs will be inserted
+        const blogContainer = document.querySelector('.blog_section .row');
+        
+        // Clear existing content
+        blogContainer.innerHTML = '';
+        
+        // Loop through each blog post and create HTML elements
+        blogs.forEach(blog => {
+          const blogElement = document.createElement('div');
+          blogElement.classList.add('col-md-4');
+          
+          blogElement.innerHTML = `
+            <div class="blog_box">
+              <div class="img-box">
+                <a href="${blog.url}"><img src="${blog.image}" alt="${blog.title}"></a>
+              </div>
+              <div class="detail-box">
+                <div class="date">${formatDate(blog.date)}</div>
+                <h5><a href="${blog.url}">${blog.title}</a></h5>
+                <p>${blog.description}</p>
+                <a href="${blog.url}">Read More</a>
+              </div>
+            </div>
+          `;
+          
+          // Append the new blog element to the container
+          blogContainer.appendChild(blogElement);
+        });
+        
+      } catch (error) {
+        console.error('Error fetching blogs:', error);
+      }
+    }
+  
+    function formatDate(dateString) {
+      const options = { year: 'numeric', month: 'long', day: 'numeric' };
+      const date = new Date(dateString);
+      return date.toLocaleDateString(undefined, options);
+    }
+  </script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
       const blogBoxes = document.querySelectorAll('.blog_box');
       blogBoxes.forEach((box, index) => {
         setTimeout(() => {
@@ -184,5 +236,6 @@
       });
     });
   </script>
+  
 </body>
 </html>
