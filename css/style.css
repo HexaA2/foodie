@@ -1415,7 +1415,7 @@ a:focus {
 }
 
 .blog_section .img-box {
-  width: 30%; 
+  width: 100%; 
   height: 300px; 
   overflow: hidden;
   margin-bottom: 15px;
