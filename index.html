@@ -382,7 +382,7 @@ document.getElementById('scrollButtonSection').addEventListener('click', functio
 
         blogElement.innerHTML = `
           <div class="img-box">
-            <a href="blog/blog${blog.id}.html"><img src="${blog.image}" alt="${blog.title}"></a>
+            <a href="blog/blog.html?id=${blog.id}"><img src="${blog.image}" alt="${blog.title}"></a>
           </div>
           <div class="detail-box">
             <div class="date">${formatDate(blog.date)}</div>
