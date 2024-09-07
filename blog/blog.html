@@ -61,23 +61,19 @@
 
   <!-- Blog Post Section -->
   <div class="blog-post">
-    <h1>Blog Post 1</h1>
-    <img src="../images/burger.jpg" alt="Blog Post Image" class="cover-image">
+    <h1 id="blog-title">Blog Post Title</h1>
+    <img id="blog-image" src="" alt="Blog Post Image" class="cover-image">
 
     <div class="author-section">
       <div class="review-author">
-        <img src="../images/johnSmith.jpg" alt="John Smith" class="author-photo">
-        <span class="author-name">John Smith</span>
+        <img id="author-image" src="" alt="Author" class="author-photo">
+        <span id="author-name" class="author-name"></span>
       </div>
-      <span class="post-date">August 22, 2024</span>
+      <span id="post-date" class="post-date"></span>
     </div>
 
-    <div class="blog-post-content">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel urna a quam posuere gravida. Phasellus interdum sapien et ante tempor, vel blandit orci dignissim. Fusce tempor eros ut turpis ultrices, vel vestibulum purus maximus. Duis scelerisque velit non est venenatis, sed tristique elit varius. Integer tempor nisi id arcu varius vestibulum. Donec ac libero vestibulum, convallis risus nec, congue lectus. Sed sed nisi non justo scelerisque aliquam non non sapien. Ut id turpis ut felis suscipit facilisis.</p>
-
-      <p>Vivamus nec justo sit amet ligula tincidunt pretium. Aliquam vitae facilisis leo, ut varius augue. Proin bibendum, magna vel tempus dictum, nisl erat commodo mi, nec bibendum odio ligula in nulla. Aenean malesuada ultricies leo, vel fermentum nunc convallis at. Vestibulum laoreet feugiat risus, vel fermentum dui varius nec. Phasellus fringilla orci ut tortor feugiat fermentum.</p>
-
-      <!-- Add more content as needed -->
+    <div id="blog-content" class="blog-post-content">
+      <!-- Blog content will be populated here -->
     </div>
   </div>
   <!-- End Blog Post Section -->
@@ -86,6 +82,59 @@
   <script src="../js/jquery-3.4.1.min.js"></script>
   <script src="../js/bootstrap.js"></script>
   <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetchBlogPost();
+    });
+
+    async function fetchBlogPost() {
+      try {
+        // Extract blog ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const blogId = urlParams.get('id');
+
+        if (!blogId) {
+          throw new Error('No blog ID found in URL');
+        }
+
+        // Fetch blog post data from JSON
+        const response = await fetch('/path/to/blog.json');
+        const blogs = await response.json();
+        
+        // Find the blog post with the matching ID
+        const blogPost = blogs.find(blog => blog.id === blogId);
+        
+        if (!blogPost) {
+          throw new Error('Blog post not found');
+        }
+
+        // Update HTML with blog post data
+        document.getElementById('blog-title').textContent = blogPost.title;
+        document.getElementById('blog-image').src = blogPost.image;
+        document.getElementById('author-image').src = blogPost.authorImage;
+        document.getElementById('author-name').textContent = blogPost.author;
+
+        // Format the date
+        const formattedDate = formatDate(blogPost.date);
+        document.getElementById('post-date').textContent = formattedDate;
+
+        // Populate blog content
+        const blogContent = document.getElementById('blog-content');
+        blogPost.text.forEach(paragraph => {
+          const p = document.createElement('p');
+          p.textContent = paragraph;
+          blogContent.appendChild(p);
+        });
+      } catch (error) {
+        console.error('Error fetching the blog post data:', error);
+      }
+    }
+
+    function formatDate(dateString) {
+      const options = { year: 'numeric', month: 'long', day: 'numeric' };
+      const date = new Date(dateString);
+      return date.toLocaleDateString(undefined, options);
+    }
+
     function openNav() {
       document.getElementById("myNav").classList.toggle("menu_width");
       document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style");
