@@ -158,13 +158,29 @@
                       // Update nutrition table
                       const nutritionTableBody = document.querySelector('#nutrition-table-body');
                       nutritionTableBody.innerHTML = ''; // Clear previous content if any
-                      for (const [key, value] of Object.entries(frenchFries.nutrition)) {
-                          nutritionTableBody.innerHTML += `
-                              <tr>
-                                  <td>${key}</td>
-                                  <td>${value}</td>
-                              </tr>
-                          `;
+                      for (const [key, value] of Object.entries(frenchFries.scores)) {
+                      const color = getColor(value);
+                      ratingItems.innerHTML += `
+                          <div class="label">${key.charAt(0).toUpperCase() + key.slice(1)}</div>
+                          <div class="rating-bar" style="width: ${value}%; background-color: ${color};" data-value="${value}"></div>
+                      `;
+                      totalValue += value; // Add value to total
+                  }
+
+                  // Calculate and display average score
+                  const averageValue = totalValue / Object.keys(frenchFries.scores).length;
+                  document.getElementById("average-value").innerText = averageValue.toFixed(1);
+                  const averageColor = getColor(averageValue);
+                  document.querySelector(".average-score").style.backgroundColor = averageColor;
+
+                  function getColor(value) {
+                      if (value >= 90) return "#009392"; 
+                      if (value >= 75) return "#39B185"; 
+                      if (value >= 60) return "#9CCB86"; 
+                      if (value >= 50) return "#E9E29C"; 
+                      if (value >= 40) return "#EEB479";
+                      if (value >= 30) return "#E88471";
+                      return "#CF597E"; // Red
                       }
           
                       // Update allergens
@@ -215,32 +231,8 @@
           });
 
           document.addEventListener("DOMContentLoaded", function() {
-    var ratingBars = document.querySelectorAll(".rating-bar");
-    var totalValue = 0;
 
-    ratingBars.forEach(function(bar) {
-        var value = parseInt(bar.getAttribute("data-value"));
-        var color = getColor(value);
-        bar.style.width = value + "%";
-        bar.style.backgroundColor = color;
-        totalValue += value;
-    });
-
-    var averageValue = totalValue / ratingBars.length;
-    document.getElementById("average-value").innerText = averageValue.toFixed(1);
-    var averageColor = getColor(averageValue);
-    var averageScoreElement = document.querySelector(".average-score");
-    averageScoreElement.style.backgroundColor = averageColor;
-
-    function getColor(value) {
-        if (value >= 90) return "#009392"; 
-        if (value >= 75) return "#39B185"; 
-        if (value >= 60) return "#9CCB86"; 
-        if (value >= 50) return "#E9E29C"; 
-        if (value >= 40) return "#EEB479";
-        if (value >= 30) return "#E88471 ";
-        return "#CF597E"; // Red
-    }
+    
     });
           </script>
 </body>       
