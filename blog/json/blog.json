@@ -5,10 +5,46 @@
         "image": "/restaurants/images/wendys/davesSingle.png",
         "author": "Tony Song",
         "authorImage": "/images/tonySong.jpg",
-        "date": "2024-08-22",
+        "date": "2024-08-02",
         "text": [
             "The Dave's Single Burger stands out as a quintessential example of classic American comfort food, embodying simplicity and quality in every bite. This burger features a perfectly seasoned, juicy beef patty grilled to perfection and nestled between two soft, toasted buns. Topped with crisp lettuce, fresh tomatoes, and pickles, the Daves Single Burger is further elevated by a generous spread of mayonnaise, mustard, and ketchup, creating a harmonious blend of flavors and textures. Each component is meticulously chosen to ensure that the burger delivers a satisfying, well-balanced experience",
             "In addition to its traditional toppings, the Daves Single Burger is often praised for its commitment to using high-quality, fresh ingredients. The beef patty is usually made from 100% pure, high-grade beef, ensuring a rich, savory taste. The accompanying vegetables are always crisp and fresh, adding a refreshing crunch that complements the tender patty. Whether enjoyed on a casual lunch break or as a hearty dinner option, the Daves Single Burger promises a delectable and fulfilling meal, reflecting the timeless appeal of a well-crafted burger."
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Chili Cheese Fries: A Hearty Snack Packed with Flavor",
+        "image": "/restaurants/images/wendys/chiliCheeseFries.png",
+        "author": "Andrew Zhao",
+        "authorImage": "/images/andrewZhao.jpg",
+        "date": "2024-08-12",
+        "text": [
+            "Wendy's Chili Cheese Fries offer a deliciously satisfying twist on the classic French fry. This dish starts with Wendy's famous, crispy natural-cut fries, which are then generously topped with the brand's rich, hearty chili and smothered in a creamy cheese sauce.",
+            "Perfect for a snack or as a side to your favorite burger, the Chili Cheese Fries provide layers of flavor and texture in every bite. The spiciness of the chili pairs well with the smoothness of the cheese, making it a comforting and indulgent option for those who crave something more substantial than regular fries."
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Baconator: The Ultimate Indulgence for Bacon Lovers",
+        "image": "/restaurants/images/wendys/baconator.png",
+        "author": "Sophia Li",
+        "authorImage": "/images/sophiaLi.jpg",
+        "date": "2024-08-16",
+        "text": [
+            "The Baconator is Wendy's unapologetic ode to bacon, making it a must-try for those who appreciate a hearty, indulgent meal. This colossal burger features two quarter-pound beef patties, perfectly grilled and layered with six slices of crispy, smoky bacon.",
+            "Each patty is topped with melted American cheese, and the burger is finished off with ketchup and mayonnaise, all served between warm, toasted buns. The combination of rich beef, savory bacon, and creamy toppings creates a truly decadent burger experience that leaves you fully satisfied. The Baconator is a celebration of bold flavors and meaty goodness, perfect for anyone looking to indulge."
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Frosty: A Cool, Creamy Treat for Any Occasion",
+        "image": "/restaurants/images/wendys/frosty.png",
+        "author": "Doris Wang",
+        "authorImage": "/images/dorisWang.jpg",
+        "date": "2024-08-20",
+        "text": [
+            "The Wendy's Frosty has long been a beloved staple, offering a perfect balance of creamy, chocolatey sweetness that complements any meal—or stands on its own as a delightful dessert. With its unique, thick texture, somewhere between a milkshake and soft-serve ice cream, the Frosty delivers a smooth and satisfying treat with every spoonful.",
+            "Available in both chocolate and vanilla, this frozen dessert is refreshing on a hot day or a comforting end to any meal. It's a nostalgic favorite for many, and whether you enjoy it solo or as a dip for your fries, the Wendy's Frosty continues to be a timeless, cool treat that never goes out of style."
         ]
     }
 ]
