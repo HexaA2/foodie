@@ -258,43 +258,63 @@
             "Protein": "87g"
         },
         "allergens": [
-            "Milk",
-            "Wheat",
-            "Soy",
-            "Beef"
+            {
+                "name": "Egg",
+                "icon": "../../images/egg.svg"
+            },
+            {
+                "name": "Milk",
+                "icon": "../../images/milk.svg"
+            },
+            {
+                "name": "Soy",
+                "icon": "../../images/soy.svg"
+            },
+            {
+                "name": "Sesame",
+                "icon": "../../images/sesame.svg"
+            },
+            {
+                "name": "Wheat",
+                "icon": "../../images/wheat.svg"
+            }
         ],
         "ingredients": [
             {
-                "name": "Beef Patties",
-                "details": "Three layers of beef patties, seasoned and grilled."
+                "name": "Hamburger Patty",
+                "details": "Ground Beef, Salt. HAMBURGER PATTIES ARE COOKED ON THE SAME GRILL AS AND MAY COME IN CONTACT WITH INGREDIENTS THAT CONTAIN MILK AND SOY."
             },
             {
-                "name": "Cheddar Cheese",
-                "details": "Three slices of cheddar cheese, melted over the patties."
+                "name": "Premium Bun",
+                "details": "Enriched Flour (Wheat Flour, Malted Barley Flour, Niacin, Reduced Iron, Thiamine Mononitrate, Riboflavin, Folic Acid), Water, High Fructose Corn Syrup and/or Sugar, Yeast, Soybean Oil, Contains less than 2% of each of the following: Ascorbic Acid (Vitamin C), Calcium Peroxide, Calcium Propionate (Added as a Preservative), Calcium Sulfate, Canola Oil, Citric Acid, Corn Starch, Dextrose, Enzymes, Maltodextrins, Modified Food Starch, Monocalcium Phosphate, Monoglycerides, Salt, Sodium Stearoyl Lactylate (SSL), Starch, Sunflower Oil, Vegetable Oil, Vegetable Proteins (Pea, Potato, Fava Bean), Wheat Dextrose, Wheat Flour, Wheat Gluten, Wheat Maltodextrins, Sesame Flour. CONTAINS: WHEAT, SESAME. BUNS ARE TOASTED IN A COMMON TOASTER WITH PRODUCTS THAT CONTAIN WHEAT, SOY, MILK, SESAME."
             },
             {
-                "name": "Lettuce",
-                "details": "Fresh leaf lettuce for crunch."
+                "name": "American Cheese Slice",
+                "details": "Milk, Cream, Water, Sodium Citrate, Salt, Contains 2% or less of Apocarotenal and Beta Carotene (Color), Cheese Culture, Citric Acid, Enzymes, Sorbic Acid (Preservative), Soy Lecithin. CONTAINS: MILK, SOY."
             },
             {
                 "name": "Tomato",
-                "details": "Sliced tomato for added freshness."
+                "details": "Tomato"
             },
             {
-                "name": "Pickles",
-                "details": "Crispy pickles for a tangy flavor."
+                "name": "Crinkle Cut Pickles",
+                "details": "Cucumber, Water, Distilled Vinegar, Salt, Calcium Chloride, Sodium Benzoate (Preservative), Lactic Acid, Natural Flavors, Polysorbate 80 and Turmeric."
             },
             {
                 "name": "Mayonnaise",
-                "details": "Creamy mayo spread on the bun."
+                "details": "Soybean Oil, Water, Egg Yolks, Corn Syrup, Distilled Vinegar, Salt, Mustard Seed, Calcium Disodium Edta (To Protect Flavor). CONTAINS: EGG."
+            },
+            {
+                "name": "Lettuce",
+                "details": "Lettuce"
             },
             {
                 "name": "Ketchup",
-                "details": "Classic ketchup for a touch of sweetness."
+                "details": "Tomato Concentrate from Red Ripe Tomatoes, Distilled Vinegar, High Fructose Corn Syrup, Corn Syrup, Salt, Natural Flavoring, Spices, Onion Powder. CONTAINS: EGG."
             },
             {
-                "name": "Burger Bun",
-                "details": "Soft and toasted bun that holds everything together."
+                "name": "Onion",
+                "details": "Onion"
             }
         ]
     }
