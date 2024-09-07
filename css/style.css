@@ -1420,7 +1420,7 @@ a:focus {
   overflow: hidden;
   margin-bottom: 15px;
   margin-top: 20px;
-  transition: transform 0.2s;
+  transition: transform 1s;
   cursor: pointer;
 }
 
