@@ -5,31 +5,106 @@
         "calories": 590,
         "price": 6.59,
         "url": "wendys/davesSingle.html",
-        "restaurant": "Wendys",
+        "restaurant": "Food Meets Business",
         "group": "main",
         "reviews": [
             {
-                "title": "Classic and satisfying",
-                "content": "A well-balanced burger with juicy beef and fresh toppings.",
-                "author": "Tony Song",
-                "authorPhoto": "../../images/tonySong.jpg"
+                "title": "Great Product!",
+                "content": "I loved this product! It exceeded my expectations and I would highly recommend it.",
+                "author": "Jane Doe",
+                "authorPhoto": "../../images/janeDoe.jpg"
             },
             {
-                "title": "Just okay",
-                "content": "The burger was decent but not extraordinary.",
-                "author": "Andrew Zhao",
-                "authorPhoto": "../../images/andrewZhao.jpg"
+                "title": "Not as expected",
+                "content": "The product was okay, but it did not meet my expectations based on the description.",
+                "author": "John Smith",
+                "authorPhoto": "../../images/johnSmith.jpg"
             }
         ],
         "scores": {
-            "flavor": 80,
-            "balance": 70,
-            "intensity": 70,
-            "aftertaste": 70,
-            "texture": 80,
-            "appearance": 70
+            "flavor": 15,
+            "balance": 90,
+            "intensity": 45,
+            "aftertaste": 50,
+            "texture": 75,
+            "appearance": 90
         },
-        "overallScore": 71.0
+        "overallScore": 61.0,
+        "nutrition": {
+            "Calories": "590 kcal",
+            "Total Fat": "37g",
+            "Saturated Fat": "15g",
+            "Trans Fat": "1.5g",
+            "Cholesterol": "80mg",
+            "Sodium": "1050mg",
+            "Total Carbs": "27g",
+            "Dietary Fiber": "2g",
+            "Total Sugars": "8g",
+            "Protein": "29g",
+            "Calcium": "15% DV",
+            "Iron": "25% DV",
+            "Potassium": "10% DV"
+        },
+        "allergens": [
+            {
+                "name": "Egg",
+                "icon": "../../images/egg.svg"
+            },
+            {
+                "name": "Milk",
+                "icon": "../../images/milk.svg"
+            },
+            {
+                "name": "Soy",
+                "icon": "../../images/soy.svg"
+            },
+            {
+                "name": "Sesame",
+                "icon": "../../images/sesame.svg"
+            },
+            {
+                "name": "Wheat",
+                "icon": "../../images/wheat.svg"
+            }
+        ],
+        "ingredients": [
+            {
+                "name": "Hamburger Patty",
+                "details": "Ground Beef, Salt. HAMBURGER PATTIES ARE COOKED ON THE SAME GRILL AS AND MAY COME IN CONTACT WITH INGREDIENTS THAT CONTAIN MILK AND SOY."
+            },
+            {
+                "name": "Premium Bun",
+                "details": "Enriched Flour (Wheat Flour, Malted Barley Flour, Niacin, Reduced Iron, Thiamine Mononitrate, Riboflavin, Folic Acid), Water, High Fructose Corn Syrup and/or Sugar, Yeast, Soybean Oil, Contains less than 2% of each of the following: Ascorbic Acid (Vitamin C), Calcium Peroxide, Calcium Propionate (Added as a Preservative), Calcium Sulfate, Canola Oil, Citric Acid, Corn Starch, Dextrose, Enzymes, Maltodextrins, Modified Food Starch, Monocalcium Phosphate, Monoglycerides, Salt, Sodium Stearoyl Lactylate (SSL), Starch, Sunflower Oil, Vegetable Oil, Vegetable Proteins (Pea, Potato, Fava Bean), Wheat Dextrose, Wheat Flour, Wheat Gluten, Wheat Maltodextrins, Sesame Flour. CONTAINS: WHEAT, SESAME. BUNS ARE TOASTED IN A COMMON TOASTER WITH PRODUCTS THAT CONTAIN WHEAT, SOY, MILK, SESAME."
+            },
+            {
+                "name": "American Cheese Slice",
+                "details": "Milk, Cream, Water, Sodium Citrate, Salt, Contains 2% or less of Apocarotenal and Beta Carotene (Color), Cheese Culture, Citric Acid, Enzymes, Sorbic Acid (Preservative), Soy Lecithin. CONTAINS: MILK, SOY."
+            },
+            {
+                "name": "Tomato",
+                "details": "Tomato"
+            },
+            {
+                "name": "Crinkle Cut Pickles",
+                "details": "Cucumber, Water, Distilled Vinegar, Salt, Calcium Chloride, Sodium Benzoate (Preservative), Lactic Acid, Natural Flavors, Polysorbate 80 and Turmeric."
+            },
+            {
+                "name": "Mayonnaise",
+                "details": "Soybean Oil, Water, Egg Yolks, Corn Syrup, Distilled Vinegar, Salt, Mustard Seed, Calcium Disodium Edta (To Protect Flavor). CONTAINS: EGG."
+            },
+            {
+                "name": "Lettuce",
+                "details": "Lettuce"
+            },
+            {
+                "name": "Ketchup",
+                "details": "Tomato Concentrate from Red Ripe Tomatoes, Distilled Vinegar, High Fructose Corn Syrup, Corn Syrup, Salt, Natural Flavoring, Spices, Onion Powder. CONTAINS: EGG."
+            },
+            {
+                "name": "Onion",
+                "details": "Onion"
+            }
+        ]
     },
     {
         "id": 2,
