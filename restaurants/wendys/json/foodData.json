@@ -5,7 +5,6 @@
         "calories": 590,
         "price": 6.59,
         "image": "images/davesSingle.png",
-        "url": "wendys/davesSingle.html",
         "restaurant": "Wendys",
         "group": "main",
         
@@ -113,8 +112,8 @@
         "name": "Dave's Double",
         "calories": 860,
         "price": 7.79,
-        "url": "wendys/davesDouble.html",
         "restaurant": "Wendys",
+        "image": "images/davesDouble.png",
         "group": "main",
         "reviews": [
             {
@@ -138,46 +137,195 @@
             "texture": 80,
             "appearance": 70
         },
-        "overallScore": 72.3
+        "overallScore": 72.3,
+        "nutrition": {
+            "Calories": "860 kcal",
+            "Total Fat": "56g",
+            "Saturated Fat": "25g",
+            "Trans Fat": "2g",
+            "Cholesterol": "120mg",
+            "Sodium": "1340mg",
+            "Total Carbs": "27g",
+            "Dietary Fiber": "3g",
+            "Total Sugars": "8g",
+            "Protein": "49g",
+            "Calcium": "20% DV",
+            "Iron": "30% DV",
+            "Potassium": "12% DV"
+        },
+        "allergens": [
+            {
+                "name": "Egg",
+                "icon": "../../images/egg.svg"
+            },
+            {
+                "name": "Milk",
+                "icon": "../../images/milk.svg"
+            },
+            {
+                "name": "Soy",
+                "icon": "../../images/soy.svg"
+            },
+            {
+                "name": "Sesame",
+                "icon": "../../images/sesame.svg"
+            },
+            {
+                "name": "Wheat",
+                "icon": "../../images/wheat.svg"
+            }
+        ],
+        "ingredients": [
+            {
+                "name": "Hamburger Patty",
+                "details": "Ground Beef, Salt. HAMBURGER PATTIES ARE COOKED ON THE SAME GRILL AS AND MAY COME IN CONTACT WITH INGREDIENTS THAT CONTAIN MILK AND SOY."
+            },
+            {
+                "name": "Premium Bun",
+                "details": "Enriched Flour (Wheat Flour, Malted Barley Flour, Niacin, Reduced Iron, Thiamine Mononitrate, Riboflavin, Folic Acid), Water, High Fructose Corn Syrup and/or Sugar, Yeast, Soybean Oil, Contains less than 2% of each of the following: Ascorbic Acid (Vitamin C), Calcium Peroxide, Calcium Propionate (Added as a Preservative), Calcium Sulfate, Canola Oil, Citric Acid, Corn Starch, Dextrose, Enzymes, Maltodextrins, Modified Food Starch, Monocalcium Phosphate, Monoglycerides, Salt, Sodium Stearoyl Lactylate (SSL), Starch, Sunflower Oil, Vegetable Oil, Vegetable Proteins (Pea, Potato, Fava Bean), Wheat Dextrose, Wheat Flour, Wheat Gluten, Wheat Maltodextrins, Sesame Flour. CONTAINS: WHEAT, SESAME. BUNS ARE TOASTED IN A COMMON TOASTER WITH PRODUCTS THAT CONTAIN WHEAT, SOY, MILK, SESAME."
+            },
+            {
+                "name": "American Cheese Slice",
+                "details": "Milk, Cream, Water, Sodium Citrate, Salt, Contains 2% or less of Apocarotenal and Beta Carotene (Color), Cheese Culture, Citric Acid, Enzymes, Sorbic Acid (Preservative), Soy Lecithin. CONTAINS: MILK, SOY."
+            },
+            {
+                "name": "Tomato",
+                "details": "Tomato"
+            },
+            {
+                "name": "Crinkle Cut Pickles",
+                "details": "Cucumber, Water, Distilled Vinegar, Salt, Calcium Chloride, Sodium Benzoate (Preservative), Lactic Acid, Natural Flavors, Polysorbate 80 and Turmeric."
+            },
+            {
+                "name": "Mayonnaise",
+                "details": "Soybean Oil, Water, Egg Yolks, Corn Syrup, Distilled Vinegar, Salt, Mustard Seed, Calcium Disodium Edta (To Protect Flavor). CONTAINS: EGG."
+            },
+            {
+                "name": "Lettuce",
+                "details": "Lettuce"
+            },
+            {
+                "name": "Ketchup",
+                "details": "Tomato Concentrate from Red Ripe Tomatoes, Distilled Vinegar, High Fructose Corn Syrup, Corn Syrup, Salt, Natural Flavoring, Spices, Onion Powder. CONTAINS: EGG."
+            },
+            {
+                "name": "Onion",
+                "details": "Onion"
+            }
+        ]
     },
     {
         "id": 3,
-        "name": "Dave's Triple",
-        "calories": 1160,
-        "price": 8.99,
-        "url": "wendys/davesTriple.html",
+        "name": "Cheeseburger Deluxe",
+        "calories": 730,
+        "price": 6.89,
         "restaurant": "Wendys",
         "group": "main",
         "reviews": [
             {
-                "title": "Massive and delicious",
-                "content": "This burger is a beast and worth every calorie!",
-                "author": "Sarah Liang",
-                "authorPhoto": "../../images/sarahLiang.jpg"
+                "title": "Delicious and satisfying",
+                "content": "A good balance of flavors and textures, very satisfying.",
+                "author": "Emma Collins",
+                "authorPhoto": "../../images/emmaCollins.jpg"
             },
             {
-                "title": "Overwhelming",
-                "content": "A bit too much for me. The flavors were overwhelming.",
-                "author": "Annika Balaji",
-                "authorPhoto": "../../images/annikaBalaji.jpg"
+                "title": "Could use more cheese",
+                "content": "The cheese wasn't very prominent. Needs more cheese for my taste.",
+                "author": "Liam Brown",
+                "authorPhoto": "../../images/liamBrown.jpg"
             }
         ],
         "scores": {
-            "flavor": 90,
-            "balance": 60,
-            "intensity": 90,
-            "aftertaste": 70,
-            "texture": 80,
-            "appearance": 80
+            "flavor": 75,
+            "balance": 70,
+            "intensity": 70,
+            "aftertaste": 65,
+            "texture": 75,
+            "appearance": 70
         },
-        "overallScore": 78.3
+        "overallScore": 71.4,
+        "nutrition": {
+            "Calories": "730 kcal",
+            "Total Fat": "42g",
+            "Saturated Fat": "18g",
+            "Trans Fat": "1.5g",
+            "Cholesterol": "95mg",
+            "Sodium": "1150mg",
+            "Total Carbs": "38g",
+            "Dietary Fiber": "2g",
+            "Total Sugars": "9g",
+            "Protein": "31g",
+            "Calcium": "20% DV",
+            "Iron": "20% DV",
+            "Potassium": "8% DV"
+        },
+        "allergens": [
+            {
+                "name": "Egg",
+                "icon": "../../images/egg.svg"
+            },
+            {
+                "name": "Milk",
+                "icon": "../../images/milk.svg"
+            },
+            {
+                "name": "Soy",
+                "icon": "../../images/soy.svg"
+            },
+            {
+                "name": "Sesame",
+                "icon": "../../images/sesame.svg"
+            },
+            {
+                "name": "Wheat",
+                "icon": "../../images/wheat.svg"
+            }
+        ],
+        "ingredients": [
+            {
+                "name": "Hamburger Patty",
+                "details": "Ground Beef, Salt. HAMBURGER PATTIES ARE COOKED ON THE SAME GRILL AS AND MAY COME IN CONTACT WITH INGREDIENTS THAT CONTAIN MILK AND SOY."
+            },
+            {
+                "name": "Premium Bun",
+                "details": "Enriched Flour (Wheat Flour, Malted Barley Flour, Niacin, Reduced Iron, Thiamine Mononitrate, Riboflavin, Folic Acid), Water, High Fructose Corn Syrup and/or Sugar, Yeast, Soybean Oil, Contains less than 2% of each of the following: Ascorbic Acid (Vitamin C), Calcium Peroxide, Calcium Propionate (Added as a Preservative), Calcium Sulfate, Canola Oil, Citric Acid, Corn Starch, Dextrose, Enzymes, Maltodextrins, Modified Food Starch, Monocalcium Phosphate, Monoglycerides, Salt, Sodium Stearoyl Lactylate (SSL), Starch, Sunflower Oil, Vegetable Oil, Vegetable Proteins (Pea, Potato, Fava Bean), Wheat Dextrose, Wheat Flour, Wheat Gluten, Wheat Maltodextrins, Sesame Flour. CONTAINS: WHEAT, SESAME. BUNS ARE TOASTED IN A COMMON TOASTER WITH PRODUCTS THAT CONTAIN WHEAT, SOY, MILK, SESAME."
+            },
+            {
+                "name": "American Cheese Slice",
+                "details": "Milk, Cream, Water, Sodium Citrate, Salt, Contains 2% or less of Apocarotenal and Beta Carotene (Color), Cheese Culture, Citric Acid, Enzymes, Sorbic Acid (Preservative), Soy Lecithin. CONTAINS: MILK, SOY."
+            },
+            {
+                "name": "Tomato",
+                "details": "Tomato"
+            },
+            {
+                "name": "Crinkle Cut Pickles",
+                "details": "Cucumber, Water, Distilled Vinegar, Salt, Calcium Chloride, Sodium Benzoate (Preservative), Lactic Acid, Natural Flavors, Polysorbate 80 and Turmeric."
+            },
+            {
+                "name": "Mayonnaise",
+                "details": "Soybean Oil, Water, Egg Yolks, Corn Syrup, Distilled Vinegar, Salt, Mustard Seed, Calcium Disodium Edta (To Protect Flavor). CONTAINS: EGG."
+            },
+            {
+                "name": "Lettuce",
+                "details": "Lettuce"
+            },
+            {
+                "name": "Ketchup",
+                "details": "Tomato Concentrate from Red Ripe Tomatoes, Distilled Vinegar, High Fructose Corn Syrup, Corn Syrup, Salt, Natural Flavoring, Spices, Onion Powder. CONTAINS: EGG."
+            },
+            {
+                "name": "Onion",
+                "details": "Onion"
+            }
+        ]
     },
     {
         "id": 4,
         "name": "Baconator",
         "calories": 960,
         "price": 8.49,
-        "url": "wendys/baconator.html",
+        "image": "images/baconator.png",
         "restaurant": "Wendys",
         "group": "main",
         "reviews": [
@@ -202,7 +350,74 @@
             "texture": 80,
             "appearance": 80
         },
-        "overallScore": 76.0
+        "overallScore": 76.0,
+        "nutrition": {
+            "Calories": "960 kcal",
+            "Total Fat": "66g",
+            "Saturated Fat": "27g",
+            "Trans Fat": "3g",
+            "Cholesterol": "155mg",
+            "Sodium": "1600mg",
+            "Total Carbs": "36g",
+            "Dietary Fiber": "1g",
+            "Total Sugars": "7g",
+            "Protein": "57g",
+            "Calcium": "15% DV",
+            "Iron": "40% DV",
+            "Potassium": "10% DV"
+        },
+        "allergens": [
+            {
+                "name": "Egg",
+                "icon": "../../images/egg.svg"
+            },
+            {
+                "name": "Milk",
+                "icon": "../../images/milk.svg"
+            },
+            {
+                "name": "Soy",
+                "icon": "../../images/soy.svg"
+            },
+            {
+                "name": "Sesame",
+                "icon": "../../images/sesame.svg"
+            },
+            {
+                "name": "Wheat",
+                "icon": "../../images/wheat.svg"
+            }
+        ],
+        "ingredients": [
+            {
+                "name": "Hamburger Patties",
+                "details": "Ground Beef, Salt. HAMBURGER PATTIES ARE COOKED ON THE SAME GRILL AS AND MAY COME IN CONTACT WITH INGREDIENTS THAT CONTAIN MILK AND SOY."
+            },
+            {
+                "name": "Premium Bun",
+                "details": "Enriched Flour (Wheat Flour, Malted Barley Flour, Niacin, Reduced Iron, Thiamine Mononitrate, Riboflavin, Folic Acid), Water, High Fructose Corn Syrup and/or Sugar, Yeast, Soybean Oil, Contains less than 2% of each of the following: Ascorbic Acid (Vitamin C), Calcium Peroxide, Calcium Propionate (Added as a Preservative), Calcium Sulfate, Canola Oil, Citric Acid, Corn Starch, Dextrose, Enzymes, Maltodextrins, Modified Food Starch, Monocalcium Phosphate, Monoglycerides, Salt, Sodium Stearoyl Lactylate (SSL), Starch, Sunflower Oil, Vegetable Oil, Vegetable Proteins (Pea, Potato, Fava Bean), Wheat Dextrose, Wheat Flour, Wheat Gluten, Wheat Maltodextrins, Sesame Flour. CONTAINS: WHEAT, SESAME. BUNS ARE TOASTED IN A COMMON TOASTER WITH PRODUCTS THAT CONTAIN WHEAT, SOY, MILK, SESAME."
+            },
+            {
+                "name": "American Cheese Slice",
+                "details": "Milk, Cream, Water, Sodium Citrate, Salt, Contains 2% or less of Apocarotenal and Beta Carotene (Color), Cheese Culture, Citric Acid, Enzymes, Sorbic Acid (Preservative), Soy Lecithin. CONTAINS: MILK, SOY."
+            },
+            {
+                "name": "Mayonnaise",
+                "details": "Soybean Oil, Water, Egg Yolks, Corn Syrup, Distilled Vinegar, Salt, Mustard Seed, Calcium Disodium Edta (To Protect Flavor). CONTAINS: EGG."
+            },
+            {
+                "name": "Lettuce",
+                "details": "Lettuce"
+            },
+            {
+                "name": "Ketchup",
+                "details": "Tomato Concentrate from Red Ripe Tomatoes, Distilled Vinegar, High Fructose Corn Syrup, Corn Syrup, Salt, Natural Flavoring, Spices, Onion Powder. CONTAINS: EGG."
+            },
+            {
+                "name": "Applewood Smoked Bacon",
+                "details": "Bacon cured with Water, Salt, Sugar, Smoke Flavoring, Sodium Phosphate, Sodium Erythorbate, Sodium Nitrite."
+            }
+        ]
     },
     {
         "id": 5,
@@ -210,7 +425,6 @@
         "calories": 470,
         "price": 4.29,
         "image": "images/frenchFries.png",
-        "url": "wendys/frenchFries.html",
         "restaurant": "Wendys",
         "group": "side",
         "reviews": [
@@ -289,7 +503,6 @@
         "name": "Baconator Fries",
         "calories": 460,
         "price": 5.19,
-        "url": "wendys/baconatorFries.html",
         "restaurant": "Wendys",
         "group": "side",
         "reviews": [
@@ -314,14 +527,60 @@
             "texture": 80,
             "appearance": 70
         },
-        "overallScore": 68.3
+        "overallScore": 68.3,
+        "nutrition": {
+            "Calories": "460 kcal",
+            "Total Fat": "28g",
+            "Saturated Fat": "15g",
+            "Trans Fat": "1g",
+            "Cholesterol": "65mg",
+            "Sodium": "1100mg",
+            "Total Carbs": "42g",
+            "Dietary Fiber": "3g",
+            "Total Sugars": "2g",
+            "Protein": "14g",
+            "Calcium": "20% DV",
+            "Iron": "15% DV",
+            "Potassium": "10% DV"
+        },
+        "allergens": [
+            {
+                "name": "Egg",
+                "icon": "../../images/egg.svg"
+            },
+            {
+                "name": "Milk",
+                "icon": "../../images/milk.svg"
+            },
+            {
+                "name": "Soy",
+                "icon": "../../images/soy.svg"
+            },
+            {
+                "name": "Wheat",
+                "icon": "../../images/wheat.svg"
+            }
+        ],
+        "ingredients": [
+            {
+                "name": "French Fries",
+                "details": "Potatoes, Vegetable Oil (Canola Oil, Soybean Oil), Salt."
+            },
+            {
+                "name": "Cheese Sauce",
+                "details": "Milk, Cream, Water, Sodium Citrate, Salt, Contains less than 2% of: Cheese Culture, Enzymes, Citric Acid, Annatto (Color). CONTAINS: MILK."
+            },
+            {
+                "name": "Applewood Smoked Bacon",
+                "details": "Bacon cured with Water, Salt, Sugar, Smoke Flavoring, Sodium Phosphate, Sodium Erythorbate, Sodium Nitrite."
+            }
+        ]
     },
     {
         "id": 7,
         "name": "Chili Cheese Fries",
         "calories": 520,
         "price": 4.69,
-        "url": "wendys/chiliCheeseFries.html",
         "restaurant": "Wendys",
         "group": "side",
         "reviews": [
@@ -346,14 +605,60 @@
             "texture": 70,
             "appearance": 70
         },
-        "overallScore": 71.0
-    },
+        "overallScore": 71.0,
+        "nutrition": {
+            "Calories": "520 kcal",
+            "Total Fat": "30g",
+            "Saturated Fat": "14g",
+            "Trans Fat": "1g",
+            "Cholesterol": "65mg",
+            "Sodium": "1100mg",
+            "Total Carbs": "50g",
+            "Dietary Fiber": "4g",
+            "Total Sugars": "6g",
+            "Protein": "18g",
+            "Calcium": "25% DV",
+            "Iron": "20% DV",
+            "Potassium": "12% DV"
+        },
+        "allergens": [
+            {
+                "name": "Egg",
+                "icon": "../../images/egg.svg"
+            },
+            {
+                "name": "Milk",
+                "icon": "../../images/milk.svg"
+            },
+            {
+                "name": "Soy",
+                "icon": "../../images/soy.svg"
+            },
+            {
+                "name": "Wheat",
+                "icon": "../../images/wheat.svg"
+            }
+        ],
+        "ingredients": [
+            {
+                "name": "French Fries",
+                "details": "Potatoes, Vegetable Oil (Canola Oil, Soybean Oil), Salt."
+            },
+            {
+                "name": "Chili",
+                "details": "Beef, Water, Tomato Paste, Beans, Onion, Spices, Salt, Garlic, Sugar."
+            },
+            {
+                "name": "Cheese Sauce",
+                "details": "Milk, Cream, Water, Sodium Citrate, Salt, Contains less than 2% of: Cheese Culture, Enzymes, Citric Acid, Annatto (Color). CONTAINS: MILK."
+            }
+        ]
+    },    
     {
         "id": 8,
         "name": "Cheese Fries",
         "calories": 470,
         "price": 4.39,
-        "url": "wendys/cheeseFries.html",
         "restaurant": "Wendys",
         "group": "side",
         "reviews": [
@@ -378,14 +683,57 @@
             "texture": 70,
             "appearance": 60
         },
-        "overallScore": 62.0
-    },
+        "overallScore": 62.0,
+        "nutrition": {
+            "Calories": "470 kcal",
+            "Total Fat": "27g",
+            "Saturated Fat": "12g",
+            "Trans Fat": "0.5g",
+            "Cholesterol": "45mg",
+            "Sodium": "940mg",
+            "Total Carbs": "47g",
+            "Dietary Fiber": "4g",
+            "Total Sugars": "5g",
+            "Protein": "18g",
+            "Calcium": "20% DV",
+            "Iron": "15% DV",
+            "Potassium": "10% DV"
+        },
+        "allergens": [
+            {
+                "name": "Egg",
+                "icon": "../../images/egg.svg"
+            },
+            {
+                "name": "Milk",
+                "icon": "../../images/milk.svg"
+            },
+            {
+                "name": "Soy",
+                "icon": "../../images/soy.svg"
+            },
+            {
+                "name": "Wheat",
+                "icon": "../../images/wheat.svg"
+            }
+        ],
+        "ingredients": [
+            {
+                "name": "French Fries",
+                "details": "Potatoes, Vegetable Oil (Canola Oil, Soybean Oil), Salt."
+            },
+            {
+                "name": "Cheese Sauce",
+                "details": "Milk, Cream, Water, Sodium Citrate, Salt, Contains less than 2% of: Cheese Culture, Enzymes, Citric Acid, Annatto (Color). CONTAINS: MILK."
+            }
+        ]
+    },    
     {
         "id": 9,
         "name": "Blueberry Pomegranate Lemonade",
         "calories": 450,
         "price": 4.19,
-        "url": "wendys/blueberryPomegranateLemonade.html",
+        "image": "images/blueberryPomegranateLemonade.png",
         "restaurant": "Wendys",
         "group": "beverage",
         "reviews": [
@@ -410,14 +758,53 @@
             "texture": 80,
             "appearance": 80
         },
-        "overallScore": 71.0
+        "overallScore": 71.0,
+        "nutrition": {
+            "Calories": "450 kcal",
+            "Total Fat": "0g",
+            "Saturated Fat": "0g",
+            "Trans Fat": "0g",
+            "Cholesterol": "0mg",
+            "Sodium": "10mg",
+            "Total Carbs": "115g",
+            "Dietary Fiber": "0g",
+            "Total Sugars": "115g",
+            "Protein": "0g"
+        },
+        "allergens": [],
+        "ingredients": [
+            {
+                "name": "Water",
+                "details": "Filtered water."
+            },
+            {
+                "name": "High Fructose Corn Syrup",
+                "details": "Sweetener."
+            },
+            {
+                "name": "Blueberry Juice Concentrate",
+                "details": "Blueberry flavoring."
+            },
+            {
+                "name": "Pomegranate Juice Concentrate",
+                "details": "Pomegranate flavoring."
+            },
+            {
+                "name": "Citric Acid",
+                "details": "Acidulant for tartness."
+            },
+            {
+                "name": "Natural Flavors",
+                "details": "Flavor enhancers."
+            }
+        ]
     },
     {
         "id": 10,
         "name": "Pineapple Mango Lemonade",
         "calories": 420,
         "price": 4.19,
-        "url": "wendys/pineappleMangoLemonade.html",
+        "image": "images/pineappleMangoLemonade.png",
         "restaurant": "Wendys",
         "group": "beverage",
         "reviews": [
@@ -436,14 +823,53 @@
             "texture": 70,
             "appearance": 80
         },
-        "overallScore": 76.2
-    },
+        "overallScore": 76.2,
+        "nutrition": {
+            "Calories": "420 kcal",
+            "Total Fat": "0g",
+            "Saturated Fat": "0g",
+            "Trans Fat": "0g",
+            "Cholesterol": "0mg",
+            "Sodium": "15mg",
+            "Total Carbs": "105g",
+            "Dietary Fiber": "0g",
+            "Total Sugars": "105g",
+            "Protein": "0g"
+        },
+        "allergens": [],
+        "ingredients": [
+            {
+                "name": "Water",
+                "details": "Filtered water."
+            },
+            {
+                "name": "High Fructose Corn Syrup",
+                "details": "Sweetener."
+            },
+            {
+                "name": "Pineapple Juice Concentrate",
+                "details": "Pineapple flavoring."
+            },
+            {
+                "name": "Mango Juice Concentrate",
+                "details": "Mango flavoring."
+            },
+            {
+                "name": "Citric Acid",
+                "details": "Acidulant for tartness."
+            },
+            {
+                "name": "Natural Flavors",
+                "details": "Flavor enhancers."
+            }
+        ]
+    },    
     {
         "id": 11,
         "name": "All-Natural Lemonade",
         "calories": 330,
         "price": 4.19,
-        "url": "wendys/allNaturalLemonade.html",
+        "image": "images/allNaturalLemonade.png",
         "restaurant": "Wendys",
         "group": "beverage",
         "reviews": [
@@ -468,14 +894,49 @@
             "texture": 70,
             "appearance": 70
         },
-        "overallScore": 65.0
-    },
+        "overallScore": 65.0,
+        "nutrition": {
+            "Calories": "330 kcal",
+            "Total Fat": "0g",
+            "Saturated Fat": "0g",
+            "Trans Fat": "0g",
+            "Cholesterol": "0mg",
+            "Sodium": "20mg",
+            "Total Carbs": "85g",
+            "Dietary Fiber": "0g",
+            "Total Sugars": "85g",
+            "Protein": "0g"
+        },
+        "allergens": [],
+        "ingredients": [
+            {
+                "name": "Water",
+                "details": "Filtered water."
+            },
+            {
+                "name": "High Fructose Corn Syrup",
+                "details": "Sweetener."
+            },
+            {
+                "name": "Lemon Juice Concentrate",
+                "details": "Lemon flavoring."
+            },
+            {
+                "name": "Citric Acid",
+                "details": "Acidulant for tartness."
+            },
+            {
+                "name": "Natural Flavors",
+                "details": "Flavor enhancers."
+            }
+        ]
+    },    
     {
         "id": 12,
         "name": "Strawberry Lemonade",
         "calories": 420,
         "price": 4.19,
-        "url": "wendys/strawberryLemonade.html",
+        "image": "images/strawberryLemonade.png",
         "restaurant": "Wendys",
         "group": "beverage",
         "reviews": [
@@ -500,7 +961,46 @@
             "texture": 70,
             "appearance": 80
         },
-        "overallScore": 68.3
+        "overallScore": 68.3,
+        "nutrition": {
+            "Calories": "420 kcal",
+            "Total Fat": "0g",
+            "Saturated Fat": "0g",
+            "Trans Fat": "0g",
+            "Cholesterol": "0mg",
+            "Sodium": "30mg",
+            "Total Carbs": "105g",
+            "Dietary Fiber": "0g",
+            "Total Sugars": "105g",
+            "Protein": "0g"
+        },
+        "allergens": [],
+        "ingredients": [
+            {
+                "name": "Water",
+                "details": "Filtered water."
+            },
+            {
+                "name": "High Fructose Corn Syrup",
+                "details": "Sweetener."
+            },
+            {
+                "name": "Lemon Juice Concentrate",
+                "details": "Lemon flavoring."
+            },
+            {
+                "name": "Strawberry Juice Concentrate",
+                "details": "Strawberry flavoring."
+            },
+            {
+                "name": "Citric Acid",
+                "details": "Acidulant for tartness."
+            },
+            {
+                "name": "Natural Flavors",
+                "details": "Flavor enhancers."
+            }
+        ]
     },
     {
         "id": 13,
@@ -532,7 +1032,57 @@
             "texture": 80,
             "appearance": 80
         },
-        "overallScore": 76.7
+        "overallScore": 76.7,
+        "nutrition": {
+            "Calories": "520 kcal",
+            "Total Fat": "20g",
+            "Saturated Fat": "12g",
+            "Trans Fat": "0g",
+            "Cholesterol": "65mg",
+            "Sodium": "210mg",
+            "Total Carbs": "78g",
+            "Dietary Fiber": "2g",
+            "Total Sugars": "64g",
+            "Protein": "8g"
+        },
+        "allergens": [
+            "Milk",
+            "Soy"
+        ],
+        "ingredients": [
+            {
+                "name": "Milk",
+                "details": "Contains milk and cream."
+            },
+            {
+                "name": "Sugar",
+                "details": "Sweetener."
+            },
+            {
+                "name": "Strawberry Puree",
+                "details": "Strawberry flavoring."
+            },
+            {
+                "name": "Blueberry Puree",
+                "details": "Blueberry flavoring."
+            },
+            {
+                "name": "Raspberry Puree",
+                "details": "Raspberry flavoring."
+            },
+            {
+                "name": "Corn Syrup",
+                "details": "Sweetener."
+            },
+            {
+                "name": "Soy Lecithin",
+                "details": "Emulsifier."
+            },
+            {
+                "name": "Natural Flavors",
+                "details": "Flavor enhancers."
+            }
+        ]
     },
     {
         "id": 14,
@@ -564,7 +1114,49 @@
             "texture": 90,
             "appearance": 80
         },
-        "overallScore": 75.0
+        "overallScore": 75.0,
+        "nutrition": {
+            "Calories": "500 kcal",
+            "Total Fat": "22g",
+            "Saturated Fat": "13g",
+            "Trans Fat": "0g",
+            "Cholesterol": "80mg",
+            "Sodium": "200mg",
+            "Total Carbs": "66g",
+            "Dietary Fiber": "3g",
+            "Total Sugars": "54g",
+            "Protein": "8g"
+        },
+        "allergens": [
+            "Milk",
+            "Soy"
+        ],
+        "ingredients": [
+            {
+                "name": "Milk",
+                "details": "Contains milk and cream."
+            },
+            {
+                "name": "Sugar",
+                "details": "Sweetener."
+            },
+            {
+                "name": "Cocoa",
+                "details": "Chocolate flavoring."
+            },
+            {
+                "name": "Corn Syrup",
+                "details": "Sweetener."
+            },
+            {
+                "name": "Soy Lecithin",
+                "details": "Emulsifier."
+            },
+            {
+                "name": "Natural Flavors",
+                "details": "Flavor enhancers."
+            }
+        ]
     },
     {
         "id": 15,
@@ -596,7 +1188,59 @@
             "texture": 90,
             "appearance": 80
         },
-        "overallScore": 78.3
+        "overallScore": 78.3,
+        "nutrition": {
+            "Calories": "550 kcal",
+            "Total Fat": "30g",
+            "Saturated Fat": "12g",
+            "Trans Fat": "0g",
+            "Cholesterol": "70mg",
+            "Sodium": "400mg",
+            "Total Carbs": "65g",
+            "Dietary Fiber": "2g",
+            "Total Sugars": "40g",
+            "Protein": "6g"
+        },
+        "allergens": [
+            "Milk",
+            "Wheat",
+            "Soy",
+            "Egg"
+        ],
+        "ingredients": [
+            {
+                "name": "Wheat Flour",
+                "details": "Main ingredient in dough."
+            },
+            {
+                "name": "Sugar",
+                "details": "Sweetener."
+            },
+            {
+                "name": "Butter",
+                "details": "For richness and flavor."
+            },
+            {
+                "name": "Milk",
+                "details": "Adds moisture and richness."
+            },
+            {
+                "name": "Cinnamon",
+                "details": "Flavoring."
+            },
+            {
+                "name": "Eggs",
+                "details": "Binder and adds richness."
+            },
+            {
+                "name": "Baking Powder",
+                "details": "Leavening agent."
+            },
+            {
+                "name": "Vanilla Extract",
+                "details": "Flavoring."
+            }
+        ]
     },
     {
         "id": 16,
@@ -628,6 +1272,55 @@
             "texture": 70,
             "appearance": 70
         },
-        "overallScore": 68.3
+        "overallScore": 68.3,
+        "nutrition": {
+            "Calories": "330 kcal",
+            "Total Fat": "16g",
+            "Saturated Fat": "8g",
+            "Trans Fat": "0g",
+            "Cholesterol": "35mg",
+            "Sodium": "150mg",
+            "Total Carbs": "44g",
+            "Dietary Fiber": "1g",
+            "Total Sugars": "26g",
+            "Protein": "3g"
+        },
+        "allergens": [
+            "Milk",
+            "Wheat",
+            "Soy",
+            "Egg"
+        ],
+        "ingredients": [
+            {
+                "name": "Wheat Flour",
+                "details": "Main ingredient in the dough."
+            },
+            {
+                "name": "Sugar",
+                "details": "Sweetener."
+            },
+            {
+                "name": "Butter",
+                "details": "Adds richness and flavor."
+            },
+            {
+                "name": "Chocolate Chunks",
+                "details": "Provides chocolate flavor and texture."
+            },
+            {
+                "name": "Eggs",
+                "details": "Binder and adds richness."
+            },
+            {
+                "name": "Baking Soda",
+                "details": "Leavening agent."
+            },
+            {
+                "name": "Vanilla Extract",
+                "details": "Flavoring."
+            }
+        ]
     }
+    
 ]
