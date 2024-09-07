@@ -287,7 +287,7 @@ document.getElementById('scrollButtonSection').addEventListener('click', functio
   async function fetchBlogs() {
     try {
       // Fetch the blog data
-      const response = await fetch('/blog/json/blog.json');
+      const response = await fetch('blog/json/blog.json');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }
@@ -295,6 +295,8 @@ document.getElementById('scrollButtonSection').addEventListener('click', functio
 
       // Sort the blogs in descending order based on their IDs
       blogs.sort((a, b) => b.id - a.id);
+
+      blogs = blogs.slice(0, 3);
 
       // Get the container where blogs will be inserted
       const blogContainer = document.querySelector('.blog_section .row');
@@ -316,7 +318,7 @@ document.getElementById('scrollButtonSection').addEventListener('click', functio
             <div class="detail-box">
               <div class="date">${formatDate(blog.date)}</div>
               <h5><a href="/blog/blog.html?id=${blog.id}">${blog.title}</a></h5>
-              <p>${blog.text[0]}</p>
+              <p>${truncateText(blog.text[0], 20)}</p>
               <a href="/blog/blog.html?id=${blog.id}">Read More</a>
             </div>
           `;
@@ -333,6 +335,14 @@ document.getElementById('scrollButtonSection').addEventListener('click', functio
     } catch (error) {
       console.error('Error fetching blogs:', error);
     }
+  }
+
+  function truncateText(text, wordLimit) {
+    const words = text.split(' ');
+    if (words.length > wordLimit) {
+      return words.slice(0, wordLimit).join(' ') + '...';
+    }
+    return text;
   }
 
   function observeBlogElement(blogElement) {
