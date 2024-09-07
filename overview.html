@@ -79,70 +79,85 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-  fetchBlogs();
-});
-
-async function fetchBlogs() {
-  try {
-    // Fetch the blog data
-    const response = await fetch('blog//json/blog.json');
-    const blogs = await response.json();
-
-    // Sort the blogs in descending order based on their IDs
-    blogs.sort((a, b) => b.id - a.id);
-
-    // Get the container where blogs will be inserted
-    const blogContainer = document.querySelector('.blog_section .row');
-
-    // Clear existing content
-    blogContainer.innerHTML = '';
-
-    // Loop through each blog post and create HTML elements
-    blogs.forEach((blog, index) => {
-      setTimeout(() => {
-        const blogElement = document.createElement('div');
-        blogElement.classList.add('col-md-4');
-        blogElement.classList.add('blog_box');
-
-        blogElement.innerHTML = `
-          <div class="img-box">
-            <a href="/blog/blog.html?id=${blog.id}"><img src="${blog.image}" alt="${blog.title}"></a>
-          </div>
-          <div class="detail-box">
-            <div class="date">${formatDate(blog.date)}</div>
-            <h5><a href="/blog/blog.html?id=${blog.id}">${blog.title}</a></h5>
-            <p>${blog.description}</p>
-            <a href="/blog/blog.html?id=${blog.id}">Read More</a>
-          </div>
-        `;
-
-        // Append the new blog element to the container
-        blogContainer.appendChild(blogElement);
-
-        // Use requestAnimationFrame to ensure the element is displayed before adding 'show' class
-        requestAnimationFrame(() => {
-          blogElement.classList.add('show');
-        });
-
-      }, index * 200); // Adjust delay to suit the effect
+      fetchBlogs();
     });
-
-  } catch (error) {
-    console.error('Error fetching blogs:', error);
-  }
-}
-
-function formatDate(dateString) {
-  const options = { year: 'numeric', month: 'long', day: 'numeric' };
-  const date = new Date(dateString);
-  return date.toLocaleDateString(undefined, options);
-}
-
-function openNav() {
-  document.getElementById("myNav").classList.toggle("menu_width");
-  document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style");
-}
+  
+    async function fetchBlogs() {
+      try {
+        // Fetch the blog data
+        const response = await fetch('blog//json/blog.json');
+        const blogs = await response.json();
+  
+        // Sort the blogs in descending order based on their IDs
+        blogs.sort((a, b) => b.id - a.id);
+  
+        // Get the container where blogs will be inserted
+        const blogContainer = document.querySelector('.blog_section .row');
+  
+        // Clear existing content
+        blogContainer.innerHTML = '';
+  
+        // Loop through each blog post and create HTML elements
+        blogs.forEach((blog, index) => {
+          setTimeout(() => {
+            const blogElement = document.createElement('div');
+            blogElement.classList.add('col-md-4');
+            blogElement.classList.add('blog_box');
+  
+            blogElement.innerHTML = `
+              <div class="img-box">
+                <a href="/blog/blog.html?id=${blog.id}"><img src="${blog.image}" alt="${blog.title}"></a>
+              </div>
+              <div class="detail-box">
+                <div class="date">${formatDate(blog.date)}</div>
+                <h5><a href="/blog/blog.html?id=${blog.id}">${blog.title}</a></h5>
+                <p>${blog.description}</p>
+                <a href="/blog/blog.html?id=${blog.id}">Read More</a>
+              </div>
+            `;
+  
+            // Append the new blog element to the container
+            blogContainer.appendChild(blogElement);
+  
+            // Add the blog element to the observer to animate when in view
+            observeBlogElement(blogElement);
+  
+          }, index * 200); // Adjust delay to suit the effect
+        });
+  
+      } catch (error) {
+        console.error('Error fetching blogs:', error);
+      }
+    }
+  
+    function observeBlogElement(blogElement) {
+      // Set up the intersection observer to detect when the element is in view
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Add the 'show' class to trigger the animation
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target);  // Stop observing once the animation is triggered
+          }
+        });
+      }, { threshold: 0.2 }); // Adjust the threshold as needed
+  
+      // Observe the blog element
+      observer.observe(blogElement);
+    }
+  
+    function formatDate(dateString) {
+      const options = { year: 'numeric', month: 'long', day: 'numeric' };
+      const date = new Date(dateString);
+      return date.toLocaleDateString(undefined, options);
+    }
+  
+    function openNav() {
+      document.getElementById("myNav").classList.toggle("menu_width");
+      document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style");
+    }
   </script>
+  
 </body>
 
 </html>
