@@ -231,7 +231,7 @@
     }
   </script>
   <script>
-    async function fetchAndPopulateTables(jsonFile) {
+async function fetchAndPopulateTables(jsonFile) {
     try {
         const response = await fetch(jsonFile);
         const jsonData = await response.json();
@@ -257,7 +257,7 @@ function populateTables(jsonData) {
 
     // Populate rows based on group and restaurant
     jsonData.forEach(item => {
-        if (item.restaurant === 'wendys') { // Check if the restaurant value is "wendys"
+        if (item.restaurant.toLowerCase() === 'wendys') { // Ensure case insensitivity
             const tableId = tables[item.group];
             if (tableId) {
                 const tableBody = document.querySelector(`#${tableId} tbody`);
@@ -268,8 +268,8 @@ function populateTables(jsonData) {
                 row.innerHTML = `
                     <td>${item.name}</td>
                     <td class="calorie-cell">${item.calories !== null ? item.calories : ''}</td>
-                    <td class="score-cell">${item.score !== null ? item.score : ''}</td>
-                    <td class="price-cell">${item.price !== null ? item.price : ''}</td>
+                    <td class="score-cell">${item.overallScore !== null ? item.overallScore : ''}</td>
+                    <td class="price-cell">${item.price !== null ? item.price.toFixed(2) : ''}</td>
                 `;
                 
                 row.addEventListener('click', () => {
@@ -281,7 +281,6 @@ function populateTables(jsonData) {
         }
     });
 }
-
 fetchAndPopulateTables('/restaurants/json/foodData.json');
 
   </script>
