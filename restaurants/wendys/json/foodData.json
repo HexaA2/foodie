@@ -216,110 +216,89 @@
     },
     {
         "id": 3,
-        "name": "Cheeseburger Deluxe",
-        "calories": 730,
-        "price": 6.89,
+        "name": "Dave's Triple",
+        "calories": 1580,
+        "price": 8.99,
+        "image": "images/davesTriple.png",
         "restaurant": "Wendys",
-        "group": "main",
+        "group": "burger",
         "reviews": [
             {
-                "title": "Delicious and satisfying",
-                "content": "A good balance of flavors and textures, very satisfying.",
-                "author": "Emma Collins",
-                "authorPhoto": "../../images/emmaCollins.jpg"
+                "title": "A Meat Lover's Dream",
+                "content": "Three beef patties, three slices of cheese – perfect for anyone who loves a hearty burger.",
+                "author": "Sarah Liang",
+                "authorPhoto": "../../images/sarahLiang.jpg"
             },
             {
-                "title": "Could use more cheese",
-                "content": "The cheese wasn't very prominent. Needs more cheese for my taste.",
-                "author": "Liam Brown",
-                "authorPhoto": "../../images/liamBrown.jpg"
+                "title": "Overwhelming",
+                "content": "Way too much meat and cheese. It's a bit overwhelming and heavy.",
+                "author": "Annika Balaji",
+                "authorPhoto": "../../images/annikaBalaji.jpg"
             }
         ],
         "scores": {
-            "flavor": 75,
-            "balance": 70,
-            "intensity": 70,
-            "aftertaste": 65,
+            "flavor": 85,
+            "balance": 60,
+            "intensity": 80,
+            "aftertaste": 70,
             "texture": 75,
-            "appearance": 70
+            "appearance": 80
         },
-        "overallScore": 71.4,
+        "overallScore": 74.0,
         "nutrition": {
-            "Calories": "730 kcal",
-            "Total Fat": "42g",
-            "Saturated Fat": "18g",
-            "Trans Fat": "1.5g",
-            "Cholesterol": "95mg",
-            "Sodium": "1150mg",
-            "Total Carbs": "38g",
-            "Dietary Fiber": "2g",
-            "Total Sugars": "9g",
-            "Protein": "31g",
-            "Calcium": "20% DV",
-            "Iron": "20% DV",
-            "Potassium": "8% DV"
+            "Calories": "1580 kcal",
+            "Total Fat": "105g",
+            "Saturated Fat": "40g",
+            "Trans Fat": "2g",
+            "Cholesterol": "245mg",
+            "Sodium": "1,370mg",
+            "Total Carbs": "82g",
+            "Dietary Fiber": "4g",
+            "Total Sugars": "13g",
+            "Protein": "87g"
         },
         "allergens": [
-            {
-                "name": "Egg",
-                "icon": "../../images/egg.svg"
-            },
-            {
-                "name": "Milk",
-                "icon": "../../images/milk.svg"
-            },
-            {
-                "name": "Soy",
-                "icon": "../../images/soy.svg"
-            },
-            {
-                "name": "Sesame",
-                "icon": "../../images/sesame.svg"
-            },
-            {
-                "name": "Wheat",
-                "icon": "../../images/wheat.svg"
-            }
+            "Milk",
+            "Wheat",
+            "Soy",
+            "Beef"
         ],
         "ingredients": [
             {
-                "name": "Hamburger Patty",
-                "details": "Ground Beef, Salt. HAMBURGER PATTIES ARE COOKED ON THE SAME GRILL AS AND MAY COME IN CONTACT WITH INGREDIENTS THAT CONTAIN MILK AND SOY."
+                "name": "Beef Patties",
+                "details": "Three layers of beef patties, seasoned and grilled."
             },
             {
-                "name": "Premium Bun",
-                "details": "Enriched Flour (Wheat Flour, Malted Barley Flour, Niacin, Reduced Iron, Thiamine Mononitrate, Riboflavin, Folic Acid), Water, High Fructose Corn Syrup and/or Sugar, Yeast, Soybean Oil, Contains less than 2% of each of the following: Ascorbic Acid (Vitamin C), Calcium Peroxide, Calcium Propionate (Added as a Preservative), Calcium Sulfate, Canola Oil, Citric Acid, Corn Starch, Dextrose, Enzymes, Maltodextrins, Modified Food Starch, Monocalcium Phosphate, Monoglycerides, Salt, Sodium Stearoyl Lactylate (SSL), Starch, Sunflower Oil, Vegetable Oil, Vegetable Proteins (Pea, Potato, Fava Bean), Wheat Dextrose, Wheat Flour, Wheat Gluten, Wheat Maltodextrins, Sesame Flour. CONTAINS: WHEAT, SESAME. BUNS ARE TOASTED IN A COMMON TOASTER WITH PRODUCTS THAT CONTAIN WHEAT, SOY, MILK, SESAME."
-            },
-            {
-                "name": "American Cheese Slice",
-                "details": "Milk, Cream, Water, Sodium Citrate, Salt, Contains 2% or less of Apocarotenal and Beta Carotene (Color), Cheese Culture, Citric Acid, Enzymes, Sorbic Acid (Preservative), Soy Lecithin. CONTAINS: MILK, SOY."
-            },
-            {
-                "name": "Tomato",
-                "details": "Tomato"
-            },
-            {
-                "name": "Crinkle Cut Pickles",
-                "details": "Cucumber, Water, Distilled Vinegar, Salt, Calcium Chloride, Sodium Benzoate (Preservative), Lactic Acid, Natural Flavors, Polysorbate 80 and Turmeric."
-            },
-            {
-                "name": "Mayonnaise",
-                "details": "Soybean Oil, Water, Egg Yolks, Corn Syrup, Distilled Vinegar, Salt, Mustard Seed, Calcium Disodium Edta (To Protect Flavor). CONTAINS: EGG."
+                "name": "Cheddar Cheese",
+                "details": "Three slices of cheddar cheese, melted over the patties."
             },
             {
                 "name": "Lettuce",
-                "details": "Lettuce"
+                "details": "Fresh leaf lettuce for crunch."
+            },
+            {
+                "name": "Tomato",
+                "details": "Sliced tomato for added freshness."
+            },
+            {
+                "name": "Pickles",
+                "details": "Crispy pickles for a tangy flavor."
+            },
+            {
+                "name": "Mayonnaise",
+                "details": "Creamy mayo spread on the bun."
             },
             {
                 "name": "Ketchup",
-                "details": "Tomato Concentrate from Red Ripe Tomatoes, Distilled Vinegar, High Fructose Corn Syrup, Corn Syrup, Salt, Natural Flavoring, Spices, Onion Powder. CONTAINS: EGG."
+                "details": "Classic ketchup for a touch of sweetness."
             },
             {
-                "name": "Onion",
-                "details": "Onion"
+                "name": "Burger Bun",
+                "details": "Soft and toasted bun that holds everything together."
             }
         ]
-    },
+    }
+    ,
     {
         "id": 4,
         "name": "Baconator",
