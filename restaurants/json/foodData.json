@@ -4,7 +4,7 @@
         "name": "Dave's Single",
         "calories": 590,
         "price": 6.59,
-        "image": "images/davesSingle.png",
+        "image": "/wendys/images/davesSingle.png",
         "restaurant": "Wendys",
         "group": "main",
         
@@ -13,13 +13,13 @@
                 "title": "Classic and satisfying",
                 "content": "A well-balanced burger with juicy beef and fresh toppings.",
                 "author": "Tony Song",
-                "authorPhoto": "../../images/tonySong.jpg"
+                "authorPhoto": "../images/tonySong.jpg"
             },
             {
                 "title": "Just okay",
                 "content": "The burger was decent but not extraordinary.",
                 "author": "Andrew Zhao",
-                "authorPhoto": "../../images/andrewZhao.jpg"
+                "authorPhoto": "../images/andrewZhao.jpg"
             }
         ],
         "scores": {
@@ -49,23 +49,23 @@
         "allergens": [
             {
                 "name": "Egg",
-                "icon": "../../images/egg.svg"
+                "icon": "../images/egg.svg"
             },
             {
                 "name": "Milk",
-                "icon": "../../images/milk.svg"
+                "icon": "../images/milk.svg"
             },
             {
                 "name": "Soy",
-                "icon": "../../images/soy.svg"
+                "icon": "../images/soy.svg"
             },
             {
                 "name": "Sesame",
-                "icon": "../../images/sesame.svg"
+                "icon": "../images/sesame.svg"
             },
             {
                 "name": "Wheat",
-                "icon": "../../images/wheat.svg"
+                "icon": "../images/wheat.svg"
             }
         ],
         "ingredients": [
@@ -113,20 +113,20 @@
         "calories": 860,
         "price": 7.79,
         "restaurant": "Wendys",
-        "image": "images/davesDouble.png",
+        "image": "/wendys/images/davesDouble.png",
         "group": "main",
         "reviews": [
             {
                 "title": "Hearty and filling",
                 "content": "The extra patty makes it a hearty meal. Great for big appetites!",
                 "author": "Sophia Li",
-                "authorPhoto": "../../images/sophiaLi.jpg"
+                "authorPhoto": "../images/sophiaLi.jpg"
             },
             {
                 "title": "Too greasy for my taste",
                 "content": "Found it a bit too greasy. Prefer something lighter.",
                 "author": "Doris Wang",
-                "authorPhoto": "../../images/dorisWang.jpg"
+                "authorPhoto": "../images/dorisWang.jpg"
             }
         ],
         "scores": {
@@ -156,23 +156,23 @@
         "allergens": [
             {
                 "name": "Egg",
-                "icon": "../../images/egg.svg"
+                "icon": "../images/egg.svg"
             },
             {
                 "name": "Milk",
-                "icon": "../../images/milk.svg"
+                "icon": "../images/milk.svg"
             },
             {
                 "name": "Soy",
-                "icon": "../../images/soy.svg"
+                "icon": "../images/soy.svg"
             },
             {
                 "name": "Sesame",
-                "icon": "../../images/sesame.svg"
+                "icon": "../images/sesame.svg"
             },
             {
                 "name": "Wheat",
-                "icon": "../../images/wheat.svg"
+                "icon": "../images/wheat.svg"
             }
         ],
         "ingredients": [
@@ -219,7 +219,7 @@
         "name": "Dave's Triple",
         "calories": 1580,
         "price": 8.99,
-        "image": "images/davesTriple.png",
+        "image": "/wendys/images/davesTriple.png",
         "restaurant": "Wendys",
         "group": "burger",
         "reviews": [
@@ -227,13 +227,13 @@
                 "title": "A Meat Lover's Dream",
                 "content": "Three beef patties, three slices of cheese – perfect for anyone who loves a hearty burger.",
                 "author": "Sarah Liang",
-                "authorPhoto": "../../images/sarahLiang.jpg"
+                "authorPhoto": "../images/sarahLiang.jpg"
             },
             {
                 "title": "Overwhelming",
                 "content": "Way too much meat and cheese. It's a bit overwhelming and heavy.",
                 "author": "Annika Balaji",
-                "authorPhoto": "../../images/annikaBalaji.jpg"
+                "authorPhoto": "../images/annikaBalaji.jpg"
             }
         ],
         "scores": {
@@ -260,23 +260,23 @@
         "allergens": [
             {
                 "name": "Egg",
-                "icon": "../../images/egg.svg"
+                "icon": "../images/egg.svg"
             },
             {
                 "name": "Milk",
-                "icon": "../../images/milk.svg"
+                "icon": "../images/milk.svg"
             },
             {
                 "name": "Soy",
-                "icon": "../../images/soy.svg"
+                "icon": "../images/soy.svg"
             },
             {
                 "name": "Sesame",
-                "icon": "../../images/sesame.svg"
+                "icon": "../images/sesame.svg"
             },
             {
                 "name": "Wheat",
-                "icon": "../../images/wheat.svg"
+                "icon": "../images/wheat.svg"
             }
         ],
         "ingredients": [
@@ -324,7 +324,7 @@
         "name": "Baconator",
         "calories": 960,
         "price": 8.49,
-        "image": "images/baconator.png",
+        "image": "/wendys/images/baconator.png",
         "restaurant": "Wendys",
         "group": "main",
         "reviews": [
@@ -332,13 +332,13 @@
                 "title": "Bacon heaven",
                 "content": "Loaded with bacon, this burger is for bacon lovers.",
                 "author": "Tony Song",
-                "authorPhoto": "../../images/tonySong.jpg"
+                "authorPhoto": "../images/tonySong.jpg"
             },
             {
                 "title": "Too rich",
                 "content": "The bacon is great, but the burger is a bit too rich.",
                 "author": "Andrew Zhao",
-                "authorPhoto": "../../images/andrewZhao.jpg"
+                "authorPhoto": "../images/andrewZhao.jpg"
             }
         ],
         "scores": {
@@ -368,23 +368,23 @@
         "allergens": [
             {
                 "name": "Egg",
-                "icon": "../../images/egg.svg"
+                "icon": "../images/egg.svg"
             },
             {
                 "name": "Milk",
-                "icon": "../../images/milk.svg"
+                "icon": "../images/milk.svg"
             },
             {
                 "name": "Soy",
-                "icon": "../../images/soy.svg"
+                "icon": "../images/soy.svg"
             },
             {
                 "name": "Sesame",
-                "icon": "../../images/sesame.svg"
+                "icon": "../images/sesame.svg"
             },
             {
                 "name": "Wheat",
-                "icon": "../../images/wheat.svg"
+                "icon": "../images/wheat.svg"
             }
         ],
         "ingredients": [
@@ -423,7 +423,7 @@
         "name": "French Fries",
         "calories": 470,
         "price": 4.29,
-        "image": "images/frenchFries.png",
+        "image": "/wendys/images/frenchFries.png",
         "restaurant": "Wendys",
         "group": "side",
         "reviews": [
@@ -431,13 +431,13 @@
                 "title": "Crispy and golden",
                 "content": "Perfectly crispy and golden brown.",
                 "author": "Sophia Li",
-                "authorPhoto": "../../images/sophiaLi.jpg"
+                "authorPhoto": "../images/sophiaLi.jpg"
             },
             {
                 "title": "A bit salty",
                 "content": "Good fries, but sometimes they are a bit too salty.",
                 "author": "Doris Wang",
-                "authorPhoto": "../../images/dorisWang.jpg"
+                "authorPhoto": "../images/dorisWang.jpg"
             }
         ],
         "scores": {
@@ -467,23 +467,23 @@
         "allergens": [
             {
                 "name": "Egg",
-                "icon": "../../images/egg.svg"
+                "icon": "../images/egg.svg"
             },
             {
                 "name": "Milk",
-                "icon": "../../images/milk.svg"
+                "icon": "../images/milk.svg"
             },
             {
                 "name": "Soy",
-                "icon": "../../images/soy.svg"
+                "icon": "../images/soy.svg"
             },
             {
                 "name": "Sesame",
-                "icon": "../../images/sesame.svg"
+                "icon": "../images/sesame.svg"
             },
             {
                 "name": "Wheat",
-                "icon": "../../images/wheat.svg"
+                "icon": "../images/wheat.svg"
             }
         ],
         "ingredients": [
@@ -503,19 +503,20 @@
         "calories": 460,
         "price": 5.19,
         "restaurant": "Wendys",
+        "image": "/wendys/images/baconatorFries.png",
         "group": "side",
         "reviews": [
             {
                 "title": "Deliciously cheesy",
                 "content": "The cheese and bacon combo is to die for.",
                 "author": "Sarah Liang",
-                "authorPhoto": "../../images/sarahLiang.jpg"
+                "authorPhoto": "../images/sarahLiang.jpg"
             },
             {
                 "title": "Overwhelming",
                 "content": "Too much going on. The flavors are overwhelming.",
                 "author": "Annika Balaji",
-                "authorPhoto": "../../images/annikaBalaji.jpg"
+                "authorPhoto": "../images/annikaBalaji.jpg"
             }
         ],
         "scores": {
@@ -545,19 +546,19 @@
         "allergens": [
             {
                 "name": "Egg",
-                "icon": "../../images/egg.svg"
+                "icon": "../images/egg.svg"
             },
             {
                 "name": "Milk",
-                "icon": "../../images/milk.svg"
+                "icon": "../images/milk.svg"
             },
             {
                 "name": "Soy",
-                "icon": "../../images/soy.svg"
+                "icon": "../images/soy.svg"
             },
             {
                 "name": "Wheat",
-                "icon": "../../images/wheat.svg"
+                "icon": "../images/wheat.svg"
             }
         ],
         "ingredients": [
@@ -581,19 +582,20 @@
         "calories": 520,
         "price": 4.69,
         "restaurant": "Wendys",
+        "image": "/wendys/images/chiliCheeseFries.png",
         "group": "side",
         "reviews": [
             {
                 "title": "Loaded and satisfying",
                 "content": "Great taste with loaded chili and cheese.",
                 "author": "Tony Song",
-                "authorPhoto": "../../images/tonySong.jpg"
+                "authorPhoto": "../images/tonySong.jpg"
             },
             {
                 "title": "A bit greasy",
                 "content": "Tasty but quite greasy.",
                 "author": "Andrew Zhao",
-                "authorPhoto": "../../images/andrewZhao.jpg"
+                "authorPhoto": "../images/andrewZhao.jpg"
             }
         ],
         "scores": {
@@ -623,19 +625,19 @@
         "allergens": [
             {
                 "name": "Egg",
-                "icon": "../../images/egg.svg"
+                "icon": "../images/egg.svg"
             },
             {
                 "name": "Milk",
-                "icon": "../../images/milk.svg"
+                "icon": "../images/milk.svg"
             },
             {
                 "name": "Soy",
-                "icon": "../../images/soy.svg"
+                "icon": "../images/soy.svg"
             },
             {
                 "name": "Wheat",
-                "icon": "../../images/wheat.svg"
+                "icon": "../images/wheat.svg"
             }
         ],
         "ingredients": [
@@ -659,19 +661,20 @@
         "calories": 470,
         "price": 4.39,
         "restaurant": "Wendys",
+        "image": "/wendys/images/cheeseFries.png",
         "group": "side",
         "reviews": [
             {
                 "title": "Classic comfort",
                 "content": "A classic, comforting choice with melted cheese.",
                 "author": "Sophia Li",
-                "authorPhoto": "../../images/sophiaLi.jpg"
+                "authorPhoto": "../images/sophiaLi.jpg"
             },
             {
                 "title": "Mediocre",
                 "content": "Nothing special, just standard cheese fries.",
                 "author": "Doris Wang",
-                "authorPhoto": "../../images/dorisWang.jpg"
+                "authorPhoto": "../images/dorisWang.jpg"
             }
         ],
         "scores": {
@@ -701,19 +704,19 @@
         "allergens": [
             {
                 "name": "Egg",
-                "icon": "../../images/egg.svg"
+                "icon": "../images/egg.svg"
             },
             {
                 "name": "Milk",
-                "icon": "../../images/milk.svg"
+                "icon": "../images/milk.svg"
             },
             {
                 "name": "Soy",
-                "icon": "../../images/soy.svg"
+                "icon": "../images/soy.svg"
             },
             {
                 "name": "Wheat",
-                "icon": "../../images/wheat.svg"
+                "icon": "../images/wheat.svg"
             }
         ],
         "ingredients": [
@@ -732,7 +735,7 @@
         "name": "Blueberry Pomegranate Lemonade",
         "calories": 450,
         "price": 4.19,
-        "image": "images/blueberryPomegranateLemonade.png",
+        "image": "/wendys/images/blueberryPomegranateLemonade.png",
         "restaurant": "Wendys",
         "group": "beverage",
         "reviews": [
@@ -740,13 +743,13 @@
                 "title": "Refreshing!",
                 "content": "Loved this drink, perfect balance of sweetness.",
                 "author": "Tony Song",
-                "authorPhoto": "../../images/tonySong.jpg"
+                "authorPhoto": "../images/tonySong.jpg"
             },
             {
                 "title": "Too sweet for me",
                 "content": "I found it a bit too sweet for my taste.",
                 "author": "Andrew Zhao",
-                "authorPhoto": "../../images/andrewZhao.jpg"
+                "authorPhoto": "../images/andrewZhao.jpg"
             }
         ],
         "scores": {
@@ -803,7 +806,7 @@
         "name": "Pineapple Mango Lemonade",
         "calories": 420,
         "price": 4.19,
-        "image": "images/pineappleMangoLemonade.png",
+        "image": "/wendys/images/pineappleMangoLemonade.png",
         "restaurant": "Wendys",
         "group": "beverage",
         "reviews": [
@@ -811,7 +814,7 @@
                 "title": "Tropical treat!",
                 "content": "This drink is like a vacation in a cup!",
                 "author": "Sophia Li",
-                "authorPhoto": "../../images/sophiaLi.jpg"
+                "authorPhoto": "../images/sophiaLi.jpg"
             }
         ],
         "scores": {
@@ -868,7 +871,7 @@
         "name": "All-Natural Lemonade",
         "calories": 330,
         "price": 4.19,
-        "image": "images/allNaturalLemonade.png",
+        "image": "/wendys/images/allNaturalLemonade.png",
         "restaurant": "Wendys",
         "group": "beverage",
         "reviews": [
@@ -876,13 +879,13 @@
                 "title": "Pure and simple",
                 "content": "A straightforward lemonade with natural flavors.",
                 "author": "Sarah Liang",
-                "authorPhoto": "../../images/sarahLiang.jpg"
+                "authorPhoto": "../images/sarahLiang.jpg"
             },
             {
                 "title": "A bit too tart",
                 "content": "The tartness was a bit overwhelming.",
                 "author": "Annika Balaji",
-                "authorPhoto": "../../images/annikaBalaji.jpg"
+                "authorPhoto": "../images/annikaBalaji.jpg"
             }
         ],
         "scores": {
@@ -935,7 +938,7 @@
         "name": "Strawberry Lemonade",
         "calories": 420,
         "price": 4.19,
-        "image": "images/strawberryLemonade.png",
+        "image": "/wendys/images/strawberryLemonade.png",
         "restaurant": "Wendys",
         "group": "beverage",
         "reviews": [
@@ -943,13 +946,13 @@
                 "title": "Fruity and refreshing",
                 "content": "A delightful lemonade with a nice fruity twist.",
                 "author": "Tony Song",
-                "authorPhoto": "../../images/tonySong.jpg"
+                "authorPhoto": "../images/tonySong.jpg"
             },
             {
                 "title": "Too sweet",
                 "content": "A bit too sugary for my taste.",
                 "author": "Andrew Zhao",
-                "authorPhoto": "../../images/andrewZhao.jpg"
+                "authorPhoto": "../images/andrewZhao.jpg"
             }
         ],
         "scores": {
@@ -1006,7 +1009,7 @@
         "name": "Triple Berry Frosty",
         "calories": 520,
         "price": 3.79,
-        "url": "wendys/tripleBerryFrosty.html",
+        "image": "wendys/images/tripleBerryFrosty.png",
         "restaurant": "Wendys",
         "group": "dessert",
         "reviews": [
@@ -1014,13 +1017,13 @@
                 "title": "Berry bliss",
                 "content": "A delightful blend of berries in a creamy treat.",
                 "author": "Sarah Liang",
-                "authorPhoto": "../../images/sarahLiang.jpg"
+                "authorPhoto": "../images/sarahLiang.jpg"
             },
             {
                 "title": "Too much berry",
                 "content": "A bit overwhelming with berry flavor. Less is more.",
                 "author": "Annika Balaji",
-                "authorPhoto": "../../images/annikaBalaji.jpg"
+                "authorPhoto": "../images/annikaBalaji.jpg"
             }
         ],
         "scores": {
@@ -1088,7 +1091,7 @@
         "name": "Classic Chocolate Frosty",
         "calories": 500,
         "price": 3.89,
-        "url": "wendys/classicChocolateFrosty.html",
+        "image": "wendys/images/classicChocolateFrosty.png",
         "restaurant": "Wendys",
         "group": "dessert",
         "reviews": [
@@ -1096,13 +1099,13 @@
                 "title": "Rich and creamy",
                 "content": "A classic favorite with rich, creamy chocolate flavor.",
                 "author": "Tony Song",
-                "authorPhoto": "../../images/tonySong.jpg"
+                "authorPhoto": "../images/tonySong.jpg"
             },
             {
                 "title": "Too sweet",
                 "content": "Very sweet. Could use a bit more balance.",
                 "author": "Andrew Zhao",
-                "authorPhoto": "../../images/andrewZhao.jpg"
+                "authorPhoto": "../images/andrewZhao.jpg"
             }
         ],
         "scores": {
@@ -1162,7 +1165,7 @@
         "name": "Cinnabon Pull-Apart",
         "calories": 550,
         "price": 3.99,
-        "url": "wendys/cinnabonPullApart.html",
+        "image": "wendys/images/cinnabonPullApart.png",
         "restaurant": "Wendys",
         "group": "dessert",
         "reviews": [
@@ -1170,13 +1173,13 @@
                 "title": "Decadent and delicious",
                 "content": "A sweet and indulgent treat with a delightful cinnamon flavor.",
                 "author": "Sophia Li",
-                "authorPhoto": "../../images/sophiaLi.jpg"
+                "authorPhoto": "../images/sophiaLi.jpg"
             },
             {
                 "title": "Too rich",
                 "content": "Very rich and sweet, might be too much for some.",
                 "author": "Doris Wang",
-                "authorPhoto": "../../images/dorisWang.jpg"
+                "authorPhoto": "../images/dorisWang.jpg"
             }
         ],
         "scores": {
@@ -1246,7 +1249,7 @@
         "name": "Chocolate Chunk Cookie",
         "calories": 330,
         "price": 1.99,
-        "url": "wendys/chocolateChunkCookie.html",
+        "image": "wendys/iamges/chocolateChunkCookie.png",
         "restaurant": "Wendys",
         "group": "dessert",
         "reviews": [
@@ -1254,13 +1257,13 @@
                 "title": "Classic cookie",
                 "content": "A classic cookie with big chunks of chocolate.",
                 "author": "Tony Song",
-                "authorPhoto": "../../images/tonySong.jpg"
+                "authorPhoto": "../images/tonySong.jpg"
             },
             {
                 "title": "Nothing special",
                 "content": "Just an average chocolate chip cookie.",
                 "author": "Andrew Zhao",
-                "authorPhoto": "../../images/andrewZhao.jpg"
+                "authorPhoto": "../images/andrewZhao.jpg"
             }
         ],
         "scores": {
