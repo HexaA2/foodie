@@ -153,15 +153,15 @@
                       for (const [key, value] of Object.entries(frenchFries.scores)) {
 
                         if (value >= 90) color= "#009392"; 
-                      if (value >= 75) color= "#39B185"; 
-                      if (value >= 60) color= "#9CCB86"; 
-                      if (value >= 50) color= "#E9E29C"; 
-                      if (value >= 40) color= "#EEB479";
-                      if (value >= 30) color= "#E88471";
-                      if (value < 30) color= "#CF597E";
+                      else if (value >= 75) color= "#39B185"; 
+                      else if (value >= 60) color= "#9CCB86"; 
+                      else if (value >= 50) color= "#E9E29C"; 
+                      else if (value >= 40) color= "#EEB479";
+                      else if (value >= 30) color= "#E88471";
+                      else if (value < 30) color= "#CF597E";
                           ratingItems.innerHTML += `
                               <div class="label">${key.charAt(0).toUpperCase() + key.slice(1)}</div>
-                              <div class="rating-bar" width=${value}%; background-color: ${color}; data-value="${value}"></div>
+                              <div class="rating-bar"  data-value="${value}" style = "width=${value}%; background-color: ${color};"></div>
                           `;
                       }
           
