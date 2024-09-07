@@ -140,7 +140,24 @@
                       document.querySelector('.Food-Title h1').textContent = frenchFries.name;
                       document.querySelector('#food-image').src = frenchFries.image;
                       document.querySelector('#food-image').alt = `${frenchFries.name} Image`;
-                      document.querySelector('#average-value').textContent = frenchFries.overallScore.toFixed(1);
+                      const averageValueElement = document.querySelector('#average-value');
+            const averageScoreElement = document.querySelector('.average-score');
+            
+            if (averageValueElement && averageScoreElement) {
+                const overallScore = frenchFries.overallScore;
+                averageValueElement.textContent = overallScore.toFixed(1);
+                averageScoreElement.style.backgroundColor = getColor(overallScore);
+            }
+
+            function getColor(value) {
+                if (value >= 90) return "#009392"; 
+                if (value >= 75) return "#39B185"; 
+                if (value >= 60) return "#9CCB86"; 
+                if (value >= 50) return "#E9E29C"; 
+                if (value >= 40) return "#EEB479";
+                if (value >= 30) return "#E88471";
+                return "#CF597E"; // Red
+            }
                       
                       
                       
