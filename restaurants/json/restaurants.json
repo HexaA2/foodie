@@ -8,22 +8,22 @@
             {
                 "name": "Dave's Single",
                 "id": 1,
-                "image": "/restaurants/wendys/images/davesSingle.png"
+                "image": "/restaurants/images/wendys/davesSingle.png"
             },
             {
                 "name": "Dave's Double",
                 "id": 2,
-                "image": "/restaurants/wendys/images/davesDouble.png"
+                "image": "/restaurants/images/wendys/davesDouble.png"
             },
             {
                 "name": "Baconator",
                 "id": 4,
-                "image": "/restaurants/wendys/images/baconator.png"
+                "image": "/restaurants/images/wendys/baconator.png"
             },
             {
                 "name": "Chili Cheese Fries",
                 "id": 7,
-                "image": "/restaurants/wendys/images/chiliCheeseFries.png"
+                "image": "/restaurants/images/wendys/chiliCheeseFries.png"
             }
         ]
     }
