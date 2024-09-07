@@ -73,10 +73,7 @@
                         Score: <span id="average-value"></span>
                     </div>
                     <div class="rating-items" id="rating-items"></div>
-                    <div class="label">Calories</div>
-                    <div class="label" id="calories"></div>
-                    <div class="label">Price</div>
-                    <div class="label" id="price"></div>
+                    
                 </div>
             </div>
         </div>
@@ -143,8 +140,7 @@
                       document.querySelector('#food-image').src = frenchFries.image;
                       document.querySelector('#food-image').alt = `${frenchFries.name} Image`;
                       document.querySelector('#average-value').textContent = frenchFries.overallScore.toFixed(1);
-                      document.querySelector('#calories').textContent = `${frenchFries.calories} kcal`;
-                      document.querySelector('#price').textContent = `$${frenchFries.price.toFixed(2)}`;
+                      
                       
                       
 
@@ -164,6 +160,12 @@
                               <div class="rating-bar"  data-value="${value}" style = "width: ${value}%; background-color: ${color};"></div>
                           `;
                       }
+                      ratingItems.innerHTML += `
+                              <div class="label">Calories</div>
+                        <div class="label">${frenchFries.calories}</div>
+                        <div class="label">Price</div>
+                        <div class="label">$${frenchFries.price.toFixed(2)}</div>
+                          `;
           
                       // Update nutrition table
                       const nutritionTableBody = document.querySelector('#nutrition-table-body');
