@@ -738,15 +738,10 @@ a:focus {
   overflow: auto; /* Show scrollbars if needed */
 }
 
-/* Placeholder styling */
 .contact_section textarea::placeholder {
-  color: #979696; /* Placeholder text color */
+  color: #979696;
 }
 
-/* Styling for .message-box if needed */
-.contact_section textarea.message-box {
-  /* Add any specific styles for message-box class here */
-}
 
 
 
@@ -1516,7 +1511,6 @@ a:focus {
   margin-bottom: 20px;
   border-radius: 15px;
   object-fit: cover; 
-  object-position: center;
 }
 
 .author-section {
