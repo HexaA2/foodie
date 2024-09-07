@@ -227,18 +227,21 @@
                       return response.json();
                   })
                   .then(data => {
-                      const frenchFries = data;
+                      // Find the item with ID 5
+                      const frenchFries = data.find(item => item.id === 5);
+          
+                      if (!frenchFries) {
+                          throw new Error('Item with ID 5 not found in JSON data');
+                      }
           
                       // Update HTML content with the fetched data
                       document.getElementById('food-title').textContent = frenchFries.name;
-          
-                      // Image source might need adjustment based on JSON URL structure
-                      document.getElementById('food-image').src = `../../images/frenchFries.png`; 
           
                       // Update rating section
                       document.getElementById('average-value').textContent = frenchFries.overallScore.toFixed(1);
           
                       const ratingItems = document.getElementById('rating-items');
+                      ratingItems.innerHTML = ''; // Clear previous content if any
                       for (const [key, value] of Object.entries(frenchFries.scores)) {
                           ratingItems.innerHTML += `
                               <div class="label">${key.charAt(0).toUpperCase() + key.slice(1)}</div>
@@ -251,6 +254,7 @@
           
                       // Update reviews
                       const reviewsContainer = document.getElementById('reviews-container');
+                      reviewsContainer.innerHTML = ''; // Clear previous reviews if any
                       frenchFries.reviews.forEach(review => {
                           reviewsContainer.innerHTML += `
                               <div class="review">
@@ -267,6 +271,7 @@
                   .catch(error => console.error('Error fetching data:', error));
           });
           </script>
+          
           
     </body>
 </html>
