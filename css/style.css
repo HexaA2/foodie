@@ -1520,25 +1520,28 @@ a:focus {
 }
 
 .blog-post .img-container {
+  width: 100%; 
+  height: 500px; 
+  overflow: hidden;
+  margin-bottom: 15px;
+  margin-top: 20px;
+  transition: transform 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
   display: flex;
-  justify-content: center; /* Centers image horizontally */
-  align-items: center;     /* Centers image vertically */
-  height: 500px;           /* Set height of the container */
-  width: 100%;             /* Full width of the parent */
-  overflow: hidden;        /* Prevent overflow if image is larger */
-  border-radius: 15px;     /* Optional: Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to the container */
+  justify-content: center; /* Horizontal centering */
+  align-items: center;
 }
 
 /* Image styling */
 .cover-image {
-  width: 100%;             /* Full width of the container */
-  height: 100%;            /* Full height of the container */
-  object-fit: cover;        /* Ensure the image covers the container without stretching */
-  transition: transform 0.2s;
+  width: 100%;
+  max-height: 100%;
+  object-fit: cover; 
+  object-position: center center;
 }
 
-.blog-post img.cover-image:hover {
+.blog-post .img-container:hover {
   transform: translateY(-5px);
 }
 
