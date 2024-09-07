@@ -975,8 +975,8 @@ a:focus {
 }
 
 .image-section img {
-  width: 300px; /* Adjust width as needed */
-  border-radius: 15px; /* Rounds the corners of the image */
+  width: 300px; 
+  border-radius: 15px; 
   margin-bottom: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s
@@ -988,15 +988,15 @@ a:focus {
 
 .color-palette {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 columns in a row */
+  grid-template-columns: repeat(5, 1fr); 
   gap: 10px;
-  max-width: 800px; /* Adjust width as needed */
+  max-width: 800px;
   margin: auto;
 }
 
 .color-item {
-  width: 50px; /* Width of each color block */
-  height: 50px; /* Height of each color block */
+  width: 50px; 
+  height: 50px; 
   border-radius: 10px;
   position: relative;
   cursor: pointer;
@@ -1029,14 +1029,14 @@ a:focus {
 
 .rating-items {
   display: grid;
-  grid-template-columns: 1fr 3fr; /* Label takes 1 part, bar takes 3 parts */
+  grid-template-columns: 1fr 3fr; 
   gap: 10px;
-  width: 100%; /* Make grid items take the full width */
+  width: 100%; 
 }
 
 .rating-grid {
   display: grid;
-  grid-template-columns: 1fr; /* One column for the average score */
+  grid-template-columns: 1fr; 
   gap: 10px;
   max-width: 600px;
   margin: auto;
@@ -1075,7 +1075,7 @@ a:focus {
   left: 0;
   height: 100%;
   border-radius: 10px;
-  background-color: #4caf50; /* Default color */
+  background-color: #4caf50;
   transition: width 0.5s;
 }
 .more-info {
@@ -1083,13 +1083,13 @@ a:focus {
   background: #fff;
   border-radius: 10px;
   margin-top: 20px;
-  text-align: center; /* Center align the text */
+  text-align: center;
 }
 
 .info-columns {
   display: flex;
   justify-content: center;
-  text-align: left; /* Align text to the left inside each column */
+  text-align: left; 
   align-items: flex-start;
 }
 
@@ -1102,16 +1102,16 @@ a:focus {
 
 .Food-Title h1 {
   margin: 0;
-  color: #0a2050; /* Dark text color */
-  text-align: center; /* Center text horizontally */
+  color: #0a2050;
+  text-align: center; 
   padding: 20px;
-  border: 2px solid #0a2050; /* Border color */
-  border-radius: 10px; /* Rounded corners */
-  background-color: #fff; /* White background for the div */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  width: 80%; /* Responsive width */
-  max-width: 600px; /* Maximum width */
-  margin: auto; /* Center horizontally if needed */
+  border: 2px solid #0a2050; 
+  border-radius: 10px; 
+  background-color: #fff; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  width: 80%; 
+  max-width: 600px; 
+  margin: auto; 
 }
 
 .average-score {
@@ -1122,9 +1122,9 @@ a:focus {
   margin-bottom: 20px;
   color: #0a2050;
   padding: 10px 20px;
-  border-radius: 15px; /* Rounded corners */
-  background-color: #f4f4f4; /* Light background color */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for a 3D effect */
+  border-radius: 15px; 
+  background-color: #f4f4f4; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s;
 }
 
@@ -1135,7 +1135,7 @@ a:focus {
 .nutrition-table {
   display: flex;
   flex: 3;
-  margin: 0 10px; /* Adjust margin as needed */
+  margin: 0 10px;
 }
 
 .styled-table2 {
@@ -1176,12 +1176,12 @@ a:focus {
 
 .styled-table2 th:nth-child(1),
         .styled-table2 td:nth-child(1) {
-            width: 60%; /* Width for the first column */
+            width: 60%; 
         }
 
         .styled-table2 th:nth-child(2),
         .styled-table2 td:nth-child(2) {
-            width: 40%; /* Width for the second column */
+            width: 40%; 
         }
 
 
@@ -1189,7 +1189,7 @@ a:focus {
 
 .allergens, .ingredients {
   flex: 3;
-  margin-left: 10px; /* Add some margin between columns */
+  margin-left: 10px;
   margin-bottom: 20px;
   margin-top: 25px;
 }
@@ -1201,7 +1201,7 @@ a:focus {
 .allergen-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px; /* Increased gap between items */
+  gap: 20px; 
 }
 
 .allergen-item {
@@ -1209,28 +1209,28 @@ a:focus {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background: #f9f9f9; /* Light background color for the boxes */
+  background: #f9f9f9; 
   border-radius: 10px;
   padding: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
-  transition: transform 0.2s; /* Smooth transition for hover effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.2s; 
 }
 
 .allergen-item:hover {
-  transform: translateY(-5px); /* Lift effect on hover */
+  transform: translateY(-5px); 
 }
 
 .allergen-item img {
-    width: 100px; /* Set the desired width */
-    height: 100px; /* Set the desired height */
-    object-fit: cover; /* Cover the box while maintaining aspect ratio */
+    width: 100px; 
+    height: 100px; 
+    object-fit: cover;
     border-radius: 5px;
-    margin-bottom: 10px; /* Increased margin for spacing */
+    margin-bottom: 10px;
 }
 
 .allergen-item p {
   margin: 0;
-  font-weight: bold; /* Bold text for emphasis */
+  font-weight: bold; 
 }
 
 #infoTable {
@@ -1257,7 +1257,7 @@ a:focus {
   cursor: pointer;
 }
 #infoTable tr.details {
-  display: none; /* Initially hide details rows */
+  display: none; 
   align-items: center;
   background-color: #f3f3f3;
 }
@@ -1286,15 +1286,13 @@ a:focus {
 
 #infoTable th:nth-child(1),
 #infoTable td:nth-child(1) {
-            width: 60%; /* Width for the first column */
+            width: 60%; 
         }
         #infoTableth:nth-child(2),
         #infoTable td:nth-child(2) {
-            width: 40%; /* Width for the second column */
+            width: 40%;
         }
 
-
-/* Style the tab */
 .tab {
   display: flex;
   justify-content: center;
@@ -1302,11 +1300,10 @@ a:focus {
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
-  border-radius: 8px; /* Add rounded corners */
-  padding: 5px; /* Optional: Add padding around the tabs */
+  border-radius: 8px; 
+  padding: 5px; 
 }
 
-/* Style the buttons that are used to open the tab content */
 .tab button {
   background-color: inherit;
   border: none;
@@ -1314,27 +1311,24 @@ a:focus {
   cursor: pointer;
   padding: 14px 16px;
   transition: 0.3s;
-  border-radius: 8px; /* Add rounded corners */
-  margin: 0 2px; /* Optional: Add spacing between buttons */
+  border-radius: 8px; 
+  margin: 0 2px; 
 }
 
-/* Change background color of buttons on hover */
 .tab button:hover {
   background-color: #ddd;
 
 }
 
-/* Create an active/current tablink class */
 .tab button.active {
   background-color: #ccc;
 }
 
-/* Style the tab content */
 .tabcontent {
-  display: none; /* Hidden by default */
-  padding: 20px; /* Some padding */
-  margin: 0 auto; /* Center the container */
-  max-width: 100%; /* Optional: limit the width */
+  display: none; 
+  padding: 20px; 
+  margin: 0 auto; 
+  max-width: 100%; 
 }
 
 .center {
@@ -1349,16 +1343,16 @@ a:focus {
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
-  border-radius: 0 0 8px 8px; /* Add rounded corners to the bottom */
+  border-radius: 0 0 8px 8px; 
 }
 
 .reviews-container {
   display: grid;
-  grid-template-columns: 1fr; /* One column layout */
-  gap: 20px; /* Space between reviews */
+  grid-template-columns: 1fr; 
+  gap: 20px; 
   padding: 20px;
-  max-width: 600px; /* Set a max-width for the container */
-  margin: 0 auto; /* Center the container */
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .review-box {
@@ -1414,7 +1408,7 @@ a:focus {
 .background-section h1 {
   font-size: 2em;
   margin-bottom: 15px;
-  color: #e74c3c; /* Wendy's red color */
+  color: #e74c3c; 
   text-align: center;
 }
 
@@ -1450,7 +1444,7 @@ a:focus {
   font-size: 20px;
   font-weight: normal;
   transition: font-weight 0.3s, text-decoration 0.3s;
-  margin-top: 10px; /* Add space between image and title */
+  margin-top: 10px;
   font-weight: bold;
   cursor: pointer;
   color: #000000;
@@ -1463,7 +1457,7 @@ a:focus {
 .heading_container h2 {
   font-weight: normal;
   transition: font-weight 0.3s, text-decoration 0.3s;
-  margin-top: 10px; /* Add space between image and title */
+  margin-top: 10px;
   font-weight: bold;
   cursor: pointer;
   color: #000000;
@@ -1474,9 +1468,9 @@ a:focus {
 }
 
 .detail-box a {
-  color: #0a2050;  /* Default color for the link */
-  text-decoration: none; /* Remove underline from links */
-  transition: color 0.3s, text-decoration 0.3s; /* Smooth transition for hover effects */
+  color: #0a2050;  
+  text-decoration: none;
+  transition: color 0.3s, text-decoration 0.3s; 
 }
 
 .heading_container {
@@ -1492,7 +1486,7 @@ a:focus {
 .post-date {
   font-size: 0.9rem;
   color: #777;
-  text-align: right; /* Right-aligns text within its container */
+  text-align: right; 
 }
 
 .blog-post-content {
@@ -1528,7 +1522,7 @@ a:focus {
 .author-section {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Distributes space between items */
+  justify-content: space-between; 
   margin-bottom: 20px;
 }
 
@@ -1550,21 +1544,19 @@ a:focus {
   color: #555;
 }
 
-/* Style for the button section */
 .scroll-btn-section {
-  width: 100%; /* Full width */
-  background-color: #0a2050; /* Base color for the section */
+  width: 100%; 
+  background-color: #0a2050; 
   text-align: center;
-  padding: 20px 0; /* Add some padding */
-  margin-top: 40px; /* Space above the section */
-  cursor: pointer; /* Show pointer cursor to indicate clickability */
-  transition: background-color 0.3s; /* Smooth transition for hover effect */
+  padding: 20px 0; 
+  margin-top: 40px; 
+  cursor: pointer;
+  transition: background-color 0.3s; 
 }
 
-/* Style for the button */
 .scroll-top-btn {
-  background-color: #0a2050; /* Same color as the section */
-  color: #ffffff; /* White text color for contrast */
+  background-color: #0a2050; 
+  color: #ffffff; 
   border: none;
   padding: 15px 30px;
   font-size: 18px;
@@ -1572,20 +1564,17 @@ a:focus {
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Hover effect for the section */
 .scroll-btn-section:hover {
-  background-color: #1b3a7a; /* Lighter blue on hover */
+  background-color: #1b3a7a; 
 }
 
-/* Hover effect for the button within the section */
 .scroll-btn-section:hover .scroll-top-btn {
-  background-color: #1b3a7a; /* Button color changes to match section on hover */
-  color: #ffffff; /* Ensure text color remains readable */
+  background-color: #1b3a7a; 
+  color: #ffffff; 
 }
 
-/* Optional: Hover effect for the button itself */
 .scroll-top-btn:hover {
-  background-color: #1b3a7a; /* Darker blue on hover */
-  color: #ffffff; /* Ensure text color remains readable */
+  background-color: #1b3a7a; 
+  color: #ffffff;
 }
 
