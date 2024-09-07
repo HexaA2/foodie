@@ -240,12 +240,12 @@ function populateHighlights(jsonData) {
                     highlightBox.className = 'box b1'; // Change this dynamically if needed
                     
                     highlightBox.innerHTML = `
-                        <div class="img-box">
-                          <img src="${highlight.image}" alt="${highlight.name}">
-                        </div>
+                        <a href="/restaurants/food.html?id=${highlight.id}" class="img-box">
+                        <img src="${highlight.image}" alt="${highlight.name}">
                         <div class="detail-box">
-                          <h5>${highlight.name}</h5>
+                        <h5>${highlight.name}</h5>
                         </div>
+                        </a>
                     `;
                     
                     highlightsContainer.appendChild(highlightBox);

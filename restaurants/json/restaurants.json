@@ -5,18 +5,22 @@
         "highlights": [
             {
                 "name": "Dave's Single",
+                "id": 1,
                 "image": "wendys/images/davesSingle.png"
             },
             {
-                "name": "Dave's Single",
+                "name": "Dave's Double",
+                "id": 2,
                 "image": "wendys/images/davesDouble.png"
             },
             {
                 "name": "Baconator",
+                "id": 4,
                 "image": "wendys/images/baconator.png"
             },
             {
                 "name": "Chili Cheese Fries",
+                "id": 7,
                 "image": "wendys/images/chiliCheeseFries.png"
             }
         ]
