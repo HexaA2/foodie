@@ -850,6 +850,7 @@ a:focus {
 .highlights_section .highlights_container .box .img-box {
   border-radius: 25px;
   overflow: hidden;
+  background-color: #ffffff;
   -webkit-box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
 }
