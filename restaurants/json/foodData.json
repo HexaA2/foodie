@@ -1048,8 +1048,14 @@
             "Protein": "8g"
         },
         "allergens": [
-            "Milk",
-            "Soy"
+            {
+                "name": "Milk",
+                "icon": "../images/milk.svg"
+            },
+            {
+                "name": "Soy",
+                "icon": "../images/soy.svg"
+            }
         ],
         "ingredients": [
             {
@@ -1130,8 +1136,14 @@
             "Protein": "8g"
         },
         "allergens": [
-            "Milk",
-            "Soy"
+            {
+                "name": "Milk",
+                "icon": "../images/milk.svg"
+            },
+            {
+                "name": "Soy",
+                "icon": "../images/soy.svg"
+            }
         ],
         "ingredients": [
             {
@@ -1204,10 +1216,22 @@
             "Protein": "6g"
         },
         "allergens": [
-            "Milk",
-            "Wheat",
-            "Soy",
-            "Egg"
+            {
+                "name": "Milk",
+                "icon": "../images/milk.svg"
+            },
+            {
+                "name": "Wheat",
+                "icon": "../images/wheat.svg"
+            },
+            {
+                "name": "Soy",
+                "icon": "../images/soy.svg"
+            },
+            {
+                "name": "Egg",
+                "icon": "../images/egg.svg"
+            }
         ],
         "ingredients": [
             {
@@ -1288,10 +1312,22 @@
             "Protein": "3g"
         },
         "allergens": [
-            "Milk",
-            "Wheat",
-            "Soy",
-            "Egg"
+            {
+                "name": "Milk",
+                "icon": "../images/milk.svg"
+            },
+            {
+                "name": "Wheat",
+                "icon": "../images/wheat.svg"
+            },
+            {
+                "name": "Soy",
+                "icon": "../images/soy.svg"
+            },
+            {
+                "name": "Egg",
+                "icon": "../images/egg.svg"
+            }
         ],
         "ingredients": [
             {
