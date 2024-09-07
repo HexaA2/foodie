@@ -151,7 +151,7 @@
                       for (const [key, value] of Object.entries(frenchFries.scores)) {
                           ratingItems.innerHTML += `
                               <div class="label">${key.charAt(0).toUpperCase() + key.slice(1)}</div>
-                              <div class="rating-bar" style="width: ${value}%"></div>
+                              <div class="rating-bar" data-value="${value}%"></div>
                           `;
                       }
           
