@@ -36,19 +36,21 @@
                         <a class="navbar-brand" href="../../index.html">
                             <img src="../../images/logo.png" alt="">
                         </a>
-                        <div class="custom_menu-btn">
-                            <button onclick="openNav()">
-                                <span class="s-1"></span>
-                                <span class="s-2"></span>
-                                <span class="s-3"></span>
-                            </button>
-                        </div>
-                        <div id="myNav" class="overlay">
-                            <div class="overlay-content">
-                                <a href="../../index.html">Home</a>
-                                <a href="../../explore.html">Explore</a>
-                                <a href="../../overview.html">Blog</a>
-                                <a href="../../contact.html">Contact Us</a>
+                        <div class="" id="">
+                            <div class="custom_menu-btn">
+                                <button onclick="openNav()">
+                                    <span class="s-1"></span>
+                                    <span class="s-2"></span>
+                                    <span class="s-3"></span>
+                                </button>
+                            </div>
+                            <div id="myNav" class="overlay">
+                                <div class="overlay-content">
+                                    <a href="../../index.html">Home</a>
+                                    <a href="../../explore.html">Explore</a>
+                                    <a href="../../overview.html">Blog</a>
+                                    <a href="../../contact.html">Contact Us</a>
+                                </div>
                             </div>
                         </div>
                     </nav>
@@ -57,13 +59,13 @@
             <!-- end header section -->
         </div>
 
-        <div class="food-title">
-            <h1 id="food-title">Food Title</h1>
+        <div class="Food-Title">
+            <h1 id="food-title">French Fries</h1>
         </div>
         
-        <div class="specific-food">
+        <div class="specificFood">
             <div class="image-section">
-                <img id="food-image" src="images/placeholder.png" alt="Food Image">
+                <img id="food-image" src="images/frenchFries.png" alt="Food Image">
             </div>
             <div class="rating-section">
                 <div class="rating-grid">
@@ -71,9 +73,9 @@
                         Score: <span id="average-value"></span>
                     </div>
                     <div class="rating-items" id="rating-items"></div>
-                    <div class="label">Calories:</div>
+                    <div class="label">Calories: </div>
                     <div class="label" id="calories"></div>
-                    <div class="label">Price:</div>
+                    <div class="label">Price: </div>
                     <div class="label" id="price"></div>
                 </div>
             </div>
@@ -84,13 +86,13 @@
             <button class="tablinks" onclick="openTab(event, 'reviews')">Reviews</button>
         </div>
         
-        <div id="food_information" class="more-info tabcontent">
+        <div id="food_information" class="more-info tabcontent overview-tab">
             <h3>Overview</h3>
             <div class="info-columns">
               <div class="nutrition-table">
-                <table class="styled-table">
-                    <tbody id="nutrition-info">
-                        <!-- Nutrition info will be populated here -->
+                <table class="styled-table2">
+                    <tbody id="nutrition-table-body">
+                        <!-- Nutrition information will be populated here -->
                     </tbody>
                 </table>
               </div>
@@ -98,7 +100,7 @@
               <div class="allergens">
                 <div class="allergen-grid" id="allergen-grid">
                   <!-- Allergen items will be populated here -->
-                </div>
+              </div>
               </div>
               <div class="ingredients">
                 <table id="infoTable">
@@ -107,16 +109,14 @@
                       <th>Ingredients</th>
                     </tr>
                   </thead>
-                  <tbody id="ingredients-info">
-                    <!-- Ingredients info will be populated here -->
+                  <tbody id="ingredients-table-body">
+                    <!-- Ingredients will be populated here -->
                   </tbody>
                 </table>
               </div>
         </div>
 
-        <div id="reviews" class="tabcontent">
-            <!-- Reviews will be populated here by JavaScript -->
-        </div>
+        <div id="reviews" class="tabcontent reviews-container" id="reviews-container"></div>
 
         <script type="text/javascript" src="../../js/jquery-3.4.1.min.js"></script>
         <script type="text/javascript" src="../../js/bootstrap.js"></script>
@@ -139,13 +139,13 @@
                       }
           
                       // Update HTML content with the fetched data
-                      document.querySelector('#food-title').textContent = frenchFries.name;
+                      document.querySelector('.Food-Title h1').textContent = frenchFries.name;
                       document.querySelector('#food-image').src = frenchFries.image;
+                      document.querySelector('#food-image').alt = `${frenchFries.name} Image`;
                       document.querySelector('#average-value').textContent = frenchFries.overallScore.toFixed(1);
                       document.querySelector('#calories').textContent = `${frenchFries.calories} kcal`;
                       document.querySelector('#price').textContent = `$${frenchFries.price.toFixed(2)}`;
-          
-                      // Update rating section
+
                       const ratingItems = document.querySelector('#rating-items');
                       ratingItems.innerHTML = ''; // Clear previous content if any
                       for (const [key, value] of Object.entries(frenchFries.scores)) {
@@ -155,21 +155,21 @@
                           `;
                       }
           
-                      // Update nutrition information
-                      const nutritionInfo = document.querySelector('#nutrition-info');
-                      nutritionInfo.innerHTML = '';
-                      Object.entries(frenchFries.nutrition).forEach(([nutrient, amount]) => {
-                          nutritionInfo.innerHTML += `
+                      // Update nutrition table
+                      const nutritionTableBody = document.querySelector('#nutrition-table-body');
+                      nutritionTableBody.innerHTML = ''; // Clear previous content if any
+                      for (const [key, value] of Object.entries(frenchFries.nutrition)) {
+                          nutritionTableBody.innerHTML += `
                               <tr>
-                                  <td>${nutrient}</td>
-                                  <td>${amount}</td>
+                                  <td>${key}</td>
+                                  <td>${value}</td>
                               </tr>
                           `;
-                      });
-
+                      }
+          
                       // Update allergens
                       const allergenGrid = document.querySelector('#allergen-grid');
-                      allergenGrid.innerHTML = '';
+                      allergenGrid.innerHTML = ''; // Clear previous content if any
                       frenchFries.allergens.forEach(allergen => {
                           allergenGrid.innerHTML += `
                               <div class="allergen-item">
@@ -179,11 +179,11 @@
                           `;
                       });
 
-                      // Update ingredients information
-                      const ingredientsInfo = document.querySelector('#ingredients-info');
-                      ingredientsInfo.innerHTML = '';
+                      // Update ingredients table
+                      const ingredientsTableBody = document.querySelector('#ingredients-table-body');
+                      ingredientsTableBody.innerHTML = ''; // Clear previous content if any
                       frenchFries.ingredients.forEach(ingredient => {
-                          ingredientsInfo.innerHTML += `
+                          ingredientsTableBody.innerHTML += `
                               <tr class="clickable">
                                   <td>${ingredient.name}</td>
                               </tr>
@@ -194,9 +194,9 @@
                               </tr>
                           `;
                       });
-          
+
                       // Update reviews
-                      const reviewsContainer = document.querySelector('#reviews');
+                      const reviewsContainer = document.querySelector('#reviews-container');
                       reviewsContainer.innerHTML = ''; // Clear previous reviews if any
                       frenchFries.reviews.forEach(review => {
                           reviewsContainer.innerHTML += `
@@ -213,7 +213,7 @@
                   })
                   .catch(error => console.error('Error fetching data:', error));
           });
-        </script>
+          </script>
           
     </body>
 </html>
