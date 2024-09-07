@@ -37,17 +37,19 @@
       transform: translateY(0);
     }
 
-    /* Keyframes for sliding in */
-    @keyframes slideIn {
+    @keyframes slideInFromBottom {
       from {
         opacity: 0;
         transform: translateY(50px);
       }
-
       to {
         opacity: 1;
         transform: translateY(0);
       }
+    }
+
+    .blog_box {
+      animation: slideInFromBottom 0.5s ease-out;
     }
   </style>
 </head>
@@ -88,13 +90,11 @@
   <section class="blog_section">
     <div class="container">
       <div class="heading_container">
-        <a href="overview.html">
-          <h2>Our Latest Blog Posts</h2>
-        </a>
+        <a href="overview.html"><h2>Our Latest Blog Posts</h2></a>
         <p>Explore our latest updates and food stories</p>
       </div>
       <div class="row">
-        <!-- Blog posts will be inserted here by JavaScript -->
+        <!-- Blog posts will be dynamically inserted here -->
       </div>
     </div>
   </section>
@@ -114,23 +114,24 @@
         // Fetch the blog data
         const response = await fetch('json/blog.json');
         const blogs = await response.json();
-        
+
         // Sort the blogs in descending order based on their IDs
         blogs.sort((a, b) => b.id - a.id);
-        
+
         // Get the container where blogs will be inserted
         const blogContainer = document.querySelector('.blog_section .row');
-        
+
         // Clear existing content
         blogContainer.innerHTML = '';
-        
+
         // Loop through each blog post and create HTML elements
-        blogs.forEach(blog => {
-          const blogElement = document.createElement('div');
-          blogElement.classList.add('col-md-4');
-          
-          blogElement.innerHTML = `
-            <div class="blog_box">
+        blogs.forEach((blog, index) => {
+          setTimeout(() => {
+            const blogElement = document.createElement('div');
+            blogElement.classList.add('col-md-4');
+            blogElement.classList.add('blog_box');
+
+            blogElement.innerHTML = `
               <div class="img-box">
                 <a href="/blog/blog.html?id=${blog.id}"><img src="${blog.image}" alt="${blog.title}"></a>
               </div>
@@ -140,11 +141,16 @@
                 <p>${blog.description}</p>
                 <a href="/blog/blog.html?id=${blog.id}">Read More</a>
               </div>
-            </div>
-          `;
-          
-          // Append the new blog element to the container
-          blogContainer.appendChild(blogElement);
+            `;
+
+            // Append the new blog element to the container
+            blogContainer.appendChild(blogElement);
+
+            // Add the show class after a slight delay
+            setTimeout(() => {
+              blogElement.classList.add('show');
+            }, 100); // Adjust delay to suit the effect
+          }, index * 200); // Adjust delay to suit the effect
         });
         
       } catch (error) {
