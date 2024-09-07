@@ -101,11 +101,11 @@
   </script>
 
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-    fetchRestaurants();
+document.addEventListener('DOMContentLoaded', () => {
+    fetchAndPopulateRestaurants();
 });
 
-async function fetchRestaurants() {
+async function fetchAndPopulateRestaurants() {
     try {
         const response = await fetch('/restaurants/json/restaurants.json');
         const data = await response.json();
@@ -134,39 +134,37 @@ function populateRestaurantGrid(restaurants) {
     });
 }
 
-function populateHighlights(jsonData, restaurantId) {
-  if (restaurants.length === 0) return;
+function displayRandomRestaurantHighlights(restaurants) {
+    if (restaurants.length === 0) return;
 
-// Select a random restaurant
-const randomIndex = Math.floor(Math.random() * restaurants.length);
-const randomRestaurant = restaurants[randomIndex];
+    // Select a random restaurant
+    const randomIndex = Math.floor(Math.random() * restaurants.length);
+    const randomRestaurant = restaurants[randomIndex];
 
-// Check if the random restaurant has highlights
-if (!randomRestaurant.highlights || randomRestaurant.highlights.length === 0) return;
+    // Check if the random restaurant has highlights
+    if (!randomRestaurant.highlights || randomRestaurant.highlights.length === 0) return;
 
-const highlightsContainer = document.querySelector('.highlights_container');
-highlightsContainer.innerHTML = '';
+    const highlightsContainer = document.querySelector('.highlights_container');
+    highlightsContainer.innerHTML = ''; // Clear any existing highlights
 
-    jsonData.forEach(item => {
-        if (item.id.toLowerCase() === restaurantId) {
-            item.highlights.forEach(highlight => {
-                const highlightBox = document.createElement('div');
-                highlightBox.className = 'box b1'; // Change this dynamically if needed
+    randomRestaurant.highlights.forEach(highlight => {
+        const highlightBox = document.createElement('div');
+        highlightBox.className = 'box b1'; // Or dynamically assign class if needed
 
-                highlightBox.innerHTML = `
-                    <a href="/restaurants/food.html?id=${highlight.id}" class="img-box">
-                        <img src="${highlight.image}" alt="${highlight.name}">
-                    </a>
-                    <div class="detail-box">
-                        <h5><a href="/restaurants/food.html?id=${highlight.id}">${highlight.name}</a></h5>
-                    </div>
-                `;
+        highlightBox.innerHTML = `
+            <a href="/restaurants/food.html?id=${highlight.id}" class="img-box">
+                <img src="${highlight.image}" alt="${highlight.name}">
+            </a>
+            <div class="detail-box">
+                <h5><a href="/restaurants/food.html?id=${highlight.id}">${highlight.name}</a></h5>
+                <p>${highlight.description || 'No description available.'}</p>
+            </div>
+        `;
 
-                highlightsContainer.appendChild(highlightBox);
-            });
-        }
+        highlightsContainer.appendChild(highlightBox);
     });
 }
+
   </script>
 
 </body>
