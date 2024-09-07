@@ -1532,6 +1532,9 @@ a:focus {
   
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
 }
 
 .blog-post img.cover-image:hover {
