@@ -1516,7 +1516,7 @@ a:focus {
 
 .blog-post img.cover-image {
   width: 100%;
-  height: auto; /* Adjust as needed */
+  height: 550px; /* Adjust as needed */
 
   display: block;
   margin-bottom: 20px;
