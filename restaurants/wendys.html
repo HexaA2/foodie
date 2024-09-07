@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html>
 
@@ -40,19 +38,11 @@
           </a>
           
           <div class="" id="">
-            
-
             <div class="custom_menu-btn">
               <button onclick="openNav()">
-                <span class="s-1">
-
-                </span>
-                <span class="s-2">
-
-                </span>
-                <span class="s-3">
-
-                </span>
+                <span class="s-1"></span>
+                <span class="s-2"></span>
+                <span class="s-3"></span>
               </button>
             </div>
             <div id="myNav" class="overlay">
@@ -84,8 +74,8 @@
       <button class="tablinks" onclick="openTab(event, 'background-information')">Information</button>
     </div>
     <div class="center">
-          <div id = "main" class="tabcontent food_table">
-            <table id = "main_course_table" class="styled-table">
+          <div id="main" class="tabcontent food_table">
+            <table id="main_course_table" class="styled-table">
               <thead>
                 <tr>
                   <th data-column="name" onclick="sortTableByColumn('main_course_table', 0, 'name')">Name</th>
@@ -94,15 +84,14 @@
                   <th data-column="price" onclick="sortTableByColumn('main_course_table', 3, 'price')">Price</th>
                 </tr>
             </thead>
-                <tbody>
-                    
-                    <!-- and so on... -->
-                </tbody>
+              <tbody>
+                  <!-- Table rows will be populated by JavaScript -->
+              </tbody>
             </table>
         </div>
 
-        <div id = "sides" class="tabcontent food_table">
-          <table id = "sides_table" class="styled-table">
+        <div id="sides" class="tabcontent food_table">
+          <table id="sides_table" class="styled-table">
             <thead>
               <tr>
                 <th data-column="name" onclick="sortTableByColumn('sides_table', 0, 'name')">Name</th>
@@ -111,14 +100,13 @@
                 <th data-column="price" onclick="sortTableByColumn('sides_table', 3, 'price')">Price</th>
               </tr>
           </thead>
-              <tbody>
-                  
-                  <!-- and so on... -->
-              </tbody>
+            <tbody>
+                <!-- Table rows will be populated by JavaScript -->
+            </tbody>
           </table>
       </div>
 
-      <div id = "beverages" class="tabcontent food_table" >
+      <div id="beverages" class="tabcontent food_table">
         <table id="beverage_table" class="styled-table">
             <thead>
                 <tr>
@@ -129,44 +117,40 @@
                 </tr>
             </thead>
             <tbody>
-                
-                <!-- and so on... -->
+                <!-- Table rows will be populated by JavaScript -->
             </tbody>
         </table>
-    </div>
-    <div id = "desserts" class="tabcontent food_table">
-      <table id="desserts_table" class="styled-table">
-        <thead>
-          <tr>
-            <th data-column="name" onclick="sortTableByColumn('desserts_table', 0, 'name')">Name</th>
-            <th data-column="calories" onclick="sortTableByColumn('desserts_table', 1, 'calories')">Calories</th>
-            <th data-column="score" onclick="sortTableByColumn('desserts_table', 2, 'score')">Score</th>
-            <th data-column="price" onclick="sortTableByColumn('desserts_table', 3, 'price')">Price</th>
-          </tr>
-      </thead>
+      </div>
+      <div id="desserts" class="tabcontent food_table">
+        <table id="desserts_table" class="styled-table">
+          <thead>
+            <tr>
+              <th data-column="name" onclick="sortTableByColumn('desserts_table', 0, 'name')">Name</th>
+              <th data-column="calories" onclick="sortTableByColumn('desserts_table', 1, 'calories')">Calories</th>
+              <th data-column="score" onclick="sortTableByColumn('desserts_table', 2, 'score')">Score</th>
+              <th data-column="price" onclick="sortTableByColumn('desserts_table', 3, 'price')">Price</th>
+            </tr>
+        </thead>
           <tbody>
-              
-              <!-- and so on... -->
+              <!-- Table rows will be populated by JavaScript -->
           </tbody>
-      </table>
+        </table>
+      </div>
+      <div id="background-information" class="tabcontent background-section">
+          <h1>Background</h1>
+          <p>Wendy's is an American international fast food restaurant chain founded by Dave Thomas on November 15, 1969, 
+            in Columbus, Ohio. Its headquarters moved to Dublin, Ohio, on January 29, 2006. As of December 31, 2018, 
+            Wendy's was the world's third-largest hamburger fast-food chain with 6,711 locations, following McDonald’s 
+            and Burger King. On September 29, 2008, the company merged with Triarc Companies Inc., the publicly 
+            traded parent company of Arby's; Wendy's headquarters remained in Dublin. Triarc then became known as Wendy's/Arby's Group,
+             and later as the Wendy's Company following the sale of Arby's to Roark Capital Group. As of November 2, 2023,
+              there were 7,166 Wendy's outlets, of which 415 are company-owned and 6,751 franchised, 83% of which are in the United States.
+              The company specifies stores' standards; owners control opening hours, decor, and staff uniforms and pay. 
+              The chain serves square hamburger patties on circular buns, sea salt fries, and the Frosty, soft ice cream mixed with starches. 
+              The food menu consists primarily of hamburgers, chicken sandwiches, and French fries. The company discontinued 
+              its Big Classic signature sandwich.</p>
+      </div>
     </div>
-    <div id = "background-information" class="tabcontent background-section">
-        <h1>Background</h1>
-        <p>Wendy's is an American international fast food restaurant chain founded by Dave Thomas on November 15, 1969, 
-          in Columbus, Ohio. Its headquarters moved to Dublin, Ohio, on January 29, 2006. As of December 31, 2018, 
-          Wendy's was the world's third-largest hamburger fast-food chain with 6,711 locations, following McDonald’s 
-          and Burger King. On September 29, 2008, the company merged with Triarc Companies Inc., the publicly 
-          traded parent company of Arby's; Wendy's headquarters remained in Dublin. Triarc then became known as Wendy's/Arby's Group,
-           and later as the Wendy's Company following the sale of Arby's to Roark Capital Group. As of November 2, 2023,
-            there were 7,166 Wendy's outlets, of which 415 are company-owned and 6,751 franchised, 83% of which are in the United States.
-            The company specifies stores' standards; owners control opening hours, decor, and staff uniforms and pay. 
-            The chain serves square hamburger patties on circular buns, sea salt fries, and the Frosty, soft ice cream mixed with starches. 
-            The food menu consists primarily of hamburgers, chicken sandwiches, and French fries. The company discontinued 
-            its Big Classic signature sandwich.</p>
-    </div>
-    </div>
-    
-    
   </section>
 
   <!-- end food section -->
@@ -236,10 +220,7 @@
       </div>
     </section>
   
-    <!-- end highlights section -->
-
-
-
+  <!-- end highlights section -->
 
   <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="../js/bootstrap.js"></script>
@@ -249,118 +230,61 @@
       document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style")
     }
   </script>
-<!-- 
-<script>
-    
-  const cals = [590,860,1160,960,
-  470,460,520,470,
-  450,420,330,420,
-  520,500,550,330]; 
-
-  const calCells = document.querySelectorAll('.calorie-cell');
-
-  calCells.forEach((cell, index) => {
-      if (cals[index] !== undefined) {
-          cell.textContent = cals[index];
-      }
-  });
-  
-  const scores = []; 
-
-  const scoreCells = document.querySelectorAll('.score-cell');
-
-  scoreCells.forEach((cell, index) => {
-      if (scores[index] !== undefined) {
-          cell.textContent = scores[index];
-      }
-  });
-
-  function formatAsPrice(value) {
-      const formatter = new Intl.NumberFormat('en-US', {
-          style: 'currency',
-          currency: 'USD',
-          minimumFractionDigits: 2
-      });
-      return formatter.format(value);
-  }
-
-  const prices = [6.59,7.79,8.99,8.49,
-  4.29,5.19,4.69,4.39,
-  4.19,4.19,4.19,4.19,
-  3.79,3.89,3.99,1.99];
-
-  const priceCells = document.querySelectorAll('.price-cell');
-  priceCells.forEach((cell, index) => {
-      if (prices[index] !== undefined) {
-          cell.textContent = formatAsPrice(prices[index]);
-      }
-  });
-  </script>  -->
-
-
-<script>
-async function fetchAndPopulateTable(jsonFile, tableId) {
+  <script>
+    async function fetchAndPopulateTables(jsonFile) {
     try {
-        const response = await fetch(jsonFile,{
-          
-        }); // Fetch the JSON file
-        const jsonData = await response.json(); // Parse the JSON data
-        populateTable(jsonData, tableId);       // Populate the table
+        const response = await fetch(jsonFile);
+        const jsonData = await response.json();
+        populateTables(jsonData);
     } catch (error) {
         console.error('Error fetching the JSON file:', error);
     }
 }
 
-// Function to populate the table
-function populateTable(jsonData, tableId) {
-    const tableBody = document.querySelector(`#${tableId} tbody`);
+function populateTables(jsonData) {
+    const tables = {
+        main: 'main_course_table',
+        side: 'sides_table',
+        beverage: 'beverage_table',
+        dessert: 'desserts_table'
+    };
 
-    // Clear existing rows
-    tableBody.innerHTML = '';
-
-    // Iterate over each item in the JSON array
-    jsonData.forEach(item => {
-        // Create a new row
-        const row = document.createElement('tr');
-        
-        // Add data-url attribute if present
-        if (item.url) {
-            row.setAttribute('data-url', item.url);
-        }
-
-        // Create and append cells for each item property
-        const cellName = document.createElement('td');
-        cellName.textContent = item.name;
-        row.appendChild(cellName);
-
-        const cellCalories = document.createElement('td');
-        cellCalories.className = 'calorie-cell';
-        cellCalories.textContent = item.calories !== null ? item.calories : '';
-        row.appendChild(cellCalories);
-
-        const cellScore = document.createElement('td');
-        cellScore.className = 'score-cell';
-        cellScore.textContent = item.score !== null ? item.score : '';
-        row.appendChild(cellScore);
-
-        const cellPrice = document.createElement('td');
-        cellPrice.className = 'price-cell';
-        cellPrice.textContent = item.price !== null ? item.price : '';
-        row.appendChild(cellPrice);
-
-        // Append the row to the table body
-        tableBody.appendChild(row);
+    // Clear existing rows in all tables
+    Object.values(tables).forEach(tableId => {
+        const tableBody = document.querySelector(`#${tableId} tbody`);
+        tableBody.innerHTML = '';
     });
-    console.log(jsonData);
+
+    // Populate rows based on group and restaurant
+    jsonData.forEach(item => {
+        if (item.restaurant === 'wendys') { // Check if the restaurant value is "wendys"
+            const tableId = tables[item.group];
+            if (tableId) {
+                const tableBody = document.querySelector(`#${tableId} tbody`);
+                const row = document.createElement('tr');
+                
+                row.dataset.id = item.id; // Set the row's id data attribute
+                
+                row.innerHTML = `
+                    <td>${item.name}</td>
+                    <td class="calorie-cell">${item.calories !== null ? item.calories : ''}</td>
+                    <td class="score-cell">${item.score !== null ? item.score : ''}</td>
+                    <td class="price-cell">${item.price !== null ? item.price : ''}</td>
+                `;
+                
+                row.addEventListener('click', () => {
+                    window.location.href = `/restaurants/food.html?id=${item.id}`;
+                });
+                
+                tableBody.appendChild(row);
+            }
+        }
+    });
 }
 
-// Call the function to fetch data and populate the table
-fetchAndPopulateTable('/restaurants/wendys/json/mainCourses.json', 'main_course_table');
-fetchAndPopulateTable('/restaurants/wendys/json/sides.json', 'sides_table');
-fetchAndPopulateTable('/restaurants/wendys/json/beverages.json', 'beverage_table');
-fetchAndPopulateTable('/restaurants/wendys/json/desserts.json', 'desserts_table');
+fetchAndPopulateTables('/restaurants/json/foodData.json');
 
-</script>
+  </script>
 </body>
 
 </html>

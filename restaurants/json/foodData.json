@@ -221,7 +221,7 @@
         "price": 8.99,
         "image": "wendys/images/davesTriple.png",
         "restaurant": "Wendys",
-        "group": "burger",
+        "group": "main",
         "reviews": [
             {
                 "title": "A Meat Lover's Dream",
