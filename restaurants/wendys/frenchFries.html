@@ -145,32 +145,24 @@
                       document.querySelector('#average-value').textContent = frenchFries.overallScore.toFixed(1);
                       document.querySelector('#calories').textContent = `${frenchFries.calories} kcal`;
                       document.querySelector('#price').textContent = `$${frenchFries.price.toFixed(2)}`;
+                      
+                      
 
                       const ratingItems = document.querySelector('#rating-items');
                       ratingItems.innerHTML = ''; // Clear previous content if any
                       for (const [key, value] of Object.entries(frenchFries.scores)) {
-                      const color = getColor(value);
-                      ratingItems.innerHTML += `
-                          <div class="label">${key.charAt(0).toUpperCase() + key.slice(1)}</div>
-                          <div class="rating-bar" style="width: ${value}%; background-color: ${color};" data-value="${value}"></div>
-                      `;
-                      totalValue += value; // Add value to total
-                  }
 
-                  // Calculate and display average score
-                  const averageValue = totalValue / Object.keys(frenchFries.scores).length;
-                  document.getElementById("average-value").innerText = averageValue.toFixed(1);
-                  const averageColor = getColor(averageValue);
-                  document.querySelector(".average-score").style.backgroundColor = averageColor;
-
-                  function getColor(value) {
-                      if (value >= 90) return "#009392"; 
-                      if (value >= 75) return "#39B185"; 
-                      if (value >= 60) return "#9CCB86"; 
-                      if (value >= 50) return "#E9E29C"; 
-                      if (value >= 40) return "#EEB479";
-                      if (value >= 30) return "#E88471";
-                      return "#CF597E"; // Red
+                        if (value >= 90) color= "#009392"; 
+                      if (value >= 75) color= "#39B185"; 
+                      if (value >= 60) color= "#9CCB86"; 
+                      if (value >= 50) color= "#E9E29C"; 
+                      if (value >= 40) color= "#EEB479";
+                      if (value >= 30) color= "#E88471";
+                      if (value < 30) color= "#CF597E";
+                          ratingItems.innerHTML += `
+                              <div class="label">${key.charAt(0).toUpperCase() + key.slice(1)}</div>
+                              <div class="rating-bar" style="width=${value}%;background-color: ${color};" data-value="${value}"></div>
+                          `;
                       }
           
                       // Update nutrition table
