@@ -845,6 +845,11 @@ a:focus {
   margin: 45px 2.5%;
   -ms-flex-preferred-size: 20%;
       flex-basis: 20%;
+  transition: transform 0.2s;
+}
+
+.highlights_section .highlights_container .box:hover {
+  transform: translateY(-5px);
 }
 
 .highlights_section .highlights_container .box .img-box {
