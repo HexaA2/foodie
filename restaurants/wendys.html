@@ -167,28 +167,32 @@
     }
   </script>
   <script>
-async function fetchAndPopulateTables(jsonFile) {
+// Function to get query parameter from URL
+function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+}
+
+// Fetch data and populate tables and highlights
+async function fetchAndPopulateData() {
+    const restaurantId = getQueryParam('id').toLowerCase(); // Get and normalize the restaurant ID from URL
+
     try {
-        const response = await fetch(jsonFile);
-        const jsonData = await response.json();
-        populateTables(jsonData);
+        const foodResponse = await fetch('/restaurants/json/foodData.json');
+        const foodData = await foodResponse.json();
+        populateTables(foodData, restaurantId);
+
+        const infoResponse = await fetch('/restaurants/json/restaurants.json');
+        const infoData = await infoResponse.json();
+        populateHighlights(infoData, restaurantId);
+        populateBackground(infoData, restaurantId);
     } catch (error) {
         console.error('Error fetching the JSON file:', error);
     }
 }
 
-async function fetchAndPopulateInfo(jsonFile) {
-    try {
-        const response = await fetch(jsonFile);
-        const jsonData = await response.json();
-        populateHighlights(jsonData);
-        populateBackground(jsonData);
-    } catch (error) {
-        console.error('Error fetching the JSON file:', error);
-    }
-}
-
-function populateTables(jsonData) {
+// Modify existing functions to use the dynamic restaurant ID
+function populateTables(jsonData, restaurantId) {
     const tables = {
         main: 'main_course_table',
         side: 'sides_table',
@@ -204,67 +208,68 @@ function populateTables(jsonData) {
 
     // Populate rows based on group and restaurant
     jsonData.forEach(item => {
-        if (item.restaurant.toLowerCase() === 'wendys') { // Ensure case insensitivity
+        if (item.restaurant.toLowerCase() === restaurantId) {
             const tableId = tables[item.group];
             if (tableId) {
                 const tableBody = document.querySelector(`#${tableId} tbody`);
                 const row = document.createElement('tr');
-                
+
                 row.dataset.id = item.id; // Set the row's id data attribute
-                
+
                 row.innerHTML = `
                     <td>${item.name}</td>
                     <td class="calorie-cell">${item.calories !== null ? item.calories : ''}</td>
                     <td class="score-cell">${item.overallScore !== null ? item.overallScore.toFixed(1) : ''}</td>
                     <td class="price-cell">${item.price !== null ? '$' + item.price.toFixed(2) : ''}</td>
                 `;
-                
+
                 row.addEventListener('click', () => {
                     window.location.href = `/restaurants/food.html?id=${item.id}`;
                 });
-                
+
                 tableBody.appendChild(row);
             }
         }
     });
 }
 
-function populateHighlights(jsonData) {
-        const highlightsContainer = document.getElementById('highlights-container');
-        highlightsContainer.innerHTML = '';
+function populateHighlights(jsonData, restaurantId) {
+    const highlightsContainer = document.getElementById('highlights-container');
+    highlightsContainer.innerHTML = '';
 
-        jsonData.forEach(item => {
-            if (item.id.toLowerCase() === 'wendys') {
-                item.highlights.forEach(highlight => {
-                    const highlightBox = document.createElement('div');
-                    highlightBox.className = 'box b1'; // Change this dynamically if needed
-                    
-                    highlightBox.innerHTML = `
-                        <a href="/restaurants/food.html?id=${highlight.id}" class="img-box">
+    jsonData.forEach(item => {
+        if (item.id.toLowerCase() === restaurantId) {
+            item.highlights.forEach(highlight => {
+                const highlightBox = document.createElement('div');
+                highlightBox.className = 'box b1'; // Change this dynamically if needed
+
+                highlightBox.innerHTML = `
+                    <a href="/restaurants/food.html?id=${highlight.id}" class="img-box">
                         <img src="${highlight.image}" alt="${highlight.name}">
-                        </a>
-                        <div class="detail-box">
+                    </a>
+                    <div class="detail-box">
                         <h5><a href="/restaurants/food.html?id=${highlight.id}">${highlight.name}</a></h5>
-                        </div>
-                        
-                    `;
-                    
-                    highlightsContainer.appendChild(highlightBox);
-                });
-            }
-        });
-    }
+                    </div>
+                `;
 
-    function populateBackground(jsonData) {
-        jsonData.forEach(item => {
-            if (item.restaurant.toLowerCase() === 'wendys') {
-                const backgroundElement = document.getElementById('restaurant-background');
-                backgroundElement.textContent = item.background;
-            }
-        });
-    }
-fetchAndPopulateTables('/restaurants/json/foodData.json');
-fetchAndPopulateInfo('/restaurants/json/restaurants.json');
+                highlightsContainer.appendChild(highlightBox);
+            });
+        }
+    });
+}
+
+function populateBackground(jsonData, restaurantId) {
+    jsonData.forEach(item => {
+        if (item.restaurant.toLowerCase() === restaurantId) {
+            const backgroundElement = document.getElementById('restaurant-background');
+            backgroundElement.textContent = item.background;
+        }
+    });
+}
+
+// Call the function to fetch and populate data
+fetchAndPopulateData();
+
 
   </script>
 </body>
