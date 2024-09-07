@@ -237,7 +237,7 @@
         }
 
         // Fetch data from JSON file
-        fetch('json/foodData.json')
+        fetch('/restaurants/wendys/json/foodData.json')
             .then(response => response.json())
             .then(data => {
                 const frenchFries = data;
