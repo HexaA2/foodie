@@ -137,18 +137,8 @@
         </table>
       </div>
       <div id="background-information" class="tabcontent background-section">
-          <h1>Background</h1>
-          <p>Wendy's is an American international fast food restaurant chain founded by Dave Thomas on November 15, 1969, 
-            in Columbus, Ohio. Its headquarters moved to Dublin, Ohio, on January 29, 2006. As of December 31, 2018, 
-            Wendy's was the world's third-largest hamburger fast-food chain with 6,711 locations, following McDonald’s 
-            and Burger King. On September 29, 2008, the company merged with Triarc Companies Inc., the publicly 
-            traded parent company of Arby's; Wendy's headquarters remained in Dublin. Triarc then became known as Wendy's/Arby's Group,
-             and later as the Wendy's Company following the sale of Arby's to Roark Capital Group. As of November 2, 2023,
-              there were 7,166 Wendy's outlets, of which 415 are company-owned and 6,751 franchised, 83% of which are in the United States.
-              The company specifies stores' standards; owners control opening hours, decor, and staff uniforms and pay. 
-              The chain serves square hamburger patties on circular buns, sea salt fries, and the Frosty, soft ice cream mixed with starches. 
-              The food menu consists primarily of hamburgers, chicken sandwiches, and French fries. The company discontinued 
-              its Big Classic signature sandwich.</p>
+        <h1>Background</h1>
+        <p id="restaurant-background">Loading background information...</p>
       </div>
     </div>
   </section>
@@ -158,64 +148,10 @@
     <!-- highlights section -->
 
     <section class="highlights_section layout_padding">
-    
       <div class="container">
         <h1 style="text-align:center"><b>Highlights</b></h1>
-        <div class="highlights_container">
-          
-          <div class="box b1">
-            
-            <div class="img-box">
-              <img src="../images/burger.jpg" alt="">
-            </div>
-            <div class="detail-box">
-              <h5>
-                Cute Dog
-              </h5>
-              <p>
-                It is a long established fact that a reader will be distracted by
-              </p>
-            </div>
-          </div>
-          <div class="box b2">
-            <div class="img-box">
-              <img src="../images/gourmet.jpg" alt="">
-            </div>
-            <div class="detail-box">
-              <h5>
-                Birds
-              </h5>
-              <p>
-                It is a long established fact that a reader will be distracted by
-              </p>
-            </div>
-          </div>
-          <div class="box b1">
-            <div class="img-box">
-              <img src="../images/cupcake.jpg" alt="">
-            </div>
-            <div class="detail-box">
-              <h5>
-                Fish
-              </h5>
-              <p>
-                It is a long established fact that a reader will be distracted by
-              </p>
-            </div>
-          </div>
-          <div class="box b2">
-            <div class="img-box">
-              <img src="../images/frappuccino.jpg" alt="">
-            </div>
-            <div class="detail-box">
-              <h5>
-                Cat Bite
-              </h5>
-              <p>
-                It is a long established fact that a reader will be distracted by
-              </p>
-            </div>
-          </div>
+        <div class="highlights_container" id="highlights-container">
+          <!-- Highlight boxes will be populated by JavaScript -->
         </div>
       </div>
     </section>
@@ -268,8 +204,8 @@ function populateTables(jsonData) {
                 row.innerHTML = `
                     <td>${item.name}</td>
                     <td class="calorie-cell">${item.calories !== null ? item.calories : ''}</td>
-                    <td class="score-cell">${item.overallScore !== null ? item.overallScore : ''}</td>
-                    <td class="price-cell">${item.price !== null ? item.price.toFixed(2) : ''}</td>
+                    <td class="score-cell">${item.overallScore !== null ? item.overallScore.toFixed(1) : ''}</td>
+                    <td class="price-cell">${item.price !== null ? '$' + item.price.toFixed(2) : ''}</td>
                 `;
                 
                 row.addEventListener('click', () => {
@@ -281,7 +217,43 @@ function populateTables(jsonData) {
         }
     });
 }
+
+function populateHighlights(jsonData) {
+        const highlightsContainer = document.getElementById('highlights-container');
+        highlightsContainer.innerHTML = '';
+
+        jsonData.forEach(item => {
+            if (item.restaurant.toLowerCase() === 'wendys') {
+                item.highlights.forEach(highlight => {
+                    const highlightBox = document.createElement('div');
+                    highlightBox.className = 'box b1'; // Change this dynamically if needed
+                    
+                    highlightBox.innerHTML = `
+                        <div class="img-box">
+                          <img src="${highlight.image}" alt="${highlight.name}">
+                        </div>
+                        <div class="detail-box">
+                          <h5>${highlight.name}</h5>
+                        </div>
+                    `;
+                    
+                    highlightsContainer.appendChild(highlightBox);
+                });
+            }
+        });
+    }
+
+    function populateBackground(jsonData) {
+        jsonData.forEach(item => {
+            if (item.restaurant.toLowerCase() === 'wendys') {
+                const backgroundElement = document.getElementById('restaurant-background');
+                backgroundElement.textContent = item.background;
+            }
+        });
+    }
 fetchAndPopulateTables('/restaurants/json/foodData.json');
+populateHighlights('/restaurants/json/restaurants.json')
+populateBackground('/restaurants/json/restaurants.json')
 
   </script>
 </body>
