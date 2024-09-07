@@ -4,32 +4,34 @@
         "name": "Dave's Single",
         "calories": 590,
         "price": 6.59,
+        "image": "images/davesSingle.png",
         "url": "wendys/davesSingle.html",
-        "restaurant": "Food Meets Business",
+        "restaurant": "Wendys",
         "group": "main",
+        
         "reviews": [
             {
-                "title": "Great Product!",
-                "content": "I loved this product! It exceeded my expectations and I would highly recommend it.",
-                "author": "Jane Doe",
-                "authorPhoto": "../../images/janeDoe.jpg"
+                "title": "Classic and satisfying",
+                "content": "A well-balanced burger with juicy beef and fresh toppings.",
+                "author": "Tony Song",
+                "authorPhoto": "../../images/tonySong.jpg"
             },
             {
-                "title": "Not as expected",
-                "content": "The product was okay, but it did not meet my expectations based on the description.",
-                "author": "John Smith",
-                "authorPhoto": "../../images/johnSmith.jpg"
+                "title": "Just okay",
+                "content": "The burger was decent but not extraordinary.",
+                "author": "Andrew Zhao",
+                "authorPhoto": "../../images/andrewZhao.jpg"
             }
         ],
         "scores": {
-            "flavor": 15,
-            "balance": 90,
-            "intensity": 45,
-            "aftertaste": 50,
-            "texture": 75,
-            "appearance": 90
+            "flavor": 80,
+            "balance": 70,
+            "intensity": 70,
+            "aftertaste": 70,
+            "texture": 80,
+            "appearance": 70
         },
-        "overallScore": 61.0,
+        "overallScore": 71.0,
         "nutrition": {
             "Calories": "590 kcal",
             "Total Fat": "37g",
