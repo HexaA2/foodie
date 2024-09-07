@@ -210,19 +210,37 @@
 
                       // Update reviews
                       const reviewsContainer = document.querySelector('#reviews-container');
-                      reviewsContainer.innerHTML = ''; // Clear previous reviews if any
-                      frenchFries.reviews.forEach(review => {
-                          reviewsContainer.innerHTML += `
-                              <div class="review-box">
-                                  <h2 class="review-title">${review.title}</h2>
-                                  <p class="review-content">${review.content}</p>
-                                  <div class="review-author">
-                                      <img src="${review.authorPhoto}" alt="${review.author}" class="author-photo">
-                                      <span class="author-name">${review.author}</span>
-                                  </div>
-                              </div>
-                          `;
-                      });
+            if (reviewsContainer) {
+                reviewsContainer.innerHTML = ''; // Clear previous reviews if any
+                
+                // Log the reviews data for debugging
+                console.log('Reviews Data:', frenchFries.reviews);
+
+                // Check if reviews exist and are in the correct format
+                if (Array.isArray(frenchFries.reviews)) {
+                    frenchFries.reviews.forEach(review => {
+                        // Check if review object has necessary properties
+                        if (review.title && review.content && review.authorPhoto && review.author) {
+                            reviewsContainer.innerHTML += `
+                                <div class="review-box">
+                                    <h2 class="review-title">${review.title}</h2>
+                                    <p class="review-content">${review.content}</p>
+                                    <div class="review-author">
+                                        <img src="${review.authorPhoto}" alt="${review.author}" class="author-photo">
+                                        <span class="author-name">${review.author}</span>
+                                    </div>
+                                </div>
+                            `;
+                        } else {
+                            console.warn('Review object is missing properties:', review);
+                        }
+                    });
+                } else {
+                    console.warn('Reviews data is not an array:', frenchFries.reviews);
+                }
+            } else {
+                console.error('Reviews container element not found');
+            }
                   })
                   .catch(error => console.error('Error fetching data:', error));
           });
