@@ -304,6 +304,7 @@ document.getElementById('scrollButtonSection').addEventListener('click', functio
 
       // Loop through each recent blog and create HTML elements
       recentBlogs.forEach(blog => {
+        setTimeout(() => {
         const blogElement = document.createElement('div');
         blogElement.classList.add('col-md-4');
         blogElement.classList.add('blog_box');
@@ -322,12 +323,30 @@ document.getElementById('scrollButtonSection').addEventListener('click', functio
 
         // Append the new blog element to the container
         blogContainer.appendChild(blogElement);
-      });
+        observeBlogElement(blogElement);
+      }, index * 200);
+    });
 
     } catch (error) {
       console.error('Error fetching blogs:', error);
     }
   }
+
+  function observeBlogElement(blogElement) {
+      // Set up the intersection observer to detect when the element is in view
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // Add the 'show' class to trigger the animation
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target);  // Stop observing once the animation is triggered
+          }
+        });
+      }, { threshold: 0.2 }); // Adjust the threshold as needed
+  
+      // Observe the blog element
+      observer.observe(blogElement);
+    }
 
   function formatDate(dateString) {
     const options = { year: 'numeric', month: 'long', day: 'numeric' };
