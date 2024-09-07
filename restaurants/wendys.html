@@ -234,7 +234,7 @@ function populateHighlights(jsonData) {
         highlightsContainer.innerHTML = '';
 
         jsonData.forEach(item => {
-            if (item.restaurant.toLowerCase() === 'wendys') {
+            if (item.id.toLowerCase() === 'wendys') {
                 item.highlights.forEach(highlight => {
                     const highlightBox = document.createElement('div');
                     highlightBox.className = 'box b1'; // Change this dynamically if needed
