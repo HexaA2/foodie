@@ -119,7 +119,6 @@
         <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
         <script type="text/javascript" src="../js/bootstrap.js"></script>
         <script>
-          // Function to get URL parameters
           function getParameterByName(name) {
               const regex = new RegExp(`[?&]${name}=([^&#]*)`);
               const results = regex.exec(window.location.search);
@@ -127,7 +126,6 @@
           }
 
           document.addEventListener('DOMContentLoaded', () => {
-              // Get the ID from the URL parameter
               const id = getParameterByName('id');
 
               if (!id) {
@@ -135,7 +133,6 @@
                   return;
               }
 
-              // Fetch data from JSON file
               fetch('/restaurants/json/foodData.json')
                   .then(response => {
                       if (!response.ok) {
@@ -144,14 +141,12 @@
                       return response.json();
                   })
                   .then(data => {
-                      // Find the item with the ID from the URL
                       const item = data.find(item => item.id === parseInt(id, 10));
 
                       if (!item) {
                           throw new Error(`Item with ID ${id} not found in JSON data`);
                       }
 
-                      // Update HTML content with the fetched data
                       document.querySelector('.Food-Title h1').textContent = item.name;
                       document.querySelector('#food-image').src = item.image;
                       document.querySelector('#food-image').alt = `${item.name} Image`;
@@ -175,7 +170,7 @@
                       }
                       
                       const ratingItems = document.querySelector('#rating-items');
-                      ratingItems.innerHTML = ''; // Clear previous content if any
+                      ratingItems.innerHTML = ''; 
                       for (const [key, value] of Object.entries(item.scores)) {
                           const color = getColor(value);
                           ratingItems.innerHTML += `
@@ -190,9 +185,8 @@
                           <div class="label">$${item.price.toFixed(2)}</div>
                       `;
           
-                      // Update nutrition table
                       const nutritionTableBody = document.querySelector('#nutrition-table-body');
-                      nutritionTableBody.innerHTML = ''; // Clear previous content if any
+                      nutritionTableBody.innerHTML = ''; 
                       for (const [key, value] of Object.entries(item.nutrition)) {
                           nutritionTableBody.innerHTML += `
                               <tr>
@@ -202,9 +196,8 @@
                           `;
                       }
           
-                      // Update allergens
                       const allergenGrid = document.querySelector('#allergen-grid');
-                      allergenGrid.innerHTML = ''; // Clear previous content if any
+                      allergenGrid.innerHTML = ''; 
                       item.allergens.forEach(allergen => {
                           allergenGrid.innerHTML += `
                               <div class="allergen-item">
@@ -214,9 +207,8 @@
                           `;
                       });
 
-                      // Update ingredients table
                       const ingredientsTableBody = document.querySelector('#ingredients-table-body');
-                      ingredientsTableBody.innerHTML = ''; // Clear previous content if any
+                      ingredientsTableBody.innerHTML = ''; 
                       item.ingredients.forEach(ingredient => {
                           ingredientsTableBody.innerHTML += `
                               <tr class="clickable">
@@ -233,7 +225,6 @@
                       const clickableRows = document.querySelectorAll('#ingredients-table-body .clickable');
             clickableRows.forEach(row => {
                 row.addEventListener('click', function() {
-                    // Toggle the next sibling row with class 'details'
                     const detailsRow = this.nextElementSibling;
                     if (detailsRow && detailsRow.classList.contains('details')) {
                         detailsRow.style.display = detailsRow.style.display === 'none' ? 'table-row' : 'none';
@@ -241,9 +232,8 @@
                 });
             });
 
-                      // Update reviews
                       const reviewsContainer = document.querySelector('#reviews');
-                      reviewsContainer.innerHTML = ''; // Clear previous reviews if any
+                      reviewsContainer.innerHTML = ''; 
                       item.reviews.forEach(review => {
                           reviewsContainer.innerHTML += `
                               <div class="review-box">

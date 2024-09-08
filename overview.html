@@ -84,20 +84,15 @@
   
     async function fetchBlogs() {
       try {
-        // Fetch the blog data
         const response = await fetch('/blog/json/blog.json');
         const blogs = await response.json();
   
-        // Sort the blogs in descending order based on their IDs
         blogs.sort((a, b) => b.id - a.id);
   
-        // Get the container where blogs will be inserted
         const blogContainer = document.querySelector('.blog_section .row');
   
-        // Clear existing content
         blogContainer.innerHTML = '';
   
-        // Loop through each blog post and create HTML elements
         blogs.forEach((blog, index) => {
           setTimeout(() => {
             const blogElement = document.createElement('div');
@@ -116,13 +111,11 @@
               </div>
             `;
   
-            // Append the new blog element to the container
             blogContainer.appendChild(blogElement);
   
-            // Add the blog element to the observer to animate when in view
             observeBlogElement(blogElement);
   
-          }, index * 200); // Adjust delay to suit the effect
+          }, index * 200); 
         });
   
       } catch (error) {
@@ -131,18 +124,15 @@
     }
   
     function observeBlogElement(blogElement) {
-      // Set up the intersection observer to detect when the element is in view
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            // Add the 'show' class to trigger the animation
             entry.target.classList.add('show');
-            observer.unobserve(entry.target);  // Stop observing once the animation is triggered
+            observer.unobserve(entry.target); 
           }
         });
-      }, { threshold: 0.2 }); // Adjust the threshold as needed
+      }, { threshold: 0.2 }); 
   
-      // Observe the blog element
       observer.observe(blogElement);
     }
   

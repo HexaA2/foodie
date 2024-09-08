@@ -90,7 +90,6 @@
 
     async function fetchBlogPost() {
       try {
-        // Extract blog ID from URL
         const urlParams = new URLSearchParams(window.location.search);
         const blogId = urlParams.get('id');
 
@@ -98,27 +97,22 @@
           throw new Error('No blog ID found in URL');
         }
 
-        // Fetch blog post data from JSON
         const response = await fetch('/blog/json/blog.json');
         const blogs = await response.json();
         
-        // Find the blog post with the matching ID
         const blogPost = blogs.find(blog => blog.id === parseInt(blogId, 10));
         if (!blogPost) {
           throw new Error('Blog post not found');
         }
 
-        // Update HTML with blog post data
         document.getElementById('blog-title').textContent = blogPost.title;
         document.getElementById('blog-image').src = blogPost.image;
         document.getElementById('author-image').src = blogPost.authorImage;
         document.getElementById('author-name').textContent = blogPost.author;
 
-        // Format the date
         const formattedDate = formatDate(blogPost.date);
         document.getElementById('post-date').textContent = formattedDate;
 
-        // Populate blog content
         const blogContent = document.getElementById('blog-content');
         blogPost.text.forEach(paragraph => {
           const p = document.createElement('p');
