@@ -267,8 +267,9 @@ function populateBackground(jsonData, restaurantId) {
 function updateLogo(jsonData, restaurantId) {
     jsonData.forEach(item => {
         if (item.id.toLowerCase() === restaurantId) {
+            console.log('Logo URL:', 'https://raw.githubusercontent.com/HexaA2/foodieJSON/main' + item.image); // Debug URL
             const logoImageElement = document.getElementById('logo-img');
-            logoImageElement.src = 'https://raw.githubusercontent.com/HexaA2/foodieJSON/main' +item.image; 
+            logoImageElement.src = 'https://raw.githubusercontent.com/HexaA2/foodieJSON/main' + item.image; 
             logoImageElement.alt = item.name; 
         }
     });
