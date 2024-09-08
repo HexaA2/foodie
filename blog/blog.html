@@ -106,8 +106,8 @@
         }
 
         document.getElementById('blog-title').textContent = blogPost.title;
-        document.getElementById('blog-image').src = blogPost.image;
-        document.getElementById('author-image').src = blogPost.authorImage;
+        document.getElementById('blog-image').src = 'https://raw.githubusercontent.com/HexaA2/foodieJSON/main' + blogPost.image;
+        document.getElementById('author-image').src = 'https://raw.githubusercontent.com/HexaA2/foodieJSON/main' + blogPost.authorImage;
         document.getElementById('author-name').textContent = blogPost.author;
 
         const formattedDate = formatDate(blogPost.date);
