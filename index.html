@@ -286,7 +286,7 @@ document.getElementById('scrollButtonSection').addEventListener('click', functio
 
   async function fetchBlogs() {
     try {
-      const response = await fetch('https://raw.githubusercontent.com/HexaA2/foodieJSON/main/blog.json');
+      const response = await fetch('https://raw.githubusercontent.com/HexaA2/foodieJSON/main/json/blog.json');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }

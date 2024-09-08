@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function fetchAndPopulateRestaurants() {
     try {
-        const response = await fetch('https://raw.githubusercontent.com/HexaA2/foodieJSON/main/restaurants.json');
+        const response = await fetch('https://raw.githubusercontent.com/HexaA2/foodieJSON/main/json/restaurants.json');
         const data = await response.json();
         populateRestaurantGrid(data);
         displayRandomRestaurantHighlights(data);
