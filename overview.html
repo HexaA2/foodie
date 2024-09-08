@@ -84,7 +84,7 @@
   
     async function fetchBlogs() {
       try {
-        const response = await fetch('https://raw.githubusercontent.com/HexaA2/foodieJSON/main/json/blog.json');
+        const response = await fetch('https://raw.githubusercontent.com/HexaA2/foodieJSON/main/blog.json');
         const blogs = await response.json();
   
         blogs.sort((a, b) => b.id - a.id);
