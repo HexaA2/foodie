@@ -84,7 +84,7 @@
   
     async function fetchBlogs() {
       try {
-        const response = await fetch('/json/blog.json');
+        const response = await fetch('https://raw.githubusercontent.com/HexaA2/foodieJSON/main/json/blog.json');
         const blogs = await response.json();
   
         blogs.sort((a, b) => b.id - a.id);
@@ -101,7 +101,7 @@
   
             blogElement.innerHTML = `
               <div class="img-box">
-                <a href="/blog/blog.html?id=${blog.id}"><img src="${blog.image}" alt="${blog.title}"></a>
+                <a href="/blog/blog.html?id=${blog.id}"><img src="${'https://raw.githubusercontent.com/HexaA2/foodieJSON/main' + blog.image}" alt="${blog.title}"></a>
               </div>
               <div class="detail-box">
                 <div class="date">${formatDate(blog.date)}</div>
