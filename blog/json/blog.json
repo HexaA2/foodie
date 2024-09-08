@@ -1,6 +1,6 @@
 [
     {
-        "id": 1,
+        "id": 3,
         "title": "The Dave's Single Burger: A Classic American Comfort Food",
         "image": "/restaurants/images/wendys/davesSingle.png",
         "author": "Tony Song",
@@ -24,7 +24,7 @@
         ]
     },
     {
-        "id": 3,
+        "id": 1,
         "title": "Baconator: The Ultimate Indulgence for Bacon Lovers",
         "image": "/restaurants/images/wendys/baconator.png",
         "author": "Sophia Li",
