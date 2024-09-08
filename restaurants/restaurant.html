@@ -267,7 +267,7 @@ function populateBackground(jsonData, restaurantId) {
 function updateLogo(jsonData, restaurantId) {
     jsonData.forEach(item => {
         if (item.id.toLowerCase() === restaurantId) {
-            const logoImageElement = document.getElementById('logo-image');
+            const logoImageElement = document.getElementById('logo-img');
             logoImageElement.src = 'https://raw.githubusercontent.com/HexaA2/foodieJSON/main' +item.image; 
             logoImageElement.alt = item.name; 
         }
