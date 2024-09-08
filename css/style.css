@@ -913,7 +913,7 @@ a:focus {
 
 .styled-table tbody tr {
   border-bottom: 1px solid #dddddd;
-  transition: 0.2s;
+  transition: 0.4s;
 }
 
 .styled-table tr:nth-child(even) {
