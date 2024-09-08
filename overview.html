@@ -106,7 +106,7 @@
               <div class="detail-box">
                 <div class="date">${formatDate(blog.date)}</div>
                 <h5><a href="/blog/blog.html?id=${blog.id}">${blog.title}</a></h5>
-                <p>${blog.description}</p>
+                <p>${truncateText(blog.text[0], 14)}</p>
                 <a href="/blog/blog.html?id=${blog.id}">Read More</a>
               </div>
             `;
@@ -146,6 +146,14 @@
       document.getElementById("myNav").classList.toggle("menu_width");
       document.querySelector(".custom_menu-btn").classList.toggle("menu_btn-style");
     }
+
+    function truncateText(text, wordLimit) {
+    const words = text.split(' ');
+    if (words.length > wordLimit) {
+      return words.slice(0, wordLimit).join(' ') + ' ...';
+    }
+    return text;
+  }
   </script>
   
 </body>
