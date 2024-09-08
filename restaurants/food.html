@@ -133,11 +133,7 @@
                   return;
               }
 
-              fetch('https://github.com/HexaA2/foodieJSON/blob/main/foodData.json', {
-      headers: {
-        'Authorization': 'token ${process.env.GITHUB_TOKEN}'
-      }
-    })
+              fetch('/restaurants/json/foodData.json')
                   .then(response => {
                       if (!response.ok) {
                           throw new Error(`HTTP error! status: ${response.status}`);
