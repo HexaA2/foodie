@@ -133,7 +133,7 @@
                   return;
               }
 
-              fetch('/restaurants/json/foodData.json')
+              fetch('/json/foodData.json')
                   .then(response => {
                       if (!response.ok) {
                           throw new Error(`HTTP error! status: ${response.status}`);

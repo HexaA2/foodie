@@ -286,7 +286,7 @@ document.getElementById('scrollButtonSection').addEventListener('click', functio
 
   async function fetchBlogs() {
     try {
-      const response = await fetch('/blog/json/blog.json');
+      const response = await fetch('/json/blog.json');
       if (!response.ok) {
         throw new Error('Network response was not ok');
       }

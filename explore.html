@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function fetchAndPopulateRestaurants() {
     try {
-        const response = await fetch('/restaurants/json/restaurants.json');
+        const response = await fetch('/json/restaurants.json');
         const data = await response.json();
         populateRestaurantGrid(data);
         displayRandomRestaurantHighlights(data);

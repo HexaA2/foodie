@@ -176,11 +176,11 @@ async function fetchAndPopulateData() {
     const restaurantId = getQueryParam('id').toLowerCase(); 
 
     try {
-        const foodResponse = await fetch('/restaurants/json/foodData.json');
+        const foodResponse = await fetch('/json/foodData.json');
         const foodData = await foodResponse.json();
         populateTables(foodData, restaurantId);
 
-        const infoResponse = await fetch('/restaurants/json/restaurants.json');
+        const infoResponse = await fetch('/json/restaurants.json');
         const infoData = await infoResponse.json();
         populateHighlights(infoData, restaurantId);
         populateBackground(infoData, restaurantId);
