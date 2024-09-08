@@ -925,7 +925,6 @@ a:focus {
 }
 
 .styled-table tbody tr:hover {
-  font-weight: bold;
   color: #0a2050;
   background-color: #e0e0e0;
 }
