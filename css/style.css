@@ -1613,9 +1613,9 @@ a:focus {
 
 .navigation-box a {
   pointer-events: auto; /* Allow clicks on arrows */
-  width: 60px; /* Narrow width */
-  height: 100px; /* Greater height than width */
-  background-color: #0a2050;
+  width: 45px; /* Narrow width */
+  height: 75px; /* Greater height than width */
+  background-color: #1b3a7a;
   border-radius: 10px;
   display: flex;
   align-items: center;
