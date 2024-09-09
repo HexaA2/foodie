@@ -80,6 +80,12 @@
   </div>
   <!-- End Blog Post Section -->
 
+  <!-- Navigation Arrows -->
+  <div class="navigation-arrows">
+    <a id="left-arrow" href="#" style="visibility:hidden;">&#x2190; Previous</a>
+    <a id="right-arrow" href="#" style="visibility:hidden;">Next &#x2192;</a>
+  </div>
+
   <!-- Bootstrap JS and dependencies -->
   <script src="../js/jquery-3.4.1.min.js"></script>
   <script src="../js/bootstrap.js"></script>
@@ -99,12 +105,13 @@
 
         const response = await fetch('https://raw.githubusercontent.com/HexaA2/foodieJSON/main/json/blog.json');
         const blogs = await response.json();
-        
+
         const blogPost = blogs.find(blog => blog.id === parseInt(blogId, 10));
         if (!blogPost) {
           throw new Error('Blog post not found');
         }
 
+        // Populate blog content
         document.getElementById('blog-title').textContent = blogPost.title;
         document.getElementById('blog-image').src = 'https://raw.githubusercontent.com/HexaA2/foodieJSON/main' + blogPost.image;
         document.getElementById('author-image').src = 'https://raw.githubusercontent.com/HexaA2/foodieJSON/main' + blogPost.authorImage;
@@ -119,6 +126,10 @@
           p.textContent = paragraph;
           blogContent.appendChild(p);
         });
+
+        // Handle navigation arrows
+        handleNavigationArrows(blogId, blogs);
+
       } catch (error) {
         console.error('Error fetching the blog post data:', error);
       }
@@ -128,6 +139,24 @@
       const options = { year: 'numeric', month: 'long', day: 'numeric' };
       const date = new Date(dateString);
       return date.toLocaleDateString(undefined, options);
+    }
+
+    function handleNavigationArrows(currentId, blogs) {
+      const currentBlogId = parseInt(currentId, 10);
+      const maxBlogId = blogs.length;
+
+      const leftArrow = document.getElementById('left-arrow');
+      const rightArrow = document.getElementById('right-arrow');
+
+      if (currentBlogId > 1) {
+        leftArrow.href = `blog.html?id=${currentBlogId - 1}`;
+        leftArrow.style.visibility = 'visible';
+      }
+
+      if (currentBlogId < maxBlogId) {
+        rightArrow.href = `blog.html?id=${currentBlogId + 1}`;
+        rightArrow.style.visibility = 'visible';
+      }
     }
 
     function openNav() {
