@@ -1616,7 +1616,7 @@ a:focus {
 
 .navigation-box {
   display: flex;
-  width: 300px;
+  width: 200px; /* Reduced width */
   border: 1px solid #ddd;
   background-color: #ffffff;
   border-radius: 10px;
@@ -1633,7 +1633,7 @@ a:focus {
 .navigation-box a {
   flex: 1;
   text-align: center;
-  padding: 15px;
+  padding: 10px; /* Adjusted padding to make buttons less tall */
   text-decoration: none;
   font-size: 16px;
   font-weight: bold;
@@ -1641,7 +1641,7 @@ a:focus {
   transition: background-color 0.3s;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 24px; /* Adjust the size of the image */
+  background-size: 16px; /* Smaller image size */
 }
 
 .navigation-box a.left {
@@ -1661,4 +1661,9 @@ a:focus {
 
 .navigation-box a.right:hover {
   background-color: #0056b3;
+}
+
+/* Add some spacing above the navigation box */
+body {
+  padding-bottom: 70px; /* Ensures no overlap with the box */
 }
