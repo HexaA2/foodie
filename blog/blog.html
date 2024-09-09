@@ -82,8 +82,8 @@
 
   <!-- Navigation Arrows -->
   <div class="navigation-arrows">
-    <a id="left-arrow" href="#" style="visibility:hidden;">&#x2190; Previous</a>
-    <a id="right-arrow" href="#" style="visibility:hidden;">Next &#x2192;</a>
+    <a id="left-arrow" href="#">&#x2190;</a>
+    <a id="right-arrow" href="#">&#x2192;</a>
   </div>
 
   <!-- Bootstrap JS and dependencies -->
@@ -149,13 +149,13 @@
       const rightArrow = document.getElementById('right-arrow');
 
       if (currentBlogId > 1) {
-        leftArrow.href = `blog.html?id=${currentBlogId - 1}`;
-        leftArrow.style.visibility = 'visible';
+        rightArrow.href = `blog.html?id=${currentBlogId - 1}`;
+        rightArrow.style.visibility = 'visible';
       }
 
       if (currentBlogId < maxBlogId) {
-        rightArrow.href = `blog.html?id=${currentBlogId + 1}`;
-        rightArrow.style.visibility = 'visible';
+        leftArrow.href = `blog.html?id=${currentBlogId + 1}`;
+        leftArrow.style.visibility = 'visible';
       }
     }
 

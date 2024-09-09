@@ -1600,3 +1600,44 @@ a:focus {
   color: #ffffff;
 }
 
+
+
+/* Positioning for left and right navigation arrows */
+.navigation-arrows {
+  position: fixed;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none; /* Ensures clicks pass through the entire container */
+}
+
+.navigation-arrows a {
+  pointer-events: auto; /* Allow clicks on arrows */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation-arrows a:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#left-arrow {
+  position: absolute;
+  left: 10px;
+  visibility: hidden;
+}
+
+#right-arrow {
+  position: absolute;
+  right: 10px;
+  visibility: hidden;
+}
