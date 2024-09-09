@@ -1602,52 +1602,63 @@ a:focus {
 
 
 
-    /* Navigation rectangle at the bottom */
-    .navigation-container {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      padding: 10px 0;
-      background-color: #f8f9fa;
-    }
+/* Navigation rectangle at the bottom */
+.navigation-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 10px 0;
+  background-color: #f8f9fa;
+}
 
-    .navigation-box {
-      display: flex;
-      width: 300px;
-      border: 1px solid #ddd;
-      background-color: #ffffff;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-    }
+.navigation-box {
+  display: flex;
+  width: 300px;
+  border: 1px solid #ddd;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  opacity: 0.5; /* Dimmed by default */
+  transition: opacity 0.3s ease;
+}
 
-    .navigation-box a {
-      flex: 1;
-      text-align: center;
-      padding: 15px;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: bold;
-      color: #ffffff;
-      transition: background-color 0.3s;
-    }
+.navigation-box:hover {
+  opacity: 1; /* Full brightness on hover */
+}
 
-    .navigation-box a.left {
-      background-color: #6c757d;
-      border-right: 1px solid #ddd;
-    }
+.navigation-box a {
+  flex: 1;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  transition: background-color 0.3s;
+}
 
-    .navigation-box a.right {
-      background-color: #007bff;
-    }
+.navigation-box a.left {
+  background-color: #6c757d;
+  border-right: 1px solid #ddd;
+}
 
-    .navigation-box a.left:hover {
-      background-color: #5a6268;
-    }
+.navigation-box a.right {
+  background-color: #007bff;
+}
 
-    .navigation-box a.right:hover {
-      background-color: #0056b3;
-    }
+.navigation-box a.left:hover {
+  background-color: #5a6268;
+}
+
+.navigation-box a.right:hover {
+  background-color: #0056b3;
+}
+
+/* Add some spacing above the navigation box */
+body {
+  padding-bottom: 70px; /* Ensures no overlap with the box */
+}
