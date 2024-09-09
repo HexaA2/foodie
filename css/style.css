@@ -1604,7 +1604,7 @@ a:focus {
 
 .navigation-container {
   position: fixed;
-  top: 50%;
+  top: 40%;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -1615,8 +1615,7 @@ a:focus {
   pointer-events: auto; /* Allow clicks on arrows */
   width: 60px; /* Narrow width */
   height: 100px; /* Greater height than width */
-  background-color: #ffffff;
-  border: 1px solid #ddd;
+  background-color: #1b3a7a;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -1630,7 +1629,7 @@ a:focus {
 }
 
 .navigation-box a:hover {
-  background-color: #f0f0f0;
+  background-color: #0a2050;
   transform: scale(1.1); /* Slight enlarge on hover */
 }
 
