@@ -25,7 +25,12 @@
   <link href="../css/responsive.css" rel="stylesheet" />
   <link rel="icon" type="image/png" href="../images/logo.png">
 
-</head> 
+  <style> body {
+    padding-bottom: 70px; /* Ensures no overlap with the box */
+  } 
+  </style>
+  
+</head>
 
 <body class="sub_page">
   <div class="hero_area ">
@@ -80,10 +85,12 @@
   </div>
   <!-- End Blog Post Section -->
 
-  <!-- Navigation Arrows -->
-  <div class="navigation-arrows">
-    <a id="left-arrow" href="#">&#x2190;</a>
-    <a id="right-arrow" href="#">&#x2192;</a>
+  <!-- Navigation Rectangle -->
+  <div class="navigation-container">
+    <div class="navigation-box">
+      <a id="left-arrow" href="#" class="left">&#x2190; Previous</a>
+      <a id="right-arrow" href="#" class="right">Next &#x2192;</a>
+    </div>
   </div>
 
   <!-- Bootstrap JS and dependencies -->
@@ -150,12 +157,14 @@
 
       if (currentBlogId > 1) {
         rightArrow.href = `blog.html?id=${currentBlogId - 1}`;
-        rightArrow.style.visibility = 'visible';
+      } else {
+        rightArrow.style.visibility = 'hidden';
       }
 
       if (currentBlogId < maxBlogId) {
         leftArrow.href = `blog.html?id=${currentBlogId + 1}`;
-        leftArrow.style.visibility = 'visible';
+      } else {
+        leftArrow.style.visibility = 'hidden';
       }
     }
 
