@@ -1604,7 +1604,7 @@ a:focus {
 
 .navigation-container {
   position: fixed;
-  top: 40%;
+  top: 45%;
   width: 100%;
   display: flex;
   justify-content: space-between;
