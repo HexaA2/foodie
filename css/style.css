@@ -1602,68 +1602,46 @@ a:focus {
 
 
 
-/* Navigation rectangle at the bottom */
 .navigation-container {
+  position: fixed;
+  top: 50%;
   width: 100%;
   display: flex;
-  justify-content: center;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  padding: 10px 0;
-  background-color: #f8f9fa;
-}
-
-.navigation-box {
-  display: flex;
-  width: 200px; /* Reduced width */
-  border: 1px solid #ddd;
-  background-color: #ffffff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-  opacity: 0.5; /* Dimmed by default */
-  transition: opacity 0.3s ease;
-}
-
-.navigation-box:hover {
-  opacity: 1; /* Full brightness on hover */
+  justify-content: space-between;
+  pointer-events: none; /* Ensures only the buttons are clickable */
 }
 
 .navigation-box a {
-  flex: 1;
-  text-align: center;
-  padding: 10px; /* Adjusted padding to make buttons less tall */
+  pointer-events: auto; /* Allow clicks on arrows */
+  width: 60px; /* Narrow width */
+  height: 100px; /* Greater height than width */
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
-  font-size: 16px;
-  font-weight: bold;
-  color: #ffffff;
-  transition: background-color 0.3s;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 16px; /* Smaller image size */
+  background-size: 30px 30px; /* Adjust icon size */
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navigation-box a:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.1); /* Slight enlarge on hover */
 }
 
 .navigation-box a.left {
-  background-color: #6c757d;
-  border-right: 1px solid #ddd;
   background-image: url('/images/prev-angle.png'); /* Left arrow image */
+  position: absolute;
+  left: 10px; /* Position near the left edge */
 }
 
 .navigation-box a.right {
-  background-color: #007bff;
   background-image: url('/images/next-angle.png'); /* Right arrow image */
-}
-
-.navigation-box a.left:hover {
-  background-color: #5a6268;
-}
-
-.navigation-box a.right:hover {
-  background-color: #0056b3;
-}
-
-/* Add some spacing above the navigation box */
-body {
-  padding-bottom: 70px; /* Ensures no overlap with the box */
+  position: absolute;
+  right: 10px; /* Position near the right edge */
 }

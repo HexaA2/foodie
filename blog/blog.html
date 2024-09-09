@@ -25,11 +25,12 @@
   <link href="../css/responsive.css" rel="stylesheet" />
   <link rel="icon" type="image/png" href="../images/logo.png">
 
-  <style> body {
-    padding-bottom: 70px; /* Ensures no overlap with the box */
-  } 
+  <style>
+    body {
+      padding-bottom: 70px; /* Ensures no overlap with the box */
+    }
   </style>
-  
+
 </head>
 
 <body class="sub_page">
@@ -85,7 +86,7 @@
   </div>
   <!-- End Blog Post Section -->
 
-  <!-- Navigation Rectangle -->
+  <!-- Navigation Buttons on the Sides -->
   <div class="navigation-container">
     <div class="navigation-box">
       <a id="left-arrow" href="#" class="left"></a>
@@ -156,15 +157,15 @@
       const rightArrow = document.getElementById('right-arrow');
 
       if (currentBlogId > 1) {
-        rightArrow.href = `blog.html?id=${currentBlogId - 1}`;
+        leftArrow.href = `blog.html?id=${currentBlogId - 1}`;
       } else {
-        rightArrow.style.visibility = 'hidden';
+        leftArrow.style.visibility = 'hidden';
       }
 
       if (currentBlogId < maxBlogId) {
-        leftArrow.href = `blog.html?id=${currentBlogId + 1}`;
+        rightArrow.href = `blog.html?id=${currentBlogId + 1}`;
       } else {
-        leftArrow.style.visibility = 'hidden';
+        rightArrow.style.visibility = 'hidden';
       }
     }
 
