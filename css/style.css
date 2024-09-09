@@ -1615,7 +1615,7 @@ a:focus {
   pointer-events: auto; /* Allow clicks on arrows */
   width: 60px; /* Narrow width */
   height: 100px; /* Greater height than width */
-  background-color: #1b3a7a;
+  background-color: #0a2050;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -1623,7 +1623,7 @@ a:focus {
   text-decoration: none;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain; /* Adjust icon size */
+  background-size: 9px 15px; /* Adjust icon size */
   transition: background-color 0.3s, transform 0.3s;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
 }
