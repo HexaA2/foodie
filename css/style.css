@@ -1639,15 +1639,20 @@ a:focus {
   font-weight: bold;
   color: #ffffff;
   transition: background-color 0.3s;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px; /* Adjust the size of the image */
 }
 
 .navigation-box a.left {
   background-color: #6c757d;
   border-right: 1px solid #ddd;
+  background-image: url('/images/prev-angle.png'); /* Left arrow image */
 }
 
 .navigation-box a.right {
   background-color: #007bff;
+  background-image: url('/images/next-angle.png'); /* Right arrow image */
 }
 
 .navigation-box a.left:hover {
@@ -1656,9 +1661,4 @@ a:focus {
 
 .navigation-box a.right:hover {
   background-color: #0056b3;
-}
-
-/* Add some spacing above the navigation box */
-body {
-  padding-bottom: 70px; /* Ensures no overlap with the box */
 }
